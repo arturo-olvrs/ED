@@ -274,7 +274,7 @@ int main(int argc, char * argv[]) {
 ```
 
 Para poder ejecutarlo con distintos valores de $n$ y representarlo hemos empleado códigos similares a los del caso anterior. Por tanto, en el caso de la ordenación mediante el algorimo de burbuja, tenemos:
-![Eficiencia de la ordenación mediante el algorimo de burbuja](Fotos/Ordenación_Burbuja.png)
+![Eficiencia de la ordenación mediante el algorimo de burbuja](Fotos/Búsqueda_Lineal.png)
 
 
 
