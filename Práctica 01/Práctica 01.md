@@ -6,7 +6,7 @@
 - **Asignatura:** Estructura de Datos.
 - **Curso Académico:** 2023-24.
 - **Grado:** Doble Grado en Ingeniería Informática y Matemáticas.
-- **Grupo:** Único.
+- **Grupo:** A2.
 - **Profesor:** Ignacio Aguilera Martos.
 - **Descripción:** Primera práctica sobre eficiencia de algoritmos.
 
