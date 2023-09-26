@@ -274,7 +274,8 @@ int main(int argc, char * argv[]) {
 ```
 
 Para poder ejecutarlo con distintos valores de $n$ y representarlo hemos empleado códigos similares a los del caso anterior. Por tanto, en el caso de la ordenación mediante el algorimo de burbuja, tenemos:
-![Eficiencia de la ordenación mediante el algorimo de burbuja](Fotos/Búsqueda_Lineal.png)
+
+![Eficiencia de la ordenación mediante el algorimo de burbuja](Fotos/Ordenación_Burbuja.png)
 
 
 
@@ -368,6 +369,7 @@ int main(int argc, char *argv[]) {
 ```
 
 Para poder ejecutarlo con distintos valores de $n$ y representarlo hemos empleado códigos similares a los del ejemplo. Por tanto, en el caso de la búsqueda binaria, tenemos:
+
 ![Eficiencia de búsqueda binaria](Fotos/Búsqueda_Binaria.png)
 
 En dicha gráfica podemos ver que el resultado es anormal, ya que los datos se encuentran distribuidos en rectas. Esto se debe a la falta de precisión en el reloj de la librería `ctime` para tiempos tan bajos. Para evitar dicho error, se repite la búsqueda `NUM_VECES = 1e6` veces y luego se calcula la media. De esta forma, el tiempo medido es mayor y luego el tiempo real se calcula con una simple división, como podemos ver en el siguiente código.
@@ -409,6 +411,7 @@ int main(int argc, char *argv[]) {
 ```
 
 Tenemos que la representación de los datos, con su correspondiente regresión, es la siguiente:
+
 ![Eficiencia de búsqueda binaria con medias](Fotos/Búsqueda_Binaria_Medias.png)
 
 Como podemos ver, en este caso se ajuste de forma adecuada a la regresión logarítmica.
@@ -454,6 +457,7 @@ void rellenar_ordenado(int *v, int n) {
 ```
 
 Tenemos que su representación es la siguiente:
+
 ![Eficiencia de ordenación mediante el algoritmo de burbuja en el mejor caso](Fotos/Ordenación_Burbuja_MejorCaso.png)
 
 
@@ -510,6 +514,7 @@ Calculamos su eficiencia teórica en el mejor caso; es decir, cuando el vector d
 $$T(n)=\sum_{i=0}^0 \sum_{j=0}^{n-2}1 \in O(n)$$
 
 En el ejercicio 2 vimos que, por norma general, la eficiencia de este algorimo era $O(n^2)$. No obstante, debido al pequeño cambio mejoramos de forma significativa su eficiencia, pasando en el caso de que esté ordenado a $O(n)$. Veámoslo de forma empírica:
+
 ![Eficiencia de ordenación mediante el algoritmo de burbuja mejorada en el mejor caso](Fotos/Ordenación_Burbuja_Mejorada_MejorCaso.png)
 
 
