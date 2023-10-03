@@ -1,0 +1,5 @@
+/home/arturoolvrs/Desktop/ED/Práctica 03/codigo/cmake-build-debug/CMakeFiles/image.dir
+/home/arturoolvrs/Desktop/ED/Práctica 03/codigo/cmake-build-debug/CMakeFiles/negativo.dir
+/home/arturoolvrs/Desktop/ED/Práctica 03/codigo/cmake-build-debug/CMakeFiles/doc_doxygen.dir
+/home/arturoolvrs/Desktop/ED/Práctica 03/codigo/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/arturoolvrs/Desktop/ED/Práctica 03/codigo/cmake-build-debug/CMakeFiles/rebuild_cache.dir

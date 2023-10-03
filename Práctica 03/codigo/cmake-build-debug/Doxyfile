@@ -1,0 +1,6 @@
+PROJECT_NAME           = "Práctica 1. Imágenes"
+OUTPUT_DIRECTORY       = /home/arturoolvrs/Desktop/ED/Práctica 03/codigo/cmake-build-debug/doc_doxygen/
+INPUT                  = /home/arturoolvrs/Desktop/ED/Práctica 03/codigo/estudiante/include /home/arturoolvrs/Desktop/ED/Práctica 03/codigo/estudiante/src /home/arturoolvrs/Desktop/ED/Práctica 03/codigo/estudiante/doc
+GENERATE_LATEX         = NO
+IMAGE_PATH             = /home/arturoolvrs/Desktop/ED/Práctica 03/codigo/estudiante/doc
+EXTRACT_PRIVATE        = NO
