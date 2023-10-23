@@ -1,0 +1,183 @@
+\hypertarget{classCasilla}{}\doxysection{Referencia de la Clase Casilla}
+\label{classCasilla}\index{Casilla@{Casilla}}
+
+
+TDA \mbox{\hyperlink{classCasilla}{Casilla}} Representa una única posición de sudoku que puede contener un único valor numérico.  
+
+
+
+
+{\ttfamily \#include $<$Casilla.\+h$>$}
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCasilla_a724097ecbb237fd05c6d43adcf3d5fb9}{Casilla}} (pair$<$ int, int $>$ \mbox{\hyperlink{classCasilla_a8a47c931a6177815a261efde01b6a863}{coord}}, int \mbox{\hyperlink{classCasilla_a099239d7a7cbcc33c4a44575f5113aff}{valor}}=0)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase con unas coordenadas y con un valor preciso. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCasilla_a3845e29668cd4299582334c29f3e28a8}{Casilla}} ()
+\begin{DoxyCompactList}\small\item\em Constructor sin argumentos. \end{DoxyCompactList}\item 
+pair$<$ int, int $>$ \mbox{\hyperlink{classCasilla_a89d93ae84920c13dfdced27ac99dba40}{get\+Coord}} () const
+\begin{DoxyCompactList}\small\item\em Recupera coordenadas de la casilla. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCasilla_a745eff6482698bfd3fdd8980f0557e87}{get\+Valor}} () const
+\begin{DoxyCompactList}\small\item\em Recupera valor de la casilla. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCasilla_a1c0160ba7ff9c92f2458c893b3d272af}{set\+Coord}} (pair$<$ int, int $>$ \mbox{\hyperlink{classCasilla_a8a47c931a6177815a261efde01b6a863}{coord}})
+\begin{DoxyCompactList}\small\item\em Fija coordenadas de la casilla. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCasilla_ae5e317a9a69742d2b98620a77774f944}{set\+Valor}} (int \mbox{\hyperlink{classCasilla_a099239d7a7cbcc33c4a44575f5113aff}{valor}})
+\begin{DoxyCompactList}\small\item\em Fija valor de la casilla. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+pair$<$ int, int $>$ \mbox{\hyperlink{classCasilla_a8a47c931a6177815a261efde01b6a863}{coord}}
+\begin{DoxyCompactList}\small\item\em Un dato pair que indica la posición en el tablero mediante la fila y la columna en este orden. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCasilla_a099239d7a7cbcc33c4a44575f5113aff}{valor}}
+\begin{DoxyCompactList}\small\item\em Número de la casilla. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+TDA \mbox{\hyperlink{classCasilla}{Casilla}} Representa una única posición de sudoku que puede contener un único valor numérico. 
+
+Una instancia {\itshape cas} del tipo de dato abstracto {\ttfamily \mbox{\hyperlink{classCasilla}{Casilla}}} es un objeto dotado de un par de enteros positivos que representan sus coordenadas en un tablero 9x9 de Sudoku, y el valor que identifica al número que guarda esa casilla Lo representaremos como una estructura de un objeto de tipo pair$<$int$>$ y un entero \begin{DoxyInvariant}{Invariante}
+0 $<$ casilla.\+coord.\+first(), casilla.\+coord.\+second() $<$= 9 
+
+0 $<$= valor $<$= 9 (Solo valdrá 0 si la casilla no está escrita aún) 
+\end{DoxyInvariant}
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classCasilla_a724097ecbb237fd05c6d43adcf3d5fb9}\label{classCasilla_a724097ecbb237fd05c6d43adcf3d5fb9}} 
+\index{Casilla@{Casilla}!Casilla@{Casilla}}
+\index{Casilla@{Casilla}!Casilla@{Casilla}}
+\doxysubsubsection{\texorpdfstring{Casilla()}{Casilla()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Casilla\+::\+Casilla (\begin{DoxyParamCaption}\item[{pair$<$ int, int $>$}]{coord,  }\item[{int}]{valor = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Constructor de la clase con unas coordenadas y con un valor preciso. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em coord} & Coordenadas de la casilla en el tablero \\
+\hline
+{\em valor} & Valor que guarda la casilla \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Crea la casilla precisada 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondición}
+{\itshape 0} $<$= coord.\+first(), coord.\+second() $<$ 9 
+
+{\itshape valor} 1 $<$= valor $<$= 9 
+\end{DoxyPrecond}
+\mbox{\Hypertarget{classCasilla_a3845e29668cd4299582334c29f3e28a8}\label{classCasilla_a3845e29668cd4299582334c29f3e28a8}} 
+\index{Casilla@{Casilla}!Casilla@{Casilla}}
+\index{Casilla@{Casilla}!Casilla@{Casilla}}
+\doxysubsubsection{\texorpdfstring{Casilla()}{Casilla()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Casilla\+::\+Casilla (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor sin argumentos. 
+
+\begin{DoxyReturn}{Devuelve}
+Objeto por defecto de la clase \mbox{\hyperlink{classCasilla}{Casilla}} 
+\end{DoxyReturn}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classCasilla_a89d93ae84920c13dfdced27ac99dba40}\label{classCasilla_a89d93ae84920c13dfdced27ac99dba40}} 
+\index{Casilla@{Casilla}!getCoord@{getCoord}}
+\index{getCoord@{getCoord}!Casilla@{Casilla}}
+\doxysubsubsection{\texorpdfstring{getCoord()}{getCoord()}}
+{\footnotesize\ttfamily pair$<$int,int$>$ Casilla\+::get\+Coord (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Recupera coordenadas de la casilla. 
+
+\begin{DoxyReturn}{Devuelve}
+Par de enteros con las coordenadas 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCasilla_a745eff6482698bfd3fdd8980f0557e87}\label{classCasilla_a745eff6482698bfd3fdd8980f0557e87}} 
+\index{Casilla@{Casilla}!getValor@{getValor}}
+\index{getValor@{getValor}!Casilla@{Casilla}}
+\doxysubsubsection{\texorpdfstring{getValor()}{getValor()}}
+{\footnotesize\ttfamily int Casilla\+::get\+Valor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Recupera valor de la casilla. 
+
+\begin{DoxyReturn}{Devuelve}
+Valor que guarda la casilla 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCasilla_a1c0160ba7ff9c92f2458c893b3d272af}\label{classCasilla_a1c0160ba7ff9c92f2458c893b3d272af}} 
+\index{Casilla@{Casilla}!setCoord@{setCoord}}
+\index{setCoord@{setCoord}!Casilla@{Casilla}}
+\doxysubsubsection{\texorpdfstring{setCoord()}{setCoord()}}
+{\footnotesize\ttfamily void Casilla\+::set\+Coord (\begin{DoxyParamCaption}\item[{pair$<$ int, int $>$}]{coord }\end{DoxyParamCaption})}
+
+
+
+Fija coordenadas de la casilla. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em coord} & Coordenadas que se pasan \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondición}
+Las coordenadas son válidas en un Sudoku 
+\end{DoxyPrecond}
+\mbox{\Hypertarget{classCasilla_ae5e317a9a69742d2b98620a77774f944}\label{classCasilla_ae5e317a9a69742d2b98620a77774f944}} 
+\index{Casilla@{Casilla}!setValor@{setValor}}
+\index{setValor@{setValor}!Casilla@{Casilla}}
+\doxysubsubsection{\texorpdfstring{setValor()}{setValor()}}
+{\footnotesize\ttfamily void Casilla\+::set\+Valor (\begin{DoxyParamCaption}\item[{int}]{valor }\end{DoxyParamCaption})}
+
+
+
+Fija valor de la casilla. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em valor} & Valor que se escribirá en la casilla \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondición}
+1$<$=valor$<$=9 
+\end{DoxyPrecond}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classCasilla_a8a47c931a6177815a261efde01b6a863}\label{classCasilla_a8a47c931a6177815a261efde01b6a863}} 
+\index{Casilla@{Casilla}!coord@{coord}}
+\index{coord@{coord}!Casilla@{Casilla}}
+\doxysubsubsection{\texorpdfstring{coord}{coord}}
+{\footnotesize\ttfamily pair$<$int, int$>$ Casilla\+::coord\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Un dato pair que indica la posición en el tablero mediante la fila y la columna en este orden. 
+
+\begin{DoxyPrecond}{Precondición}
+0 $<$ casilla.\+coord.\+first(), casilla.\+coord.\+second() $<$= 9 
+\end{DoxyPrecond}
+\mbox{\Hypertarget{classCasilla_a099239d7a7cbcc33c4a44575f5113aff}\label{classCasilla_a099239d7a7cbcc33c4a44575f5113aff}} 
+\index{Casilla@{Casilla}!valor@{valor}}
+\index{valor@{valor}!Casilla@{Casilla}}
+\doxysubsubsection{\texorpdfstring{valor}{valor}}
+{\footnotesize\ttfamily int Casilla\+::valor\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Número de la casilla. 
+
+\begin{DoxyPrecond}{Precondición}
+1 $<$= {\ttfamily valor} $<$= 9 (Solo puede tener valor si no esta escrita aún) 
+\end{DoxyPrecond}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Casilla_8h}{Casilla.\+h}}\end{DoxyCompactItemize}

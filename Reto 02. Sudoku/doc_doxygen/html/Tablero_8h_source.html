@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Reto 2. Sudoku Killer: Fichero Fuente include/Tablero.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Reto 2. Sudoku Killer
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Tablero.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Tablero_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef SUDOKU_TABLERO_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define SUDOKU_TABLERO_H</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Grupo_8h.html">Grupo.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classTablero.html">   35</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTablero.html">Tablero</a> {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classTablero.html#a5ab5516422e4b9a36514bdb25130f337">   43</a></span>&#160;    vector&lt;Grupo&gt; <a class="code" href="classTablero.html#a5ab5516422e4b9a36514bdb25130f337">grupos</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classTablero.html#acd980ff230232bc7c0b1d592252ed611">   48</a></span>&#160;    vector&lt;vector&lt;Casilla&gt;&gt; <a class="code" href="classTablero.html#acd980ff230232bc7c0b1d592252ed611">sudoku</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classTablero.html#ab4912f28f1db392e1dd44ddc98bd4f59">   53</a></span>&#160;    <a class="code" href="classTablero.html#ab4912f28f1db392e1dd44ddc98bd4f59">Tablero</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classTablero.html#aeb22a169fffcf69f9789c24c2296e3dc">   60</a></span>&#160;    <a class="code" href="classTablero.html#aeb22a169fffcf69f9789c24c2296e3dc">Tablero</a>(<span class="keyword">const</span> vector&lt;Grupo&gt; &amp;<a class="code" href="classTablero.html#a5ab5516422e4b9a36514bdb25130f337">grupos</a>, <span class="keyword">const</span> vector&lt;vector&lt;Casilla&gt;&gt;&amp; sdk);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classTablero.html#abbe54b010dd36cf69dc01185a00618b3">   68</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="classGrupo.html">Grupo</a> &amp;<a class="code" href="classTablero.html#abbe54b010dd36cf69dc01185a00618b3">get_grupo</a> (<span class="keywordtype">int</span> pos) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classTablero.html#a42bc19abfc635802ed9d3cb7dcc5d7d3">   79</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTablero.html#a42bc19abfc635802ed9d3cb7dcc5d7d3">set_casilla</a>(<span class="keyword">const</span> <a class="code" href="classCasilla.html">Casilla</a> &amp;casilla_escrita, <span class="keywordtype">bool</span> <a class="code" href="classTablero.html#a602a384d1860c0b75ad6c143d4a81e04">limpiar</a> = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classTablero.html#aa09223075a7a2206544917484f01ce43">   85</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTablero.html#aa09223075a7a2206544917484f01ce43">escribir_vector</a>(<span class="keyword">const</span> vector&lt;Casilla&gt; &amp;a_escribir);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="classTablero.html#a96a93a35fe95576658f6536bd48b6c57">   92</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTablero.html#a96a93a35fe95576658f6536bd48b6c57">escribir_inmediatos</a>();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classTablero.html#ab0d41d7d1ab19e4824ab68d50fbb4e68">   98</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTablero.html#ab0d41d7d1ab19e4824ab68d50fbb4e68">calcular_todas_combinaciones</a>();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="classTablero.html#a602a384d1860c0b75ad6c143d4a81e04">  107</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTablero.html#a602a384d1860c0b75ad6c143d4a81e04">limpiar</a>(<span class="keyword">const</span> <a class="code" href="classCasilla.html">Casilla</a> &amp;cas);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="classTablero.html#abdb3e9a63b9a68ddd62680a5840847bf">  112</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTablero.html#abdb3e9a63b9a68ddd62680a5840847bf">escribir_determinados</a>();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="classTablero.html#a8a9a0bf405b85e2d8baefccddded11b3">  119</a></span>&#160;    <a class="code" href="classGrupo.html">Grupo</a> &amp;<a class="code" href="classTablero.html#a8a9a0bf405b85e2d8baefccddded11b3">get_grupo</a>(<span class="keyword">const</span> <a class="code" href="classCasilla.html">Casilla</a> &amp;cas) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="classTablero.html#a681270a82e99d05b1dc5f7f289a0cec3">  126</a></span>&#160;    vector&lt;Grupo&gt;  <a class="code" href="classTablero.html#a681270a82e99d05b1dc5f7f289a0cec3">getGrupos_fila</a>(<span class="keyword">const</span> <a class="code" href="classCasilla.html">Casilla</a> &amp;fila) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="classTablero.html#a27d046439b4b25538713ad0e1db39d90">  134</a></span>&#160;    vector&lt;Grupo&gt;  <a class="code" href="classTablero.html#a27d046439b4b25538713ad0e1db39d90">getGrupos_col</a>(<span class="keyword">const</span> <a class="code" href="classCasilla.html">Casilla</a> &amp;col) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="classTablero.html#a092ba5b34fa4b9cd978e020d754bc2d0">  142</a></span>&#160;    vector&lt;Grupo&gt;  <a class="code" href="classTablero.html#a092ba5b34fa4b9cd978e020d754bc2d0">getGrupos_cubo</a>(<span class="keyword">const</span> <a class="code" href="classCasilla.html">Casilla</a> &amp;cubo) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno"><a class="line" href="classTablero.html#a6749cbed675bc3fb99257ea6818b4f62">  149</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTablero.html#a6749cbed675bc3fb99257ea6818b4f62">rellenar_unitarias</a>();</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00172"></a><span class="lineno"><a class="line" href="classTablero.html#a51c3cf8337af705fcd6739974eaad963">  172</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTablero.html#a51c3cf8337af705fcd6739974eaad963">metodo_45</a>();</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="comment">// Para obtener inmediatas, devuelven casilla (identificando grupo)</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="comment">// nula si no hay uno solo en la estructura</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="comment">// Devuelve precisamente la casilla que se puede calcular (única fuera o única dentro)</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno"><a class="line" href="classTablero.html#a0e3f25f726b674e1412a43f16c270f31">  184</a></span>&#160;<span class="comment"></span>    <span class="keyword">const</span> <a class="code" href="classCasilla.html">Casilla</a>&amp; <a class="code" href="classTablero.html#a0e3f25f726b674e1412a43f16c270f31">unico_casillas_fuera_fil</a>(<span class="keyword">const</span> <a class="code" href="classCasilla.html">Casilla</a> &amp;fila, <span class="keywordtype">int</span> desp=0) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
+<div class="line"><a name="l00193"></a><span class="lineno"><a class="line" href="classTablero.html#ac42f7b6babaa045b85eb02630b8259aa">  193</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="classCasilla.html">Casilla</a>&amp; <a class="code" href="classTablero.html#ac42f7b6babaa045b85eb02630b8259aa">unico_casillas_fuera_col</a>(<span class="keyword">const</span> <a class="code" href="classCasilla.html">Casilla</a> &amp;col, <span class="keywordtype">int</span> desp=0) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="classTablero.html#ada1028370bdedf72867f66e97fa8fb97">  205</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="classCasilla.html">Casilla</a>&amp; <a class="code" href="classTablero.html#ada1028370bdedf72867f66e97fa8fb97">unico_casillas_fuera_cubo</a>(<a class="code" href="classCasilla.html">Casilla</a> cubo, <span class="keywordtype">bool</span> desp_dcha=<span class="keyword">false</span>, <span class="keywordtype">bool</span> desp_abj=<span class="keyword">false</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="comment">// Para la limpieza</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
+<div class="line"><a name="l00218"></a><span class="lineno"><a class="line" href="classTablero.html#a245e0df374bff65226957c40ab720a4d">  218</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTablero.html#a245e0df374bff65226957c40ab720a4d">limpiar_basico</a>(<span class="keyword">const</span> <a class="code" href="classCasilla.html">Casilla</a> &amp;cas);</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160; </div>
+<div class="line"><a name="l00234"></a><span class="lineno"><a class="line" href="classTablero.html#aa1f9d773bf046d0728937e2878586783">  234</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTablero.html#aa1f9d773bf046d0728937e2878586783">limpiar_fila</a>(<span class="keyword">const</span> <a class="code" href="classCasilla.html">Casilla</a> &amp;cas);</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
+<div class="line"><a name="l00249"></a><span class="lineno"><a class="line" href="classTablero.html#ab0be25d645cab06e45d889a08c27509d">  249</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTablero.html#ab0be25d645cab06e45d889a08c27509d">limpiar_col</a>(<span class="keyword">const</span> <a class="code" href="classCasilla.html">Casilla</a> &amp;cas);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
+<div class="line"><a name="l00264"></a><span class="lineno"><a class="line" href="classTablero.html#ae58d9ad07cec9734e831e7848e5db593">  264</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTablero.html#ae58d9ad07cec9734e831e7848e5db593">limpiar_cubo</a>(<span class="keyword">const</span> <a class="code" href="classCasilla.html">Casilla</a> &amp;cas);</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160; </div>
+<div class="line"><a name="l00292"></a><span class="lineno"><a class="line" href="classTablero.html#a8bdea9f81c86f3e52c9ed969aade0357">  292</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTablero.html#a8bdea9f81c86f3e52c9ed969aade0357">limpiar_unic_comb</a>(<span class="keyword">const</span> <a class="code" href="classCasilla.html">Casilla</a> &amp;cas);</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;};</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160; </div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160; </div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//SUDOKU_TABLERO_H</span></div>
+<div class="ttc" id="aGrupo_8h_html"><div class="ttname"><a href="Grupo_8h.html">Grupo.h</a></div><div class="ttdoc">Fichero cabecera del TDA Grupo.</div></div>
+<div class="ttc" id="aclassCasilla_html"><div class="ttname"><a href="classCasilla.html">Casilla</a></div><div class="ttdoc">TDA Casilla Representa una única posición de sudoku que puede contener un único valor numérico.</div><div class="ttdef"><b>Definition:</b> Casilla.h:29</div></div>
+<div class="ttc" id="aclassGrupo_html"><div class="ttname"><a href="classGrupo.html">Grupo</a></div><div class="ttdoc">TDA Grupo Representa los conjuntos contiguos de celdas marcados con línea discontinua en un Sudoku Ki...</div><div class="ttdef"><b>Definition:</b> Grupo.h:37</div></div>
+<div class="ttc" id="aclassTablero_html"><div class="ttname"><a href="classTablero.html">Tablero</a></div><div class="ttdoc">TDA Tablero Representa al sudoku en sí; es decir, al tablero 9x9 con las casillas y los grupos.</div><div class="ttdef"><b>Definition:</b> Tablero.h:35</div></div>
+<div class="ttc" id="aclassTablero_html_a092ba5b34fa4b9cd978e020d754bc2d0"><div class="ttname"><a href="classTablero.html#a092ba5b34fa4b9cd978e020d754bc2d0">Tablero::getGrupos_cubo</a></div><div class="ttdeci">vector&lt; Grupo &gt; getGrupos_cubo(const Casilla &amp;cubo) const</div><div class="ttdoc">Devuelve un vector de los grupos que tienen al menos una casilla en ese cubo.</div></div>
+<div class="ttc" id="aclassTablero_html_a0e3f25f726b674e1412a43f16c270f31"><div class="ttname"><a href="classTablero.html#a0e3f25f726b674e1412a43f16c270f31">Tablero::unico_casillas_fuera_fil</a></div><div class="ttdeci">const Casilla &amp; unico_casillas_fuera_fil(const Casilla &amp;fila, int desp=0) const</div><div class="ttdoc">Devuelve la casilla que se puede calcular (única fuera o única dentro). Devuelve casilla nula si no e...</div></div>
+<div class="ttc" id="aclassTablero_html_a245e0df374bff65226957c40ab720a4d"><div class="ttname"><a href="classTablero.html#a245e0df374bff65226957c40ab720a4d">Tablero::limpiar_basico</a></div><div class="ttdeci">void limpiar_basico(const Casilla &amp;cas)</div><div class="ttdoc">Dada la última casilla escrita en el tablero, limpia todas las combinaciones y posiciones de cada est...</div></div>
+<div class="ttc" id="aclassTablero_html_a27d046439b4b25538713ad0e1db39d90"><div class="ttname"><a href="classTablero.html#a27d046439b4b25538713ad0e1db39d90">Tablero::getGrupos_col</a></div><div class="ttdeci">vector&lt; Grupo &gt; getGrupos_col(const Casilla &amp;col) const</div><div class="ttdoc">Devuelve un vector de los grupos que tienen al menos una casilla en esa columna.</div></div>
+<div class="ttc" id="aclassTablero_html_a42bc19abfc635802ed9d3cb7dcc5d7d3"><div class="ttname"><a href="classTablero.html#a42bc19abfc635802ed9d3cb7dcc5d7d3">Tablero::set_casilla</a></div><div class="ttdeci">void set_casilla(const Casilla &amp;casilla_escrita, bool limpiar=true)</div><div class="ttdoc">Modifica el grupo de la casilla que escribe eliminándola de este, con el metodo quitar_casilla (Casil...</div></div>
+<div class="ttc" id="aclassTablero_html_a51c3cf8337af705fcd6739974eaad963"><div class="ttname"><a href="classTablero.html#a51c3cf8337af705fcd6739974eaad963">Tablero::metodo_45</a></div><div class="ttdeci">void metodo_45()</div><div class="ttdoc">Escribe las casillas determinadas por el método del 45 (o derivados inmediatos).</div></div>
+<div class="ttc" id="aclassTablero_html_a5ab5516422e4b9a36514bdb25130f337"><div class="ttname"><a href="classTablero.html#a5ab5516422e4b9a36514bdb25130f337">Tablero::grupos</a></div><div class="ttdeci">vector&lt; Grupo &gt; grupos</div><div class="ttdoc">Vector de los grupos que quedan en el sudoku.</div><div class="ttdef"><b>Definition:</b> Tablero.h:43</div></div>
+<div class="ttc" id="aclassTablero_html_a602a384d1860c0b75ad6c143d4a81e04"><div class="ttname"><a href="classTablero.html#a602a384d1860c0b75ad6c143d4a81e04">Tablero::limpiar</a></div><div class="ttdeci">void limpiar(const Casilla &amp;cas)</div><div class="ttdoc">Actualiza el tablero. LLama a:</div></div>
+<div class="ttc" id="aclassTablero_html_a6749cbed675bc3fb99257ea6818b4f62"><div class="ttname"><a href="classTablero.html#a6749cbed675bc3fb99257ea6818b4f62">Tablero::rellenar_unitarias</a></div><div class="ttdeci">void rellenar_unitarias()</div><div class="ttdoc">Rellena los grupos que tienen una sola casilla.</div></div>
+<div class="ttc" id="aclassTablero_html_a681270a82e99d05b1dc5f7f289a0cec3"><div class="ttname"><a href="classTablero.html#a681270a82e99d05b1dc5f7f289a0cec3">Tablero::getGrupos_fila</a></div><div class="ttdeci">vector&lt; Grupo &gt; getGrupos_fila(const Casilla &amp;fila) const</div><div class="ttdoc">Devuelve un vector de los grupos que tienen al menos una casilla en esa fila.</div></div>
+<div class="ttc" id="aclassTablero_html_a8a9a0bf405b85e2d8baefccddded11b3"><div class="ttname"><a href="classTablero.html#a8a9a0bf405b85e2d8baefccddded11b3">Tablero::get_grupo</a></div><div class="ttdeci">Grupo &amp; get_grupo(const Casilla &amp;cas) const</div><div class="ttdoc">Devuelve el grupo al que esta casilla pertenece.</div></div>
+<div class="ttc" id="aclassTablero_html_a8bdea9f81c86f3e52c9ed969aade0357"><div class="ttname"><a href="classTablero.html#a8bdea9f81c86f3e52c9ed969aade0357">Tablero::limpiar_unic_comb</a></div><div class="ttdeci">void limpiar_unic_comb(const Casilla &amp;cas)</div><div class="ttdoc">Sobre cada uno de los grupos tocados por las estructuras a las que cas pertenece se comprobará:</div></div>
+<div class="ttc" id="aclassTablero_html_a96a93a35fe95576658f6536bd48b6c57"><div class="ttname"><a href="classTablero.html#a96a93a35fe95576658f6536bd48b6c57">Tablero::escribir_inmediatos</a></div><div class="ttdeci">void escribir_inmediatos()</div><div class="ttdoc">Escribe las casillas inmediatas obtenidas:</div></div>
+<div class="ttc" id="aclassTablero_html_aa09223075a7a2206544917484f01ce43"><div class="ttname"><a href="classTablero.html#aa09223075a7a2206544917484f01ce43">Tablero::escribir_vector</a></div><div class="ttdeci">void escribir_vector(const vector&lt; Casilla &gt; &amp;a_escribir)</div><div class="ttdoc">Escribe un vector de casillas en el tablero. Llama a Tablero::set_casilla()</div></div>
+<div class="ttc" id="aclassTablero_html_aa1f9d773bf046d0728937e2878586783"><div class="ttname"><a href="classTablero.html#aa1f9d773bf046d0728937e2878586783">Tablero::limpiar_fila</a></div><div class="ttdeci">void limpiar_fila(const Casilla &amp;cas)</div><div class="ttdoc">Dada la última casilla escrita en el tablero (o simulada), itera sobre todos los grupos con casillas ...</div></div>
+<div class="ttc" id="aclassTablero_html_ab0be25d645cab06e45d889a08c27509d"><div class="ttname"><a href="classTablero.html#ab0be25d645cab06e45d889a08c27509d">Tablero::limpiar_col</a></div><div class="ttdeci">void limpiar_col(const Casilla &amp;cas)</div><div class="ttdoc">Dada la última casilla escrita (o simulada) en el tablero, itera sobre todos los grupos con casillas ...</div></div>
+<div class="ttc" id="aclassTablero_html_ab0d41d7d1ab19e4824ab68d50fbb4e68"><div class="ttname"><a href="classTablero.html#ab0d41d7d1ab19e4824ab68d50fbb4e68">Tablero::calcular_todas_combinaciones</a></div><div class="ttdeci">void calcular_todas_combinaciones()</div><div class="ttdoc">Rellena todas las combinaciones posibles (cada una con todas sus posiciones). LLama a calcular combin...</div></div>
+<div class="ttc" id="aclassTablero_html_ab4912f28f1db392e1dd44ddc98bd4f59"><div class="ttname"><a href="classTablero.html#ab4912f28f1db392e1dd44ddc98bd4f59">Tablero::Tablero</a></div><div class="ttdeci">Tablero()</div><div class="ttdoc">Constructor sin argumentos.</div></div>
+<div class="ttc" id="aclassTablero_html_abbe54b010dd36cf69dc01185a00618b3"><div class="ttname"><a href="classTablero.html#abbe54b010dd36cf69dc01185a00618b3">Tablero::get_grupo</a></div><div class="ttdeci">const Grupo &amp; get_grupo(int pos) const</div><div class="ttdoc">Devuelve el grupo correspondiente a la posición de este en el vector sudoku.</div></div>
+<div class="ttc" id="aclassTablero_html_abdb3e9a63b9a68ddd62680a5840847bf"><div class="ttname"><a href="classTablero.html#abdb3e9a63b9a68ddd62680a5840847bf">Tablero::escribir_determinados</a></div><div class="ttdeci">void escribir_determinados()</div><div class="ttdoc">Itera sobre cada grupo llamando a escribe_determinados()</div></div>
+<div class="ttc" id="aclassTablero_html_ac42f7b6babaa045b85eb02630b8259aa"><div class="ttname"><a href="classTablero.html#ac42f7b6babaa045b85eb02630b8259aa">Tablero::unico_casillas_fuera_col</a></div><div class="ttdeci">const Casilla &amp; unico_casillas_fuera_col(const Casilla &amp;col, int desp=0) const</div><div class="ttdoc">Devuelve la casilla que se puede calcular (única fuera o única dentro). Devuelve casilla nula si no e...</div></div>
+<div class="ttc" id="aclassTablero_html_acd980ff230232bc7c0b1d592252ed611"><div class="ttname"><a href="classTablero.html#acd980ff230232bc7c0b1d592252ed611">Tablero::sudoku</a></div><div class="ttdeci">vector&lt; vector&lt; Casilla &gt; &gt; sudoku</div><div class="ttdoc">Matriz de Casillas que representan el tablero del sudoku en sí.</div><div class="ttdef"><b>Definition:</b> Tablero.h:48</div></div>
+<div class="ttc" id="aclassTablero_html_ada1028370bdedf72867f66e97fa8fb97"><div class="ttname"><a href="classTablero.html#ada1028370bdedf72867f66e97fa8fb97">Tablero::unico_casillas_fuera_cubo</a></div><div class="ttdeci">const Casilla &amp; unico_casillas_fuera_cubo(Casilla cubo, bool desp_dcha=false, bool desp_abj=false) const</div><div class="ttdoc">Devuelve la casilla que se puede calcular (única fuera o única dentro). Devuelve casilla nula si no e...</div></div>
+<div class="ttc" id="aclassTablero_html_ae58d9ad07cec9734e831e7848e5db593"><div class="ttname"><a href="classTablero.html#ae58d9ad07cec9734e831e7848e5db593">Tablero::limpiar_cubo</a></div><div class="ttdeci">void limpiar_cubo(const Casilla &amp;cas)</div><div class="ttdoc">Dada la última casilla escrita (o simulada) en el tablero, itera sobre todos los grupos con casillas ...</div></div>
+<div class="ttc" id="aclassTablero_html_aeb22a169fffcf69f9789c24c2296e3dc"><div class="ttname"><a href="classTablero.html#aeb22a169fffcf69f9789c24c2296e3dc">Tablero::Tablero</a></div><div class="ttdeci">Tablero(const vector&lt; Grupo &gt; &amp;grupos, const vector&lt; vector&lt; Casilla &gt;&gt; &amp;sdk)</div><div class="ttdoc">Constructor con vector de grupos y vector de vectores de casillas.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

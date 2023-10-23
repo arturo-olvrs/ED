@@ -1,0 +1,50 @@
+/*! \mainpage Documentación del Sudoku Killer
+
+# Introducción
+Este proyecto está compuesto de tres archivos de cabecera a forma de propuesta de representación
+algorítmica para la resolución del problema conocido como Sudoku Killer
+(las [reglas del sudoku killer](https://en.wikipedia.org/wiki/Killer_sudoku)).
+
+# Propuesta de resolución usando nuestra representación
+
+A continuación, detallamos cómo creemos podría resolverse cualquier Sudoku Killer (soluble) sistemáticamente
+haciendo uso de nuestros métodos (aunque no se precise explícitamente, en la siguiente propuesta no se
+escribirá nada que no pueda hacerse con nuestras clases).
+
+
+Lo primero que hacemos después de inicializar el tablero es obtener todas las combinaciones posibles asociadas
+a cada grupo y para cada una de esas todas sus posiciones posibles.
+
+Seguidamente, se procedería con la obtención de las casillas llamadas "inmediatas" por no requerir más que la posición
+inicial para determinarse. Estas son:
+- Las pertenecientes a grupos unitarios
+- Las obtenidas con el "método del 45 (o múltiplos)" detallado en los ficheros de cabecera (Tablero::metodo_45()).
+
+Como se ha especificado en los comentarios en los ficheros
+de cabecera, por cada escritura se llamará al método Tablero::limpiar() de la clase tablero, que se ocupará de:
+- Tachar las correspondientes posiciones o combinaciones (esto iterando sobre cada fila, columna, y cubo 3x3 que contengan a la casilla escrita)
+        para evitar que un mismo dígito se encuentre más de una vez en la misma estructura.
+        Este es el método Tablero::limpiar_basico()
+- Otro limpiado más sutil: por cada grupo tocado por las estructuras anteriormente mencionadas, nos preguntamos si:
+    - Está enteramente contenido en alguna estructura (fila, columna o cubo)
+    - Le queda una única combinación posible (sumandos sin posición especificada)
+
+    En ese caso, obviamente, los dígitos de esa combinación no van a aparecer en la estructura contenedora (reglas del Sudoku)
+    y por tanto las "tachamos" (de esto se ocupa el Tablero::limpiar_unic_comb(), que limpia a su vez sobre la estructura contenedora).
+
+Tras hacer estos procesos de limpieza sobre cada casilla "inmediata", se termina lo que llamaremos UNA ITERACIÓN DE LIMPIEZA en el Sudoku.
+Es decir, obtención de las casillas determinadas en un "snapshot" de la situación del Sudoku, y la escritura
+y limpieza de cada una de esas casillas. Al término de cada una de estas iteraciones de limpieza, comienza una nueva
+examinando la situación del sudoku y obteniendo las nuevas determinadas.
+
+Terminaremos este proceso en el momento
+en el que no "queden grupos" en el tablero, ya que para cada casilla que escribamos (y se encuentre en el borde del grupo
+al que pertenece) la eliminamos de éste, quitando el grupo del sudoku cuando no le queden casillas.
+
+
+
+@author Joaquín Avilés de la Fuente
+@author Daniel Hidalgo Chica
+@author Arturo Olivares Martos
+
+*/

@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Reto 2. Sudoku Killer: Documentación del Sudoku Killer</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Reto 2. Sudoku Killer
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">Documentación del Sudoku Killer </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1><a class="anchor" id="autotoc_md0"></a>
+Introducción</h1>
+<p>Este proyecto está compuesto de tres archivos de cabecera a forma de propuesta de representación algorítmica para la resolución del problema conocido como Sudoku Killer (las <a href="https://en.wikipedia.org/wiki/Killer_sudoku">reglas del sudoku killer</a>).</p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Propuesta de resolución usando nuestra representación</h1>
+<p>A continuación, detallamos cómo creemos podría resolverse cualquier Sudoku Killer (soluble) sistemáticamente haciendo uso de nuestros métodos (aunque no se precise explícitamente, en la siguiente propuesta no se escribirá nada que no pueda hacerse con nuestras clases).</p>
+<p>Lo primero que hacemos después de inicializar el tablero es obtener todas las combinaciones posibles asociadas a cada grupo y para cada una de esas todas sus posiciones posibles.</p>
+<p>Seguidamente, se procedería con la obtención de las casillas llamadas "inmediatas" por no requerir más que la posición inicial para determinarse. Estas son:</p><ul>
+<li>Las pertenecientes a grupos unitarios</li>
+<li>Las obtenidas con el "método del 45 (o múltiplos)" detallado en los ficheros de cabecera (<a class="el" href="classTablero.html#a51c3cf8337af705fcd6739974eaad963" title="Escribe las casillas determinadas por el método del 45 (o derivados inmediatos).">Tablero::metodo_45()</a>).</li>
+</ul>
+<p>Como se ha especificado en los comentarios en los ficheros de cabecera, por cada escritura se llamará al método <a class="el" href="classTablero.html#a602a384d1860c0b75ad6c143d4a81e04" title="Actualiza el tablero. LLama a:">Tablero::limpiar()</a> de la clase tablero, que se ocupará de:</p><ul>
+<li>Tachar las correspondientes posiciones o combinaciones (esto iterando sobre cada fila, columna, y cubo 3x3 que contengan a la casilla escrita) para evitar que un mismo dígito se encuentre más de una vez en la misma estructura. Este es el método <a class="el" href="classTablero.html#a245e0df374bff65226957c40ab720a4d" title="Dada la última casilla escrita en el tablero, limpia todas las combinaciones y posiciones de cada est...">Tablero::limpiar_basico()</a></li>
+<li><p class="startli">Otro limpiado más sutil: por cada grupo tocado por las estructuras anteriormente mencionadas, nos preguntamos si:</p><ul>
+<li>Está enteramente contenido en alguna estructura (fila, columna o cubo)</li>
+<li>Le queda una única combinación posible (sumandos sin posición especificada)</li>
+</ul>
+<p class="startli">En ese caso, obviamente, los dígitos de esa combinación no van a aparecer en la estructura contenedora (reglas del Sudoku) y por tanto las "tachamos" (de esto se ocupa el <a class="el" href="classTablero.html#a8bdea9f81c86f3e52c9ed969aade0357" title="Sobre cada uno de los grupos tocados por las estructuras a las que cas pertenece se comprobará:">Tablero::limpiar_unic_comb()</a>, que limpia a su vez sobre la estructura contenedora).</p>
+</li>
+</ul>
+<p>Tras hacer estos procesos de limpieza sobre cada casilla "inmediata", se termina lo que llamaremos UNA ITERACIÓN DE LIMPIEZA en el Sudoku. Es decir, obtención de las casillas determinadas en un "snapshot" de la situación del Sudoku, y la escritura y limpieza de cada una de esas casillas. Al término de cada una de estas iteraciones de limpieza, comienza una nueva examinando la situación del sudoku y obteniendo las nuevas determinadas.</p>
+<p>Terminaremos este proceso en el momento en el que no "queden grupos" en el tablero, ya que para cada casilla que escribamos (y se encuentre en el borde del grupo al que pertenece) la eliminamos de éste, quitando el grupo del sudoku cuando no le queden casillas.</p>
+<dl class="section author"><dt>Autor</dt><dd>Joaquín Avilés de la Fuente </dd>
+<dd>
+Daniel Hidalgo Chica </dd>
+<dd>
+Arturo Olivares Martos </dd></dl>
+</div></div><!-- PageDoc -->
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

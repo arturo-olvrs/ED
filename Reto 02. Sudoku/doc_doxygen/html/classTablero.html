@@ -1,0 +1,959 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Reto 2. Sudoku Killer: Referencia de la Clase Tablero</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Reto 2. Sudoku Killer
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Métodos públicos</a> &#124;
+<a href="#pri-methods">Métodos privados</a> &#124;
+<a href="#pri-attribs">Atributos privados</a> &#124;
+<a href="classTablero-members.html">Lista de todos los miembros</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia de la Clase Tablero</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>TDA <a class="el" href="classTablero.html" title="TDA Tablero Representa al sudoku en sí; es decir, al tablero 9x9 con las casillas y los grupos.">Tablero</a> Representa al sudoku en sí; es decir, al tablero 9x9 con las casillas y los grupos.  
+ <a href="classTablero.html#details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Tablero_8h_source.html">Tablero.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:ab4912f28f1db392e1dd44ddc98bd4f59"><td class="memItemLeft" align="right" valign="top"><a id="ab4912f28f1db392e1dd44ddc98bd4f59"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTablero.html#ab4912f28f1db392e1dd44ddc98bd4f59">Tablero</a> ()</td></tr>
+<tr class="memdesc:ab4912f28f1db392e1dd44ddc98bd4f59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor sin argumentos. <br /></td></tr>
+<tr class="separator:ab4912f28f1db392e1dd44ddc98bd4f59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb22a169fffcf69f9789c24c2296e3dc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTablero.html#aeb22a169fffcf69f9789c24c2296e3dc">Tablero</a> (const vector&lt; <a class="el" href="classGrupo.html">Grupo</a> &gt; &amp;<a class="el" href="classTablero.html#a5ab5516422e4b9a36514bdb25130f337">grupos</a>, const vector&lt; vector&lt; <a class="el" href="classCasilla.html">Casilla</a> &gt;&gt; &amp;sdk)</td></tr>
+<tr class="memdesc:aeb22a169fffcf69f9789c24c2296e3dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor con vector de grupos y vector de vectores de casillas.  <a href="classTablero.html#aeb22a169fffcf69f9789c24c2296e3dc">Más...</a><br /></td></tr>
+<tr class="separator:aeb22a169fffcf69f9789c24c2296e3dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbe54b010dd36cf69dc01185a00618b3"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classGrupo.html">Grupo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTablero.html#abbe54b010dd36cf69dc01185a00618b3">get_grupo</a> (int pos) const</td></tr>
+<tr class="memdesc:abbe54b010dd36cf69dc01185a00618b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el grupo correspondiente a la posición de este en el vector <code>sudoku</code>.  <a href="classTablero.html#abbe54b010dd36cf69dc01185a00618b3">Más...</a><br /></td></tr>
+<tr class="separator:abbe54b010dd36cf69dc01185a00618b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42bc19abfc635802ed9d3cb7dcc5d7d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTablero.html#a42bc19abfc635802ed9d3cb7dcc5d7d3">set_casilla</a> (const <a class="el" href="classCasilla.html">Casilla</a> &amp;casilla_escrita, bool <a class="el" href="classTablero.html#a602a384d1860c0b75ad6c143d4a81e04">limpiar</a>=true)</td></tr>
+<tr class="memdesc:a42bc19abfc635802ed9d3cb7dcc5d7d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifica el grupo de la casilla que escribe eliminándola de este, con el metodo quitar_casilla (<a class="el" href="classCasilla.html" title="TDA Casilla Representa una única posición de sudoku que puede contener un único valor numérico.">Casilla</a> cas) de la clase <a class="el" href="classGrupo.html" title="TDA Grupo Representa los conjuntos contiguos de celdas marcados con línea discontinua en un Sudoku Ki...">Grupo</a> y modifica el sudoku colocando el valor a la casilla correspondiente.  <a href="classTablero.html#a42bc19abfc635802ed9d3cb7dcc5d7d3">Más...</a><br /></td></tr>
+<tr class="separator:a42bc19abfc635802ed9d3cb7dcc5d7d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa09223075a7a2206544917484f01ce43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTablero.html#aa09223075a7a2206544917484f01ce43">escribir_vector</a> (const vector&lt; <a class="el" href="classCasilla.html">Casilla</a> &gt; &amp;a_escribir)</td></tr>
+<tr class="memdesc:aa09223075a7a2206544917484f01ce43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escribe un vector de casillas en el tablero. Llama a <a class="el" href="classTablero.html#a42bc19abfc635802ed9d3cb7dcc5d7d3" title="Modifica el grupo de la casilla que escribe eliminándola de este, con el metodo quitar_casilla (Casil...">Tablero::set_casilla()</a>  <a href="classTablero.html#aa09223075a7a2206544917484f01ce43">Más...</a><br /></td></tr>
+<tr class="separator:aa09223075a7a2206544917484f01ce43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96a93a35fe95576658f6536bd48b6c57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTablero.html#a96a93a35fe95576658f6536bd48b6c57">escribir_inmediatos</a> ()</td></tr>
+<tr class="memdesc:a96a93a35fe95576658f6536bd48b6c57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escribe las casillas inmediatas obtenidas:  <a href="classTablero.html#a96a93a35fe95576658f6536bd48b6c57">Más...</a><br /></td></tr>
+<tr class="separator:a96a93a35fe95576658f6536bd48b6c57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0d41d7d1ab19e4824ab68d50fbb4e68"><td class="memItemLeft" align="right" valign="top"><a id="ab0d41d7d1ab19e4824ab68d50fbb4e68"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTablero.html#ab0d41d7d1ab19e4824ab68d50fbb4e68">calcular_todas_combinaciones</a> ()</td></tr>
+<tr class="memdesc:ab0d41d7d1ab19e4824ab68d50fbb4e68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rellena todas las combinaciones posibles (cada una con todas sus posiciones). LLama a calcular combinaciones de cada grupo de la clase <a class="el" href="classGrupo.html" title="TDA Grupo Representa los conjuntos contiguos de celdas marcados con línea discontinua en un Sudoku Ki...">Grupo</a>. <br /></td></tr>
+<tr class="separator:ab0d41d7d1ab19e4824ab68d50fbb4e68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a602a384d1860c0b75ad6c143d4a81e04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTablero.html#a602a384d1860c0b75ad6c143d4a81e04">limpiar</a> (const <a class="el" href="classCasilla.html">Casilla</a> &amp;cas)</td></tr>
+<tr class="memdesc:a602a384d1860c0b75ad6c143d4a81e04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualiza el tablero. LLama a:  <a href="classTablero.html#a602a384d1860c0b75ad6c143d4a81e04">Más...</a><br /></td></tr>
+<tr class="separator:a602a384d1860c0b75ad6c143d4a81e04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdb3e9a63b9a68ddd62680a5840847bf"><td class="memItemLeft" align="right" valign="top"><a id="abdb3e9a63b9a68ddd62680a5840847bf"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTablero.html#abdb3e9a63b9a68ddd62680a5840847bf">escribir_determinados</a> ()</td></tr>
+<tr class="memdesc:abdb3e9a63b9a68ddd62680a5840847bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Itera sobre cada grupo llamando a escribe_determinados() <br /></td></tr>
+<tr class="separator:abdb3e9a63b9a68ddd62680a5840847bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Métodos privados</h2></td></tr>
+<tr class="memitem:a8a9a0bf405b85e2d8baefccddded11b3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGrupo.html">Grupo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTablero.html#a8a9a0bf405b85e2d8baefccddded11b3">get_grupo</a> (const <a class="el" href="classCasilla.html">Casilla</a> &amp;cas) const</td></tr>
+<tr class="memdesc:a8a9a0bf405b85e2d8baefccddded11b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el grupo al que esta casilla pertenece.  <a href="classTablero.html#a8a9a0bf405b85e2d8baefccddded11b3">Más...</a><br /></td></tr>
+<tr class="separator:a8a9a0bf405b85e2d8baefccddded11b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a681270a82e99d05b1dc5f7f289a0cec3"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="classGrupo.html">Grupo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTablero.html#a681270a82e99d05b1dc5f7f289a0cec3">getGrupos_fila</a> (const <a class="el" href="classCasilla.html">Casilla</a> &amp;fila) const</td></tr>
+<tr class="memdesc:a681270a82e99d05b1dc5f7f289a0cec3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve un vector de los grupos que tienen al menos una casilla en esa fila.  <a href="classTablero.html#a681270a82e99d05b1dc5f7f289a0cec3">Más...</a><br /></td></tr>
+<tr class="separator:a681270a82e99d05b1dc5f7f289a0cec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27d046439b4b25538713ad0e1db39d90"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="classGrupo.html">Grupo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTablero.html#a27d046439b4b25538713ad0e1db39d90">getGrupos_col</a> (const <a class="el" href="classCasilla.html">Casilla</a> &amp;col) const</td></tr>
+<tr class="memdesc:a27d046439b4b25538713ad0e1db39d90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve un vector de los grupos que tienen al menos una casilla en esa columna.  <a href="classTablero.html#a27d046439b4b25538713ad0e1db39d90">Más...</a><br /></td></tr>
+<tr class="separator:a27d046439b4b25538713ad0e1db39d90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a092ba5b34fa4b9cd978e020d754bc2d0"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="classGrupo.html">Grupo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTablero.html#a092ba5b34fa4b9cd978e020d754bc2d0">getGrupos_cubo</a> (const <a class="el" href="classCasilla.html">Casilla</a> &amp;cubo) const</td></tr>
+<tr class="memdesc:a092ba5b34fa4b9cd978e020d754bc2d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve un vector de los grupos que tienen al menos una casilla en ese cubo.  <a href="classTablero.html#a092ba5b34fa4b9cd978e020d754bc2d0">Más...</a><br /></td></tr>
+<tr class="separator:a092ba5b34fa4b9cd978e020d754bc2d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6749cbed675bc3fb99257ea6818b4f62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTablero.html#a6749cbed675bc3fb99257ea6818b4f62">rellenar_unitarias</a> ()</td></tr>
+<tr class="memdesc:a6749cbed675bc3fb99257ea6818b4f62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rellena los grupos que tienen una sola casilla.  <a href="classTablero.html#a6749cbed675bc3fb99257ea6818b4f62">Más...</a><br /></td></tr>
+<tr class="separator:a6749cbed675bc3fb99257ea6818b4f62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51c3cf8337af705fcd6739974eaad963"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTablero.html#a51c3cf8337af705fcd6739974eaad963">metodo_45</a> ()</td></tr>
+<tr class="memdesc:a51c3cf8337af705fcd6739974eaad963"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escribe las casillas determinadas por el método del 45 (o derivados inmediatos).  <a href="classTablero.html#a51c3cf8337af705fcd6739974eaad963">Más...</a><br /></td></tr>
+<tr class="separator:a51c3cf8337af705fcd6739974eaad963"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e3f25f726b674e1412a43f16c270f31"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classCasilla.html">Casilla</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTablero.html#a0e3f25f726b674e1412a43f16c270f31">unico_casillas_fuera_fil</a> (const <a class="el" href="classCasilla.html">Casilla</a> &amp;fila, int desp=0) const</td></tr>
+<tr class="memdesc:a0e3f25f726b674e1412a43f16c270f31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve la casilla que se puede calcular (única fuera o única dentro). Devuelve casilla nula si no existe una única fuera o dentro de la estructura.  <a href="classTablero.html#a0e3f25f726b674e1412a43f16c270f31">Más...</a><br /></td></tr>
+<tr class="separator:a0e3f25f726b674e1412a43f16c270f31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac42f7b6babaa045b85eb02630b8259aa"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classCasilla.html">Casilla</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTablero.html#ac42f7b6babaa045b85eb02630b8259aa">unico_casillas_fuera_col</a> (const <a class="el" href="classCasilla.html">Casilla</a> &amp;col, int desp=0) const</td></tr>
+<tr class="memdesc:ac42f7b6babaa045b85eb02630b8259aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve la casilla que se puede calcular (única fuera o única dentro). Devuelve casilla nula si no existe una única fuera o dentro de la estructura.  <a href="classTablero.html#ac42f7b6babaa045b85eb02630b8259aa">Más...</a><br /></td></tr>
+<tr class="separator:ac42f7b6babaa045b85eb02630b8259aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada1028370bdedf72867f66e97fa8fb97"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classCasilla.html">Casilla</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTablero.html#ada1028370bdedf72867f66e97fa8fb97">unico_casillas_fuera_cubo</a> (<a class="el" href="classCasilla.html">Casilla</a> cubo, bool desp_dcha=false, bool desp_abj=false) const</td></tr>
+<tr class="memdesc:ada1028370bdedf72867f66e97fa8fb97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve la casilla que se puede calcular (única fuera o única dentro). Devuelve casilla nula si no existe una única fuera o dentro de la estructura.  <a href="classTablero.html#ada1028370bdedf72867f66e97fa8fb97">Más...</a><br /></td></tr>
+<tr class="separator:ada1028370bdedf72867f66e97fa8fb97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a245e0df374bff65226957c40ab720a4d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTablero.html#a245e0df374bff65226957c40ab720a4d">limpiar_basico</a> (const <a class="el" href="classCasilla.html">Casilla</a> &amp;cas)</td></tr>
+<tr class="memdesc:a245e0df374bff65226957c40ab720a4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dada la última casilla escrita en el tablero, limpia todas las combinaciones y posiciones de cada estructura que contenga a <em>cas</em>.  <a href="classTablero.html#a245e0df374bff65226957c40ab720a4d">Más...</a><br /></td></tr>
+<tr class="separator:a245e0df374bff65226957c40ab720a4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1f9d773bf046d0728937e2878586783"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTablero.html#aa1f9d773bf046d0728937e2878586783">limpiar_fila</a> (const <a class="el" href="classCasilla.html">Casilla</a> &amp;cas)</td></tr>
+<tr class="memdesc:aa1f9d773bf046d0728937e2878586783"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dada la última casilla escrita en el tablero (o simulada), itera sobre todos los grupos con casillas dentro de la fila a la que <em>cas</em> pertenece.  <a href="classTablero.html#aa1f9d773bf046d0728937e2878586783">Más...</a><br /></td></tr>
+<tr class="separator:aa1f9d773bf046d0728937e2878586783"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0be25d645cab06e45d889a08c27509d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTablero.html#ab0be25d645cab06e45d889a08c27509d">limpiar_col</a> (const <a class="el" href="classCasilla.html">Casilla</a> &amp;cas)</td></tr>
+<tr class="memdesc:ab0be25d645cab06e45d889a08c27509d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dada la última casilla escrita (o simulada) en el tablero, itera sobre todos los grupos con casillas dentro de la col a la que <em>cas</em> pertenece.  <a href="classTablero.html#ab0be25d645cab06e45d889a08c27509d">Más...</a><br /></td></tr>
+<tr class="separator:ab0be25d645cab06e45d889a08c27509d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae58d9ad07cec9734e831e7848e5db593"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTablero.html#ae58d9ad07cec9734e831e7848e5db593">limpiar_cubo</a> (const <a class="el" href="classCasilla.html">Casilla</a> &amp;cas)</td></tr>
+<tr class="memdesc:ae58d9ad07cec9734e831e7848e5db593"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dada la última casilla escrita (o simulada) en el tablero, itera sobre todos los grupos con casillas dentro del cubo al que <em>cas</em> pertenece.  <a href="classTablero.html#ae58d9ad07cec9734e831e7848e5db593">Más...</a><br /></td></tr>
+<tr class="separator:ae58d9ad07cec9734e831e7848e5db593"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bdea9f81c86f3e52c9ed969aade0357"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTablero.html#a8bdea9f81c86f3e52c9ed969aade0357">limpiar_unic_comb</a> (const <a class="el" href="classCasilla.html">Casilla</a> &amp;cas)</td></tr>
+<tr class="memdesc:a8bdea9f81c86f3e52c9ed969aade0357"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobre cada uno de los grupos tocados por las estructuras a las que <em>cas</em> pertenece se comprobará:  <a href="classTablero.html#a8bdea9f81c86f3e52c9ed969aade0357">Más...</a><br /></td></tr>
+<tr class="separator:a8bdea9f81c86f3e52c9ed969aade0357"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atributos privados</h2></td></tr>
+<tr class="memitem:a5ab5516422e4b9a36514bdb25130f337"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="classGrupo.html">Grupo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTablero.html#a5ab5516422e4b9a36514bdb25130f337">grupos</a></td></tr>
+<tr class="memdesc:a5ab5516422e4b9a36514bdb25130f337"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector de los grupos que quedan en el sudoku.  <a href="classTablero.html#a5ab5516422e4b9a36514bdb25130f337">Más...</a><br /></td></tr>
+<tr class="separator:a5ab5516422e4b9a36514bdb25130f337"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd980ff230232bc7c0b1d592252ed611"><td class="memItemLeft" align="right" valign="top"><a id="acd980ff230232bc7c0b1d592252ed611"></a>
+vector&lt; vector&lt; <a class="el" href="classCasilla.html">Casilla</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTablero.html#acd980ff230232bc7c0b1d592252ed611">sudoku</a></td></tr>
+<tr class="memdesc:acd980ff230232bc7c0b1d592252ed611"><td class="mdescLeft">&#160;</td><td class="mdescRight">Matriz de Casillas que representan el tablero del sudoku en sí. <br /></td></tr>
+<tr class="separator:acd980ff230232bc7c0b1d592252ed611"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>TDA <a class="el" href="classTablero.html" title="TDA Tablero Representa al sudoku en sí; es decir, al tablero 9x9 con las casillas y los grupos.">Tablero</a> Representa al sudoku en sí; es decir, al tablero 9x9 con las casillas y los grupos. </p>
+<p>Una instancia <em>tab</em> del tipo de dato abstracto <code><a class="el" href="classTablero.html" title="TDA Tablero Representa al sudoku en sí; es decir, al tablero 9x9 con las casillas y los grupos.">Tablero</a></code> es una matriz 9x9 con casillas que identifican las distintas estructuras, es decir, a las filas, columnas y cubo. Esto es de vital importancia, pues tomaremos en muchas ocasiones el nombre estructura para identificar estos tres términos, ya que en ninguno de ellos se podrán repetir casillas con mismo <code>valor</code>.</p>
+<p>Lo representaremos como un vector de grupos, que a su vez identifica todas las casillas que tiene el <a class="el" href="classTablero.html" title="TDA Tablero Representa al sudoku en sí; es decir, al tablero 9x9 con las casillas y los grupos.">Tablero</a> del Sudoku Killer.</p>
+<dl class="section invariant"><dt>Invariante</dt><dd>Todas las casillas deben ser válidas </dd>
+<dd>
+Num_Casillas = 81 </dd>
+<dd>
+Todos los grupos del vector deben cumplir con su invariante de representación </dd></dl>
+</div><h2 class="groupheader">Documentación del constructor y destructor</h2>
+<a id="aeb22a169fffcf69f9789c24c2296e3dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb22a169fffcf69f9789c24c2296e3dc">&#9670;&nbsp;</a></span>Tablero()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Tablero::Tablero </td>
+          <td>(</td>
+          <td class="paramtype">const vector&lt; <a class="el" href="classGrupo.html">Grupo</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>grupos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const vector&lt; vector&lt; <a class="el" href="classCasilla.html">Casilla</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>sdk</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor con vector de grupos y vector de vectores de casillas. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">grupos</td><td>Vector de grupos del tablero </td></tr>
+    <tr><td class="paramname">sdk</td><td>Tabla de casillas del tablero </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones miembro</h2>
+<a id="a96a93a35fe95576658f6536bd48b6c57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96a93a35fe95576658f6536bd48b6c57">&#9670;&nbsp;</a></span>escribir_inmediatos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tablero::escribir_inmediatos </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Escribe las casillas inmediatas obtenidas: </p>
+<ul>
+<li>Usando el método del 45 para el sudoku killer (y derivados con estructuras mayores). <a class="el" href="classTablero.html#a51c3cf8337af705fcd6739974eaad963" title="Escribe las casillas determinadas por el método del 45 (o derivados inmediatos).">Tablero::metodo_45()</a></li>
+<li>Rellenando grupos con una única casilla. <a class="el" href="classTablero.html#a6749cbed675bc3fb99257ea6818b4f62" title="Rellena los grupos que tienen una sola casilla.">Tablero::rellenar_unitarias()</a> </li>
+</ul>
+
+</div>
+</div>
+<a id="aa09223075a7a2206544917484f01ce43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa09223075a7a2206544917484f01ce43">&#9670;&nbsp;</a></span>escribir_vector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tablero::escribir_vector </td>
+          <td>(</td>
+          <td class="paramtype">const vector&lt; <a class="el" href="classCasilla.html">Casilla</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a_escribir</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Escribe un vector de casillas en el tablero. Llama a <a class="el" href="classTablero.html#a42bc19abfc635802ed9d3cb7dcc5d7d3" title="Modifica el grupo de la casilla que escribe eliminándola de este, con el metodo quitar_casilla (Casil...">Tablero::set_casilla()</a> </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a_escribir</td><td>Vector de casillas a escribir en el sudoku. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8a9a0bf405b85e2d8baefccddded11b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a9a0bf405b85e2d8baefccddded11b3">&#9670;&nbsp;</a></span>get_grupo() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classGrupo.html">Grupo</a>&amp; Tablero::get_grupo </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCasilla.html">Casilla</a> &amp;&#160;</td>
+          <td class="paramname"><em>cas</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Devuelve el grupo al que esta casilla pertenece. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cas</td><td><a class="el" href="classCasilla.html" title="TDA Casilla Representa una única posición de sudoku que puede contener un único valor numérico.">Casilla</a> cuyo grupo se devuelve </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Referencia al grupo al que <em>cas</em> pertenece </dd></dl>
+
+</div>
+</div>
+<a id="abbe54b010dd36cf69dc01185a00618b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbe54b010dd36cf69dc01185a00618b3">&#9670;&nbsp;</a></span>get_grupo() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classGrupo.html">Grupo</a>&amp; Tablero::get_grupo </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve el grupo correspondiente a la posición de este en el vector <code>sudoku</code>. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Posición del grupo que se quiere tener </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Objeto de la clase <a class="el" href="classGrupo.html" title="TDA Grupo Representa los conjuntos contiguos de celdas marcados con línea discontinua en un Sudoku Ki...">Grupo</a>, que ocupa dicha <code>pos</code> </dd></dl>
+
+</div>
+</div>
+<a id="a27d046439b4b25538713ad0e1db39d90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27d046439b4b25538713ad0e1db39d90">&#9670;&nbsp;</a></span>getGrupos_col()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="classGrupo.html">Grupo</a>&gt; Tablero::getGrupos_col </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCasilla.html">Casilla</a> &amp;&#160;</td>
+          <td class="paramname"><em>col</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Devuelve un vector de los grupos que tienen al menos una casilla en esa columna. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">col</td><td>Columna del sudoku en la que buscar grupos </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Vector de Grupos que cumplen dicha condicion. </dd></dl>
+
+</div>
+</div>
+<a id="a092ba5b34fa4b9cd978e020d754bc2d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a092ba5b34fa4b9cd978e020d754bc2d0">&#9670;&nbsp;</a></span>getGrupos_cubo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="classGrupo.html">Grupo</a>&gt; Tablero::getGrupos_cubo </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCasilla.html">Casilla</a> &amp;&#160;</td>
+          <td class="paramname"><em>cubo</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Devuelve un vector de los grupos que tienen al menos una casilla en ese cubo. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cubo</td><td>Cubo del sudoku en el que buscar grupos </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Vector de Grupos que cumplen dicha condicion. </dd></dl>
+
+</div>
+</div>
+<a id="a681270a82e99d05b1dc5f7f289a0cec3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a681270a82e99d05b1dc5f7f289a0cec3">&#9670;&nbsp;</a></span>getGrupos_fila()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="classGrupo.html">Grupo</a>&gt; Tablero::getGrupos_fila </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCasilla.html">Casilla</a> &amp;&#160;</td>
+          <td class="paramname"><em>fila</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Devuelve un vector de los grupos que tienen al menos una casilla en esa fila. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fila</td><td>Fila del sudoku en la que buscar grupos </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Vector de Grupos que cumplen dicha condicion. </dd></dl>
+
+</div>
+</div>
+<a id="a602a384d1860c0b75ad6c143d4a81e04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a602a384d1860c0b75ad6c143d4a81e04">&#9670;&nbsp;</a></span>limpiar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tablero::limpiar </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCasilla.html">Casilla</a> &amp;&#160;</td>
+          <td class="paramname"><em>cas</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Actualiza el tablero. LLama a: </p>
+<ul>
+<li><a class="el" href="classTablero.html#a245e0df374bff65226957c40ab720a4d" title="Dada la última casilla escrita en el tablero, limpia todas las combinaciones y posiciones de cada est...">limpiar_basico(const Casilla &amp;cas)</a></li>
+<li><a class="el" href="classTablero.html#a8bdea9f81c86f3e52c9ed969aade0357" title="Sobre cada uno de los grupos tocados por las estructuras a las que cas pertenece se comprobará:">limpiar_unic_comb(const Casilla &amp;cas)</a></li>
+</ul>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cas</td><td><a class="el" href="classCasilla.html" title="TDA Casilla Representa una única posición de sudoku que puede contener un único valor numérico.">Casilla</a> cuyo valor se limpiará </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a245e0df374bff65226957c40ab720a4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a245e0df374bff65226957c40ab720a4d">&#9670;&nbsp;</a></span>limpiar_basico()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tablero::limpiar_basico </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCasilla.html">Casilla</a> &amp;&#160;</td>
+          <td class="paramname"><em>cas</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dada la última casilla escrita en el tablero, limpia todas las combinaciones y posiciones de cada estructura que contenga a <em>cas</em>. </p>
+<p>LLama a Tablero::limp_{estructura}(<a class="el" href="classCasilla.html" title="TDA Casilla Representa una única posición de sudoku que puede contener un único valor numérico.">Casilla</a> cas)</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cas</td><td>Última casilla escrita </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab0be25d645cab06e45d889a08c27509d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0be25d645cab06e45d889a08c27509d">&#9670;&nbsp;</a></span>limpiar_col()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tablero::limpiar_col </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCasilla.html">Casilla</a> &amp;&#160;</td>
+          <td class="paramname"><em>cas</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dada la última casilla escrita (o simulada) en el tablero, itera sobre todos los grupos con casillas dentro de la col a la que <em>cas</em> pertenece. </p>
+<ul>
+<li>LLama a <a class="el" href="classGrupo.html#a1019974c417082c5b141518231415651" title="Limpia todas las combinaciones de la columna que contengan el dígito de la casilla cas.">Grupo::limp_comb_en_col(const Casilla&amp; cas)</a></li>
+<li>LLama a <a class="el" href="classGrupo.html#a50a2f8e0c2e608ed82811e7eb2773930" title="Limpia todas las posiciones que tengan al dígito de cas en una casilla en la col en la que se encuent...">Grupo::limp_comb_no_en_col(const Casilla&amp; cas)</a></li>
+</ul>
+<p>Esto se da porque la manera de limpiar un grupo de imposibilidades es notablemente distinta en los casos en los que los grupos afectados estén o no enteramente contenidos dentro de la estructura afectada</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cas</td><td>última casilla escrita (o simulada) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae58d9ad07cec9734e831e7848e5db593"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae58d9ad07cec9734e831e7848e5db593">&#9670;&nbsp;</a></span>limpiar_cubo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tablero::limpiar_cubo </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCasilla.html">Casilla</a> &amp;&#160;</td>
+          <td class="paramname"><em>cas</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dada la última casilla escrita (o simulada) en el tablero, itera sobre todos los grupos con casillas dentro del cubo al que <em>cas</em> pertenece. </p>
+<ul>
+<li>LLama a <a class="el" href="classGrupo.html#aa3399847a0bcae2b80ea32b025ae5145" title="Limpia todas las combinaciones del cubo que contengan el dígito de la casilla cas.">Grupo::limp_comb_en_cubo(const Casilla&amp; cas)</a></li>
+<li>LLama a <a class="el" href="classGrupo.html#af64b55b58361da07c494f789c925a028" title="Limpia todas las posiciones que tengan al dígito de cas en una casilla en el cubo en la que se encuen...">Grupo::limp_comb_no_en_cubo(const Casilla&amp; cas)</a></li>
+</ul>
+<p>Esto se da porque la manera de limpiar un grupo de imposibilidades es notablemente distinta en los casos en los que los grupos afectados estén o no enteramente contenidos dentro de la estructura afectada</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cas</td><td>última casilla escrita (o simulada) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa1f9d773bf046d0728937e2878586783"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1f9d773bf046d0728937e2878586783">&#9670;&nbsp;</a></span>limpiar_fila()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tablero::limpiar_fila </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCasilla.html">Casilla</a> &amp;&#160;</td>
+          <td class="paramname"><em>cas</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dada la última casilla escrita en el tablero (o simulada), itera sobre todos los grupos con casillas dentro de la fila a la que <em>cas</em> pertenece. </p>
+<ul>
+<li>LLama a <a class="el" href="classGrupo.html#a397f7f2ad138b17a03db7fc619d5e263" title="Limpia todas las combinaciones de la fila que contengan el dígito de la casilla cas.">Grupo::limp_comb_en_fila(const Casilla&amp; cas)</a></li>
+<li>LLama a <a class="el" href="classGrupo.html#ad350d5d2e7e05ef9c7a9c05f11ca39fb" title="Limpia todas las posiciones que tengan al dígito de cas en una casilla en la fila en la que se encuen...">Grupo::limp_comb_no_en_fila(const Casilla&amp; cas)</a></li>
+</ul>
+<p>Esto se da porque la manera de limpiar un grupo de imposibilidades es notablemente distinta en los casos en los que los grupos afectados estén o no enteramente contenidos dentro de la estructura afectada</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cas</td><td>última casilla escrita (o simulada) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8bdea9f81c86f3e52c9ed969aade0357"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bdea9f81c86f3e52c9ed969aade0357">&#9670;&nbsp;</a></span>limpiar_unic_comb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tablero::limpiar_unic_comb </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCasilla.html">Casilla</a> &amp;&#160;</td>
+          <td class="paramname"><em>cas</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sobre cada uno de los grupos tocados por las estructuras a las que <em>cas</em> pertenece se comprobará: </p>
+<ul>
+<li>Si ese grupo está contenido entero dentro de una estructura</li>
+<li>Si ese grupo tan solo conserva una de sus combinaciones Si ambas condiciones se cumplen, ejecutará este método de la siguiente manera:</li>
+</ul>
+<div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; tam_unica_comb; i++) {</div>
+<div class="line">    <a class="code" href="classCasilla.html">Casilla</a> cas(grupo[0].getCoord(),grupo.getComb[0][i]); <span class="comment">// Solo hay una comb. ([0]) (con i sumandos)</span></div>
+<div class="line">    limpiar_{esctructura}(cas); <span class="comment">// Donde {estructura} será la fila, col. o cubo</span></div>
+<div class="line">                                <span class="comment">// en el que grupo esté enteramente contenido (guión 1)</span></div>
+<div class="line">}</div>
+<div class="ttc" id="aclassCasilla_html"><div class="ttname"><a href="classCasilla.html">Casilla</a></div><div class="ttdoc">TDA Casilla Representa una única posición de sudoku que puede contener un único valor numérico.</div><div class="ttdef"><b>Definition:</b> Casilla.h:29</div></div>
+</div><!-- fragment --><p>La motivación de este uso del método reside en que si en cierta estructura encontramos un grupo con una única combinación, aunque no sepamos el orden en el que esta aparecerá (su posición) y por tanto no podamos escribirla, sabemos que todos esos dígitos aparecerán en las casillas asociadas al grupo, y por tanto no aparecerán en ninguna otra casilla de la estructura que lo contenga Por tanto, llamamos a limpiar_{estructura} con una casilla simulada</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cas</td><td>Úlima casilla escrita </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a51c3cf8337af705fcd6739974eaad963"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51c3cf8337af705fcd6739974eaad963">&#9670;&nbsp;</a></span>metodo_45()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tablero::metodo_45 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Escribe las casillas determinadas por el método del 45 (o derivados inmediatos). </p>
+<p>MÉTODO DE LOS 45</p>
+<p>Iterando sobre cada una de las estructuras del tablero (todas las filas, columnas y cubos de 3x3) examinamos si todos los grupos con casillas en esa estructura están totalmente contenidos menos uno de ellos. En ese caso, si el grupo no-enteramente-contenido tiene fuera de la estructura 1 sola casilla, o size_grupo-1 casillas, podremos determinar de manera inmediata una casilla del grupo. (Tablero::unico_casillas_fuera_{estructura})</p><ul>
+<li>En el caso de una sola casilla fuera:<ul>
+<li>casilla = suma_todos_grupos_de_la_estructura - 45</li>
+</ul>
+</li>
+<li>En el caso de size-1 casillas fuera:<ul>
+<li>casilla = 45 - suma_grupos_enteros_dentro</li>
+</ul>
+</li>
+</ul>
+<p>Nótese que el método es fácilmente aplicable al caso en el que tengamos una estructura compuesta de dos o más de las estructuras anteriormente consideradas (sea n) usando 45*n en las fórmulas.</p>
+<p>Obtiene un vector con las casillas a escribir y las escribe con <a class="el" href="classTablero.html#aa09223075a7a2206544917484f01ce43" title="Escribe un vector de casillas en el tablero. Llama a Tablero::set_casilla()">Tablero::escribir_vector</a>. </p>
+
+</div>
+</div>
+<a id="a6749cbed675bc3fb99257ea6818b4f62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6749cbed675bc3fb99257ea6818b4f62">&#9670;&nbsp;</a></span>rellenar_unitarias()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tablero::rellenar_unitarias </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rellena los grupos que tienen una sola casilla. </p>
+<p>Las guarda en un vector y las escribe con <a class="el" href="classTablero.html#aa09223075a7a2206544917484f01ce43" title="Escribe un vector de casillas en el tablero. Llama a Tablero::set_casilla()">Tablero::escribir_vector()</a> </p>
+
+</div>
+</div>
+<a id="a42bc19abfc635802ed9d3cb7dcc5d7d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42bc19abfc635802ed9d3cb7dcc5d7d3">&#9670;&nbsp;</a></span>set_casilla()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tablero::set_casilla </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCasilla.html">Casilla</a> &amp;&#160;</td>
+          <td class="paramname"><em>casilla_escrita</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>limpiar</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modifica el grupo de la casilla que escribe eliminándola de este, con el metodo quitar_casilla (<a class="el" href="classCasilla.html" title="TDA Casilla Representa una única posición de sudoku que puede contener un único valor numérico.">Casilla</a> cas) de la clase <a class="el" href="classGrupo.html" title="TDA Grupo Representa los conjuntos contiguos de celdas marcados con línea discontinua en un Sudoku Ki...">Grupo</a> y modifica el sudoku colocando el valor a la casilla correspondiente. </p>
+<p>Además, llamará a limpiar (por defecto) para quitar las combinaciones posibles de otros grupos. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">casilla_escrita</td><td><a class="el" href="classCasilla.html" title="TDA Casilla Representa una única posición de sudoku que puede contener un único valor numérico.">Casilla</a> cuyo valor se escribe </td></tr>
+    <tr><td class="paramname">limpiar</td><td>Por defecto limpia. En el caso que no queramos, pasar un booleano igual a false. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac42f7b6babaa045b85eb02630b8259aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac42f7b6babaa045b85eb02630b8259aa">&#9670;&nbsp;</a></span>unico_casillas_fuera_col()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classCasilla.html">Casilla</a>&amp; Tablero::unico_casillas_fuera_col </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCasilla.html">Casilla</a> &amp;&#160;</td>
+          <td class="paramname"><em>col</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>desp</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Devuelve la casilla que se puede calcular (única fuera o única dentro). Devuelve casilla nula si no existe una única fuera o dentro de la estructura. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">col</td><td><a class="el" href="classCasilla.html" title="TDA Casilla Representa una única posición de sudoku que puede contener un único valor numérico.">Casilla</a> de la cual solo tomaremos la segunda coordenada </td></tr>
+    <tr><td class="paramname">desp</td><td>Número de columnas que hemos utilizado en el método 45. (</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>Ver también</dt><dd><a class="el" href="classTablero.html#a51c3cf8337af705fcd6739974eaad963" title="Escribe las casillas determinadas por el método del 45 (o derivados inmediatos).">metodo_45()</a>) </dd></dl>
+<dl class="section return"><dt>Devuelve</dt><dd><a class="el" href="classCasilla.html" title="TDA Casilla Representa una única posición de sudoku que puede contener un único valor numérico.">Casilla</a> que se puede calcular </dd></dl>
+
+</div>
+</div>
+<a id="ada1028370bdedf72867f66e97fa8fb97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada1028370bdedf72867f66e97fa8fb97">&#9670;&nbsp;</a></span>unico_casillas_fuera_cubo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classCasilla.html">Casilla</a>&amp; Tablero::unico_casillas_fuera_cubo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classCasilla.html">Casilla</a>&#160;</td>
+          <td class="paramname"><em>cubo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>desp_dcha</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>desp_abj</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Devuelve la casilla que se puede calcular (única fuera o única dentro). Devuelve casilla nula si no existe una única fuera o dentro de la estructura. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cubo</td><td><a class="el" href="classCasilla.html" title="TDA Casilla Representa una única posición de sudoku que puede contener un único valor numérico.">Casilla</a> que utilizaremos para identificar el cubo </td></tr>
+    <tr><td class="paramname">desp_dcha</td><td>Predeterminado false, ya que solo en el caso de querer tomar dos grupos hacia la derecha la llamaremos con booleano igual a true. (</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>Ver también</dt><dd><a class="el" href="classTablero.html#a51c3cf8337af705fcd6739974eaad963" title="Escribe las casillas determinadas por el método del 45 (o derivados inmediatos).">metodo_45()</a>) </dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">desp_abj</td><td>Predeterminado false, ya que solo en el caso de querer tomar dos grupos hacia abajo la llamaremos con booleano igual a true. (</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>Ver también</dt><dd><a class="el" href="classTablero.html#a51c3cf8337af705fcd6739974eaad963" title="Escribe las casillas determinadas por el método del 45 (o derivados inmediatos).">metodo_45()</a>) </dd></dl>
+<dl class="section return"><dt>Devuelve</dt><dd><a class="el" href="classCasilla.html" title="TDA Casilla Representa una única posición de sudoku que puede contener un único valor numérico.">Casilla</a> que se puede calcular </dd></dl>
+
+</div>
+</div>
+<a id="a0e3f25f726b674e1412a43f16c270f31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e3f25f726b674e1412a43f16c270f31">&#9670;&nbsp;</a></span>unico_casillas_fuera_fil()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classCasilla.html">Casilla</a>&amp; Tablero::unico_casillas_fuera_fil </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCasilla.html">Casilla</a> &amp;&#160;</td>
+          <td class="paramname"><em>fila</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>desp</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Devuelve la casilla que se puede calcular (única fuera o única dentro). Devuelve casilla nula si no existe una única fuera o dentro de la estructura. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fila</td><td><a class="el" href="classCasilla.html" title="TDA Casilla Representa una única posición de sudoku que puede contener un único valor numérico.">Casilla</a> de la cual solo tomaremos la primera coordenada </td></tr>
+    <tr><td class="paramname">desp</td><td>Número de filas que hemos utilizado en el método 45 (</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>Ver también</dt><dd><a class="el" href="classTablero.html#a51c3cf8337af705fcd6739974eaad963" title="Escribe las casillas determinadas por el método del 45 (o derivados inmediatos).">metodo_45()</a>) </dd></dl>
+<dl class="section return"><dt>Devuelve</dt><dd><a class="el" href="classCasilla.html" title="TDA Casilla Representa una única posición de sudoku que puede contener un único valor numérico.">Casilla</a> que se puede calcular </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de los datos miembro</h2>
+<a id="a5ab5516422e4b9a36514bdb25130f337"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ab5516422e4b9a36514bdb25130f337">&#9670;&nbsp;</a></span>grupos</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="classGrupo.html">Grupo</a>&gt; Tablero::grupos</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Vector de los grupos que quedan en el sudoku. </p>
+<p>Inicialmente, abarca el tablero completo. </p>
+
+</div>
+</div>
+<hr/>La documentación para esta clase fue generada a partir del siguiente fichero:<ul>
+<li>include/<a class="el" href="Tablero_8h_source.html">Tablero.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

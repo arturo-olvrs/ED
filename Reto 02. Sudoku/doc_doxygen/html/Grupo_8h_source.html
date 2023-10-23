@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Reto 2. Sudoku Killer: Fichero Fuente include/Grupo.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Reto 2. Sudoku Killer
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Grupo.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Grupo_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef SUDOKU_GRUPO_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define SUDOKU_GRUPO_H</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Casilla_8h.html">Casilla.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classGrupo.html">   37</a></span>&#160;<span class="keyword">class </span><a class="code" href="classGrupo.html">Grupo</a> {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classGrupo.html#aa5b90c6f143180007b83458550c00ba3">   43</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classGrupo.html#aa5b90c6f143180007b83458550c00ba3">suma</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classGrupo.html#afbb99a838da79d00184e89516fda52d4">   50</a></span>&#160;    vector&lt;Casilla&gt; <a class="code" href="classGrupo.html#afbb99a838da79d00184e89516fda52d4">grupo</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classGrupo.html#aec21620e9030d2fcd320dc13080a93fd">   64</a></span>&#160;    vector&lt;vector&lt;vector&lt;int&gt;&gt;&gt; <a class="code" href="classGrupo.html#aec21620e9030d2fcd320dc13080a93fd">combinaciones</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classGrupo.html#a4da0a9f69008e7c58ea6cb41754467ef">   70</a></span>&#160;    <span class="keyword">const</span> vector&lt;Casilla&gt; &amp;<a class="code" href="classGrupo.html#a4da0a9f69008e7c58ea6cb41754467ef">getCasillas</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classGrupo.html#a2df3e6c24d47b2ba640083781b89bc2c">   76</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classGrupo.html#a2df3e6c24d47b2ba640083781b89bc2c">getSuma</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classGrupo.html#a7e3eb6056f6bc7326c8dc659553ea642">   82</a></span>&#160;    <span class="keyword">const</span> vector&lt;vector&lt;vector&lt;int&gt;&gt;&gt; &amp;<a class="code" href="classGrupo.html#a7e3eb6056f6bc7326c8dc659553ea642">getCombinaciones</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classGrupo.html#ae34696a38f2effe1d327d464af4c578b">   89</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classGrupo.html#ae34696a38f2effe1d327d464af4c578b">setCasillas</a>(<span class="keyword">const</span> vector&lt;Casilla&gt; &amp; cas);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classGrupo.html#acd84a0801ccf5f8e7547695328b67d17">   96</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classGrupo.html#acd84a0801ccf5f8e7547695328b67d17">setSuma</a>(<span class="keywordtype">int</span> sum);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="classGrupo.html#a99452233240ab222c9c074c762418830">  102</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classGrupo.html#a99452233240ab222c9c074c762418830">setCombinaciones</a>(<span class="keyword">const</span> vector&lt;vector&lt;vector&lt;int&gt;&gt;&gt; &amp;comb);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="classGrupo.html#af984eb5b480b2e9503b39418d8a05b3e">  109</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classGrupo.html#af984eb5b480b2e9503b39418d8a05b3e">InFila</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="classGrupo.html#a2c8fee654a9e83eef19232ba068448d2">  115</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classGrupo.html#a2c8fee654a9e83eef19232ba068448d2">InCubo</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="classGrupo.html#a284937d60252ba9bc9112f92b5ecba89">  121</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classGrupo.html#a284937d60252ba9bc9112f92b5ecba89">InCol</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="classGrupo.html#aa4eb78105dc9abf6b6ca21182aa5d871">  138</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classGrupo.html#aa4eb78105dc9abf6b6ca21182aa5d871">quitar_casilla</a>(<span class="keyword">const</span> <a class="code" href="classCasilla.html">Casilla</a>&amp; cas);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="classGrupo.html#ad25f6a6bf393ce83c62d80a65426423d">  145</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classGrupo.html#ad25f6a6bf393ce83c62d80a65426423d">rellena_comb_y_pos</a>();</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="classGrupo.html#a397f7f2ad138b17a03db7fc619d5e263">  153</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classGrupo.html#a397f7f2ad138b17a03db7fc619d5e263">limp_comb_en_fila</a>(<span class="keyword">const</span> <a class="code" href="classCasilla.html">Casilla</a>&amp; cas);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno"><a class="line" href="classGrupo.html#ad350d5d2e7e05ef9c7a9c05f11ca39fb">  162</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classGrupo.html#ad350d5d2e7e05ef9c7a9c05f11ca39fb">limp_comb_no_en_fila</a>(<span class="keyword">const</span> <a class="code" href="classCasilla.html">Casilla</a>&amp; cas);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="classGrupo.html#a1019974c417082c5b141518231415651">  170</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classGrupo.html#a1019974c417082c5b141518231415651">limp_comb_en_col</a>(<span class="keyword">const</span> <a class="code" href="classCasilla.html">Casilla</a>&amp; cas);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="classGrupo.html#a50a2f8e0c2e608ed82811e7eb2773930">  179</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classGrupo.html#a50a2f8e0c2e608ed82811e7eb2773930">limp_comb_no_en_col</a>(<span class="keyword">const</span> <a class="code" href="classCasilla.html">Casilla</a>&amp; cas);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
+<div class="line"><a name="l00187"></a><span class="lineno"><a class="line" href="classGrupo.html#aa3399847a0bcae2b80ea32b025ae5145">  187</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classGrupo.html#aa3399847a0bcae2b80ea32b025ae5145">limp_comb_en_cubo</a>(<span class="keyword">const</span> <a class="code" href="classCasilla.html">Casilla</a>&amp; cas);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
+<div class="line"><a name="l00196"></a><span class="lineno"><a class="line" href="classGrupo.html#af64b55b58361da07c494f789c925a028">  196</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classGrupo.html#af64b55b58361da07c494f789c925a028">limp_comb_no_en_cubo</a>(<span class="keyword">const</span> <a class="code" href="classCasilla.html">Casilla</a>&amp; cas);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
+<div class="line"><a name="l00212"></a><span class="lineno"><a class="line" href="classGrupo.html#aa17f63f9a6da0b599749961436ae74f3">  212</a></span>&#160;    <span class="keyword">const</span> vector&lt;Casilla&gt;&amp; <a class="code" href="classGrupo.html#aa17f63f9a6da0b599749961436ae74f3">obtener_determinados</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00220"></a><span class="lineno"><a class="line" href="classGrupo.html#a6918ec2a26d856788c561ffdcb2c2aaf">  220</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classGrupo.html#a6918ec2a26d856788c561ffdcb2c2aaf">CuantasFuera_cubo</a>(<span class="keyword">const</span> <a class="code" href="classCasilla.html">Casilla</a>&amp; cubo) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
+<div class="line"><a name="l00227"></a><span class="lineno"><a class="line" href="classGrupo.html#ad32af264f401142e5030f385a53daf09">  227</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classGrupo.html#ad32af264f401142e5030f385a53daf09">CuantasFuera_fila</a>(<span class="keyword">const</span> <a class="code" href="classCasilla.html">Casilla</a>&amp; fila) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
+<div class="line"><a name="l00234"></a><span class="lineno"><a class="line" href="classGrupo.html#a9b553595c60d0f604047711edf7e8e18">  234</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classGrupo.html#a9b553595c60d0f604047711edf7e8e18">CuantasFuera_col</a>(<span class="keyword">const</span> <a class="code" href="classCasilla.html">Casilla</a>&amp; col) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
+<div class="line"><a name="l00245"></a><span class="lineno"><a class="line" href="classGrupo.html#a514114d9e21413ed951e54c633cd1b9b">  245</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classGrupo.html#a514114d9e21413ed951e54c633cd1b9b">esta_en_el_borde</a>(<span class="keyword">const</span> <a class="code" href="classCasilla.html">Casilla</a> &amp;cas);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;};</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160; </div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//SUDOKU_GRUPO_H</span></div>
+<div class="ttc" id="aCasilla_8h_html"><div class="ttname"><a href="Casilla_8h.html">Casilla.h</a></div><div class="ttdoc">Fichero cabecera del TDA Casilla.</div></div>
+<div class="ttc" id="aclassCasilla_html"><div class="ttname"><a href="classCasilla.html">Casilla</a></div><div class="ttdoc">TDA Casilla Representa una única posición de sudoku que puede contener un único valor numérico.</div><div class="ttdef"><b>Definition:</b> Casilla.h:29</div></div>
+<div class="ttc" id="aclassGrupo_html"><div class="ttname"><a href="classGrupo.html">Grupo</a></div><div class="ttdoc">TDA Grupo Representa los conjuntos contiguos de celdas marcados con línea discontinua en un Sudoku Ki...</div><div class="ttdef"><b>Definition:</b> Grupo.h:37</div></div>
+<div class="ttc" id="aclassGrupo_html_a1019974c417082c5b141518231415651"><div class="ttname"><a href="classGrupo.html#a1019974c417082c5b141518231415651">Grupo::limp_comb_en_col</a></div><div class="ttdeci">void limp_comb_en_col(const Casilla &amp;cas)</div><div class="ttdoc">Limpia todas las combinaciones de la columna que contengan el dígito de la casilla cas.</div></div>
+<div class="ttc" id="aclassGrupo_html_a284937d60252ba9bc9112f92b5ecba89"><div class="ttname"><a href="classGrupo.html#a284937d60252ba9bc9112f92b5ecba89">Grupo::InCol</a></div><div class="ttdeci">bool InCol() const</div><div class="ttdoc">Informa sobre si el grupo está enteramente contenido en una columna.</div></div>
+<div class="ttc" id="aclassGrupo_html_a2c8fee654a9e83eef19232ba068448d2"><div class="ttname"><a href="classGrupo.html#a2c8fee654a9e83eef19232ba068448d2">Grupo::InCubo</a></div><div class="ttdeci">bool InCubo() const</div><div class="ttdoc">Informa sobre si el grupo está enteramente contenido en un cubo.</div></div>
+<div class="ttc" id="aclassGrupo_html_a2df3e6c24d47b2ba640083781b89bc2c"><div class="ttname"><a href="classGrupo.html#a2df3e6c24d47b2ba640083781b89bc2c">Grupo::getSuma</a></div><div class="ttdeci">int getSuma() const</div><div class="ttdoc">Recupera la suma asociada al grupo.</div></div>
+<div class="ttc" id="aclassGrupo_html_a397f7f2ad138b17a03db7fc619d5e263"><div class="ttname"><a href="classGrupo.html#a397f7f2ad138b17a03db7fc619d5e263">Grupo::limp_comb_en_fila</a></div><div class="ttdeci">void limp_comb_en_fila(const Casilla &amp;cas)</div><div class="ttdoc">Limpia todas las combinaciones de la fila que contengan el dígito de la casilla cas.</div></div>
+<div class="ttc" id="aclassGrupo_html_a4da0a9f69008e7c58ea6cb41754467ef"><div class="ttname"><a href="classGrupo.html#a4da0a9f69008e7c58ea6cb41754467ef">Grupo::getCasillas</a></div><div class="ttdeci">const vector&lt; Casilla &gt; &amp; getCasillas() const</div><div class="ttdoc">Recupera las casillas de grupo.</div></div>
+<div class="ttc" id="aclassGrupo_html_a50a2f8e0c2e608ed82811e7eb2773930"><div class="ttname"><a href="classGrupo.html#a50a2f8e0c2e608ed82811e7eb2773930">Grupo::limp_comb_no_en_col</a></div><div class="ttdeci">void limp_comb_no_en_col(const Casilla &amp;cas)</div><div class="ttdoc">Limpia todas las posiciones que tengan al dígito de cas en una casilla en la col en la que se encuent...</div></div>
+<div class="ttc" id="aclassGrupo_html_a514114d9e21413ed951e54c633cd1b9b"><div class="ttname"><a href="classGrupo.html#a514114d9e21413ed951e54c633cd1b9b">Grupo::esta_en_el_borde</a></div><div class="ttdeci">bool esta_en_el_borde(const Casilla &amp;cas)</div><div class="ttdoc">Controla si cierta casilla del grupo está en el borde de éste (puede eliminarse sin desconectar el gr...</div></div>
+<div class="ttc" id="aclassGrupo_html_a6918ec2a26d856788c561ffdcb2c2aaf"><div class="ttname"><a href="classGrupo.html#a6918ec2a26d856788c561ffdcb2c2aaf">Grupo::CuantasFuera_cubo</a></div><div class="ttdeci">int CuantasFuera_cubo(const Casilla &amp;cubo) const</div><div class="ttdoc">Devuelve cuántas casillas se quedan fuera de &quot;cubo&quot;.</div></div>
+<div class="ttc" id="aclassGrupo_html_a7e3eb6056f6bc7326c8dc659553ea642"><div class="ttname"><a href="classGrupo.html#a7e3eb6056f6bc7326c8dc659553ea642">Grupo::getCombinaciones</a></div><div class="ttdeci">const vector&lt; vector&lt; vector&lt; int &gt; &gt; &gt; &amp; getCombinaciones() const</div><div class="ttdoc">Recupera las combinaciones posibles del grupo (basadas en el instante del tablero)</div></div>
+<div class="ttc" id="aclassGrupo_html_a99452233240ab222c9c074c762418830"><div class="ttname"><a href="classGrupo.html#a99452233240ab222c9c074c762418830">Grupo::setCombinaciones</a></div><div class="ttdeci">void setCombinaciones(const vector&lt; vector&lt; vector&lt; int &gt;&gt;&gt; &amp;comb)</div><div class="ttdoc">Fija las combinaciones posibles del grupo (basadas en el instante del tablero)</div></div>
+<div class="ttc" id="aclassGrupo_html_a9b553595c60d0f604047711edf7e8e18"><div class="ttname"><a href="classGrupo.html#a9b553595c60d0f604047711edf7e8e18">Grupo::CuantasFuera_col</a></div><div class="ttdeci">int CuantasFuera_col(const Casilla &amp;col) const</div><div class="ttdoc">Devuelve cuántas casillas se quedan fuera de &quot;col&quot;.</div></div>
+<div class="ttc" id="aclassGrupo_html_aa17f63f9a6da0b599749961436ae74f3"><div class="ttname"><a href="classGrupo.html#aa17f63f9a6da0b599749961436ae74f3">Grupo::obtener_determinados</a></div><div class="ttdeci">const vector&lt; Casilla &gt; &amp; obtener_determinados() const</div><div class="ttdoc">Obtiene las casillas totalmente determinadas por un proceso de eliminación de posiciones....</div></div>
+<div class="ttc" id="aclassGrupo_html_aa3399847a0bcae2b80ea32b025ae5145"><div class="ttname"><a href="classGrupo.html#aa3399847a0bcae2b80ea32b025ae5145">Grupo::limp_comb_en_cubo</a></div><div class="ttdeci">void limp_comb_en_cubo(const Casilla &amp;cas)</div><div class="ttdoc">Limpia todas las combinaciones del cubo que contengan el dígito de la casilla cas.</div></div>
+<div class="ttc" id="aclassGrupo_html_aa4eb78105dc9abf6b6ca21182aa5d871"><div class="ttname"><a href="classGrupo.html#aa4eb78105dc9abf6b6ca21182aa5d871">Grupo::quitar_casilla</a></div><div class="ttdeci">void quitar_casilla(const Casilla &amp;cas)</div><div class="ttdoc">Se ejecutará al escribir una casilla para quitarla del grupo Esto tiene como propósito ir simplifican...</div></div>
+<div class="ttc" id="aclassGrupo_html_aa5b90c6f143180007b83458550c00ba3"><div class="ttname"><a href="classGrupo.html#aa5b90c6f143180007b83458550c00ba3">Grupo::suma</a></div><div class="ttdeci">int suma</div><div class="ttdoc">Suma de los valores de las casillas del grupo.</div><div class="ttdef"><b>Definition:</b> Grupo.h:43</div></div>
+<div class="ttc" id="aclassGrupo_html_acd84a0801ccf5f8e7547695328b67d17"><div class="ttname"><a href="classGrupo.html#acd84a0801ccf5f8e7547695328b67d17">Grupo::setSuma</a></div><div class="ttdeci">void setSuma(int sum)</div><div class="ttdoc">Fija la suma asociada al grupo.</div></div>
+<div class="ttc" id="aclassGrupo_html_ad25f6a6bf393ce83c62d80a65426423d"><div class="ttname"><a href="classGrupo.html#ad25f6a6bf393ce83c62d80a65426423d">Grupo::rellena_comb_y_pos</a></div><div class="ttdeci">void rellena_comb_y_pos()</div><div class="ttdoc">Rellena las todas las posibles sumas del grupo con cada una de sus posiciones posibles.</div></div>
+<div class="ttc" id="aclassGrupo_html_ad32af264f401142e5030f385a53daf09"><div class="ttname"><a href="classGrupo.html#ad32af264f401142e5030f385a53daf09">Grupo::CuantasFuera_fila</a></div><div class="ttdeci">int CuantasFuera_fila(const Casilla &amp;fila) const</div><div class="ttdoc">Devuelve cuántas casillas se quedan fuera de &quot;fila&quot;.</div></div>
+<div class="ttc" id="aclassGrupo_html_ad350d5d2e7e05ef9c7a9c05f11ca39fb"><div class="ttname"><a href="classGrupo.html#ad350d5d2e7e05ef9c7a9c05f11ca39fb">Grupo::limp_comb_no_en_fila</a></div><div class="ttdeci">void limp_comb_no_en_fila(const Casilla &amp;cas)</div><div class="ttdoc">Limpia todas las posiciones que tengan al dígito de cas en una casilla en la fila en la que se encuen...</div></div>
+<div class="ttc" id="aclassGrupo_html_ae34696a38f2effe1d327d464af4c578b"><div class="ttname"><a href="classGrupo.html#ae34696a38f2effe1d327d464af4c578b">Grupo::setCasillas</a></div><div class="ttdeci">void setCasillas(const vector&lt; Casilla &gt; &amp;cas)</div><div class="ttdoc">Fija las casillas de grupo.</div></div>
+<div class="ttc" id="aclassGrupo_html_aec21620e9030d2fcd320dc13080a93fd"><div class="ttname"><a href="classGrupo.html#aec21620e9030d2fcd320dc13080a93fd">Grupo::combinaciones</a></div><div class="ttdeci">vector&lt; vector&lt; vector&lt; int &gt; &gt; &gt; combinaciones</div><div class="ttdoc">Vector de matrices, donde cada matriz representa una combinación y dentro de esa matriz cada columna ...</div><div class="ttdef"><b>Definition:</b> Grupo.h:64</div></div>
+<div class="ttc" id="aclassGrupo_html_af64b55b58361da07c494f789c925a028"><div class="ttname"><a href="classGrupo.html#af64b55b58361da07c494f789c925a028">Grupo::limp_comb_no_en_cubo</a></div><div class="ttdeci">void limp_comb_no_en_cubo(const Casilla &amp;cas)</div><div class="ttdoc">Limpia todas las posiciones que tengan al dígito de cas en una casilla en el cubo en la que se encuen...</div></div>
+<div class="ttc" id="aclassGrupo_html_af984eb5b480b2e9503b39418d8a05b3e"><div class="ttname"><a href="classGrupo.html#af984eb5b480b2e9503b39418d8a05b3e">Grupo::InFila</a></div><div class="ttdeci">bool InFila() const</div><div class="ttdoc">Informa sobre si el grupo está enteramente contenido en una fila.</div></div>
+<div class="ttc" id="aclassGrupo_html_afbb99a838da79d00184e89516fda52d4"><div class="ttname"><a href="classGrupo.html#afbb99a838da79d00184e89516fda52d4">Grupo::grupo</a></div><div class="ttdeci">vector&lt; Casilla &gt; grupo</div><div class="ttdoc">Array de casillas que tiene el grupo.</div><div class="ttdef"><b>Definition:</b> Grupo.h:50</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

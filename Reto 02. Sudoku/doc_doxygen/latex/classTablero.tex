@@ -1,0 +1,521 @@
+\hypertarget{classTablero}{}\doxysection{Referencia de la Clase Tablero}
+\label{classTablero}\index{Tablero@{Tablero}}
+
+
+TDA \mbox{\hyperlink{classTablero}{Tablero}} Representa al sudoku en sí; es decir, al tablero 9x9 con las casillas y los grupos.  
+
+
+
+
+{\ttfamily \#include $<$Tablero.\+h$>$}
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTablero_ab4912f28f1db392e1dd44ddc98bd4f59}\label{classTablero_ab4912f28f1db392e1dd44ddc98bd4f59}} 
+\mbox{\hyperlink{classTablero_ab4912f28f1db392e1dd44ddc98bd4f59}{Tablero}} ()
+\begin{DoxyCompactList}\small\item\em Constructor sin argumentos. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTablero_aeb22a169fffcf69f9789c24c2296e3dc}{Tablero}} (const vector$<$ \mbox{\hyperlink{classGrupo}{Grupo}} $>$ \&\mbox{\hyperlink{classTablero_a5ab5516422e4b9a36514bdb25130f337}{grupos}}, const vector$<$ vector$<$ \mbox{\hyperlink{classCasilla}{Casilla}} $>$$>$ \&sdk)
+\begin{DoxyCompactList}\small\item\em Constructor con vector de grupos y vector de vectores de casillas. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classGrupo}{Grupo}} \& \mbox{\hyperlink{classTablero_abbe54b010dd36cf69dc01185a00618b3}{get\+\_\+grupo}} (int pos) const
+\begin{DoxyCompactList}\small\item\em Devuelve el grupo correspondiente a la posición de este en el vector {\ttfamily sudoku}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTablero_a42bc19abfc635802ed9d3cb7dcc5d7d3}{set\+\_\+casilla}} (const \mbox{\hyperlink{classCasilla}{Casilla}} \&casilla\+\_\+escrita, bool \mbox{\hyperlink{classTablero_a602a384d1860c0b75ad6c143d4a81e04}{limpiar}}=true)
+\begin{DoxyCompactList}\small\item\em Modifica el grupo de la casilla que escribe eliminándola de este, con el metodo quitar\+\_\+casilla (\mbox{\hyperlink{classCasilla}{Casilla}} cas) de la clase \mbox{\hyperlink{classGrupo}{Grupo}} y modifica el sudoku colocando el valor a la casilla correspondiente. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTablero_aa09223075a7a2206544917484f01ce43}{escribir\+\_\+vector}} (const vector$<$ \mbox{\hyperlink{classCasilla}{Casilla}} $>$ \&a\+\_\+escribir)
+\begin{DoxyCompactList}\small\item\em Escribe un vector de casillas en el tablero. Llama a \mbox{\hyperlink{classTablero_a42bc19abfc635802ed9d3cb7dcc5d7d3}{Tablero\+::set\+\_\+casilla()}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTablero_a96a93a35fe95576658f6536bd48b6c57}{escribir\+\_\+inmediatos}} ()
+\begin{DoxyCompactList}\small\item\em Escribe las casillas inmediatas obtenidas\+: \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTablero_ab0d41d7d1ab19e4824ab68d50fbb4e68}\label{classTablero_ab0d41d7d1ab19e4824ab68d50fbb4e68}} 
+void \mbox{\hyperlink{classTablero_ab0d41d7d1ab19e4824ab68d50fbb4e68}{calcular\+\_\+todas\+\_\+combinaciones}} ()
+\begin{DoxyCompactList}\small\item\em Rellena todas las combinaciones posibles (cada una con todas sus posiciones). LLama a calcular combinaciones de cada grupo de la clase \mbox{\hyperlink{classGrupo}{Grupo}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTablero_a602a384d1860c0b75ad6c143d4a81e04}{limpiar}} (const \mbox{\hyperlink{classCasilla}{Casilla}} \&cas)
+\begin{DoxyCompactList}\small\item\em Actualiza el tablero. LLama a\+: \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTablero_abdb3e9a63b9a68ddd62680a5840847bf}\label{classTablero_abdb3e9a63b9a68ddd62680a5840847bf}} 
+void \mbox{\hyperlink{classTablero_abdb3e9a63b9a68ddd62680a5840847bf}{escribir\+\_\+determinados}} ()
+\begin{DoxyCompactList}\small\item\em Itera sobre cada grupo llamando a escribe\+\_\+determinados() \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGrupo}{Grupo}} \& \mbox{\hyperlink{classTablero_a8a9a0bf405b85e2d8baefccddded11b3}{get\+\_\+grupo}} (const \mbox{\hyperlink{classCasilla}{Casilla}} \&cas) const
+\begin{DoxyCompactList}\small\item\em Devuelve el grupo al que esta casilla pertenece. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{classGrupo}{Grupo}} $>$ \mbox{\hyperlink{classTablero_a681270a82e99d05b1dc5f7f289a0cec3}{get\+Grupos\+\_\+fila}} (const \mbox{\hyperlink{classCasilla}{Casilla}} \&fila) const
+\begin{DoxyCompactList}\small\item\em Devuelve un vector de los grupos que tienen al menos una casilla en esa fila. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{classGrupo}{Grupo}} $>$ \mbox{\hyperlink{classTablero_a27d046439b4b25538713ad0e1db39d90}{get\+Grupos\+\_\+col}} (const \mbox{\hyperlink{classCasilla}{Casilla}} \&col) const
+\begin{DoxyCompactList}\small\item\em Devuelve un vector de los grupos que tienen al menos una casilla en esa columna. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{classGrupo}{Grupo}} $>$ \mbox{\hyperlink{classTablero_a092ba5b34fa4b9cd978e020d754bc2d0}{get\+Grupos\+\_\+cubo}} (const \mbox{\hyperlink{classCasilla}{Casilla}} \&cubo) const
+\begin{DoxyCompactList}\small\item\em Devuelve un vector de los grupos que tienen al menos una casilla en ese cubo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTablero_a6749cbed675bc3fb99257ea6818b4f62}{rellenar\+\_\+unitarias}} ()
+\begin{DoxyCompactList}\small\item\em Rellena los grupos que tienen una sola casilla. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTablero_a51c3cf8337af705fcd6739974eaad963}{metodo\+\_\+45}} ()
+\begin{DoxyCompactList}\small\item\em Escribe las casillas determinadas por el método del 45 (o derivados inmediatos). \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classCasilla}{Casilla}} \& \mbox{\hyperlink{classTablero_a0e3f25f726b674e1412a43f16c270f31}{unico\+\_\+casillas\+\_\+fuera\+\_\+fil}} (const \mbox{\hyperlink{classCasilla}{Casilla}} \&fila, int desp=0) const
+\begin{DoxyCompactList}\small\item\em Devuelve la casilla que se puede calcular (única fuera o única dentro). Devuelve casilla nula si no existe una única fuera o dentro de la estructura. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classCasilla}{Casilla}} \& \mbox{\hyperlink{classTablero_ac42f7b6babaa045b85eb02630b8259aa}{unico\+\_\+casillas\+\_\+fuera\+\_\+col}} (const \mbox{\hyperlink{classCasilla}{Casilla}} \&col, int desp=0) const
+\begin{DoxyCompactList}\small\item\em Devuelve la casilla que se puede calcular (única fuera o única dentro). Devuelve casilla nula si no existe una única fuera o dentro de la estructura. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classCasilla}{Casilla}} \& \mbox{\hyperlink{classTablero_ada1028370bdedf72867f66e97fa8fb97}{unico\+\_\+casillas\+\_\+fuera\+\_\+cubo}} (\mbox{\hyperlink{classCasilla}{Casilla}} cubo, bool desp\+\_\+dcha=false, bool desp\+\_\+abj=false) const
+\begin{DoxyCompactList}\small\item\em Devuelve la casilla que se puede calcular (única fuera o única dentro). Devuelve casilla nula si no existe una única fuera o dentro de la estructura. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTablero_a245e0df374bff65226957c40ab720a4d}{limpiar\+\_\+basico}} (const \mbox{\hyperlink{classCasilla}{Casilla}} \&cas)
+\begin{DoxyCompactList}\small\item\em Dada la última casilla escrita en el tablero, limpia todas las combinaciones y posiciones de cada estructura que contenga a {\itshape cas}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTablero_aa1f9d773bf046d0728937e2878586783}{limpiar\+\_\+fila}} (const \mbox{\hyperlink{classCasilla}{Casilla}} \&cas)
+\begin{DoxyCompactList}\small\item\em Dada la última casilla escrita en el tablero (o simulada), itera sobre todos los grupos con casillas dentro de la fila a la que {\itshape cas} pertenece. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTablero_ab0be25d645cab06e45d889a08c27509d}{limpiar\+\_\+col}} (const \mbox{\hyperlink{classCasilla}{Casilla}} \&cas)
+\begin{DoxyCompactList}\small\item\em Dada la última casilla escrita (o simulada) en el tablero, itera sobre todos los grupos con casillas dentro de la col a la que {\itshape cas} pertenece. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTablero_ae58d9ad07cec9734e831e7848e5db593}{limpiar\+\_\+cubo}} (const \mbox{\hyperlink{classCasilla}{Casilla}} \&cas)
+\begin{DoxyCompactList}\small\item\em Dada la última casilla escrita (o simulada) en el tablero, itera sobre todos los grupos con casillas dentro del cubo al que {\itshape cas} pertenece. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTablero_a8bdea9f81c86f3e52c9ed969aade0357}{limpiar\+\_\+unic\+\_\+comb}} (const \mbox{\hyperlink{classCasilla}{Casilla}} \&cas)
+\begin{DoxyCompactList}\small\item\em Sobre cada uno de los grupos tocados por las estructuras a las que {\itshape cas} pertenece se comprobará\+: \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{classGrupo}{Grupo}} $>$ \mbox{\hyperlink{classTablero_a5ab5516422e4b9a36514bdb25130f337}{grupos}}
+\begin{DoxyCompactList}\small\item\em Vector de los grupos que quedan en el sudoku. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTablero_acd980ff230232bc7c0b1d592252ed611}\label{classTablero_acd980ff230232bc7c0b1d592252ed611}} 
+vector$<$ vector$<$ \mbox{\hyperlink{classCasilla}{Casilla}} $>$ $>$ \mbox{\hyperlink{classTablero_acd980ff230232bc7c0b1d592252ed611}{sudoku}}
+\begin{DoxyCompactList}\small\item\em Matriz de Casillas que representan el tablero del sudoku en sí. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+TDA \mbox{\hyperlink{classTablero}{Tablero}} Representa al sudoku en sí; es decir, al tablero 9x9 con las casillas y los grupos. 
+
+Una instancia {\itshape tab} del tipo de dato abstracto {\ttfamily \mbox{\hyperlink{classTablero}{Tablero}}} es una matriz 9x9 con casillas que identifican las distintas estructuras, es decir, a las filas, columnas y cubo. Esto es de vital importancia, pues tomaremos en muchas ocasiones el nombre estructura para identificar estos tres términos, ya que en ninguno de ellos se podrán repetir casillas con mismo {\ttfamily valor}.
+
+Lo representaremos como un vector de grupos, que a su vez identifica todas las casillas que tiene el \mbox{\hyperlink{classTablero}{Tablero}} del Sudoku Killer.
+
+\begin{DoxyInvariant}{Invariante}
+Todas las casillas deben ser válidas 
+
+Num\+\_\+\+Casillas = 81 
+
+Todos los grupos del vector deben cumplir con su invariante de representación 
+\end{DoxyInvariant}
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classTablero_aeb22a169fffcf69f9789c24c2296e3dc}\label{classTablero_aeb22a169fffcf69f9789c24c2296e3dc}} 
+\index{Tablero@{Tablero}!Tablero@{Tablero}}
+\index{Tablero@{Tablero}!Tablero@{Tablero}}
+\doxysubsubsection{\texorpdfstring{Tablero()}{Tablero()}}
+{\footnotesize\ttfamily Tablero\+::\+Tablero (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classGrupo}{Grupo}} $>$ \&}]{grupos,  }\item[{const vector$<$ vector$<$ \mbox{\hyperlink{classCasilla}{Casilla}} $>$$>$ \&}]{sdk }\end{DoxyParamCaption})}
+
+
+
+Constructor con vector de grupos y vector de vectores de casillas. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em grupos} & Vector de grupos del tablero \\
+\hline
+{\em sdk} & Tabla de casillas del tablero \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classTablero_a96a93a35fe95576658f6536bd48b6c57}\label{classTablero_a96a93a35fe95576658f6536bd48b6c57}} 
+\index{Tablero@{Tablero}!escribir\_inmediatos@{escribir\_inmediatos}}
+\index{escribir\_inmediatos@{escribir\_inmediatos}!Tablero@{Tablero}}
+\doxysubsubsection{\texorpdfstring{escribir\_inmediatos()}{escribir\_inmediatos()}}
+{\footnotesize\ttfamily void Tablero\+::escribir\+\_\+inmediatos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Escribe las casillas inmediatas obtenidas\+: 
+
+
+\begin{DoxyItemize}
+\item Usando el método del 45 para el sudoku killer (y derivados con estructuras mayores). \mbox{\hyperlink{classTablero_a51c3cf8337af705fcd6739974eaad963}{Tablero\+::metodo\+\_\+45()}}
+\item Rellenando grupos con una única casilla. \mbox{\hyperlink{classTablero_a6749cbed675bc3fb99257ea6818b4f62}{Tablero\+::rellenar\+\_\+unitarias()}} 
+\end{DoxyItemize}\mbox{\Hypertarget{classTablero_aa09223075a7a2206544917484f01ce43}\label{classTablero_aa09223075a7a2206544917484f01ce43}} 
+\index{Tablero@{Tablero}!escribir\_vector@{escribir\_vector}}
+\index{escribir\_vector@{escribir\_vector}!Tablero@{Tablero}}
+\doxysubsubsection{\texorpdfstring{escribir\_vector()}{escribir\_vector()}}
+{\footnotesize\ttfamily void Tablero\+::escribir\+\_\+vector (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classCasilla}{Casilla}} $>$ \&}]{a\+\_\+escribir }\end{DoxyParamCaption})}
+
+
+
+Escribe un vector de casillas en el tablero. Llama a \mbox{\hyperlink{classTablero_a42bc19abfc635802ed9d3cb7dcc5d7d3}{Tablero\+::set\+\_\+casilla()}} 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em a\+\_\+escribir} & Vector de casillas a escribir en el sudoku. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTablero_a8a9a0bf405b85e2d8baefccddded11b3}\label{classTablero_a8a9a0bf405b85e2d8baefccddded11b3}} 
+\index{Tablero@{Tablero}!get\_grupo@{get\_grupo}}
+\index{get\_grupo@{get\_grupo}!Tablero@{Tablero}}
+\doxysubsubsection{\texorpdfstring{get\_grupo()}{get\_grupo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGrupo}{Grupo}}\& Tablero\+::get\+\_\+grupo (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCasilla}{Casilla}} \&}]{cas }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Devuelve el grupo al que esta casilla pertenece. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em cas} & \mbox{\hyperlink{classCasilla}{Casilla}} cuyo grupo se devuelve \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Referencia al grupo al que {\itshape cas} pertenece 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTablero_abbe54b010dd36cf69dc01185a00618b3}\label{classTablero_abbe54b010dd36cf69dc01185a00618b3}} 
+\index{Tablero@{Tablero}!get\_grupo@{get\_grupo}}
+\index{get\_grupo@{get\_grupo}!Tablero@{Tablero}}
+\doxysubsubsection{\texorpdfstring{get\_grupo()}{get\_grupo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classGrupo}{Grupo}}\& Tablero\+::get\+\_\+grupo (\begin{DoxyParamCaption}\item[{int}]{pos }\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el grupo correspondiente a la posición de este en el vector {\ttfamily sudoku}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em pos} & Posición del grupo que se quiere tener \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Objeto de la clase \mbox{\hyperlink{classGrupo}{Grupo}}, que ocupa dicha {\ttfamily pos} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTablero_a27d046439b4b25538713ad0e1db39d90}\label{classTablero_a27d046439b4b25538713ad0e1db39d90}} 
+\index{Tablero@{Tablero}!getGrupos\_col@{getGrupos\_col}}
+\index{getGrupos\_col@{getGrupos\_col}!Tablero@{Tablero}}
+\doxysubsubsection{\texorpdfstring{getGrupos\_col()}{getGrupos\_col()}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{classGrupo}{Grupo}}$>$ Tablero\+::get\+Grupos\+\_\+col (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCasilla}{Casilla}} \&}]{col }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Devuelve un vector de los grupos que tienen al menos una casilla en esa columna. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em col} & Columna del sudoku en la que buscar grupos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Vector de Grupos que cumplen dicha condicion. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTablero_a092ba5b34fa4b9cd978e020d754bc2d0}\label{classTablero_a092ba5b34fa4b9cd978e020d754bc2d0}} 
+\index{Tablero@{Tablero}!getGrupos\_cubo@{getGrupos\_cubo}}
+\index{getGrupos\_cubo@{getGrupos\_cubo}!Tablero@{Tablero}}
+\doxysubsubsection{\texorpdfstring{getGrupos\_cubo()}{getGrupos\_cubo()}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{classGrupo}{Grupo}}$>$ Tablero\+::get\+Grupos\+\_\+cubo (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCasilla}{Casilla}} \&}]{cubo }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Devuelve un vector de los grupos que tienen al menos una casilla en ese cubo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em cubo} & Cubo del sudoku en el que buscar grupos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Vector de Grupos que cumplen dicha condicion. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTablero_a681270a82e99d05b1dc5f7f289a0cec3}\label{classTablero_a681270a82e99d05b1dc5f7f289a0cec3}} 
+\index{Tablero@{Tablero}!getGrupos\_fila@{getGrupos\_fila}}
+\index{getGrupos\_fila@{getGrupos\_fila}!Tablero@{Tablero}}
+\doxysubsubsection{\texorpdfstring{getGrupos\_fila()}{getGrupos\_fila()}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{classGrupo}{Grupo}}$>$ Tablero\+::get\+Grupos\+\_\+fila (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCasilla}{Casilla}} \&}]{fila }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Devuelve un vector de los grupos que tienen al menos una casilla en esa fila. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em fila} & Fila del sudoku en la que buscar grupos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Vector de Grupos que cumplen dicha condicion. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTablero_a602a384d1860c0b75ad6c143d4a81e04}\label{classTablero_a602a384d1860c0b75ad6c143d4a81e04}} 
+\index{Tablero@{Tablero}!limpiar@{limpiar}}
+\index{limpiar@{limpiar}!Tablero@{Tablero}}
+\doxysubsubsection{\texorpdfstring{limpiar()}{limpiar()}}
+{\footnotesize\ttfamily void Tablero\+::limpiar (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCasilla}{Casilla}} \&}]{cas }\end{DoxyParamCaption})}
+
+
+
+Actualiza el tablero. LLama a\+: 
+
+
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classTablero_a245e0df374bff65226957c40ab720a4d}{limpiar\+\_\+basico(const Casilla \&cas)}}
+\item \mbox{\hyperlink{classTablero_a8bdea9f81c86f3e52c9ed969aade0357}{limpiar\+\_\+unic\+\_\+comb(const Casilla \&cas)}}
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em cas} & \mbox{\hyperlink{classCasilla}{Casilla}} cuyo valor se limpiará \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTablero_a245e0df374bff65226957c40ab720a4d}\label{classTablero_a245e0df374bff65226957c40ab720a4d}} 
+\index{Tablero@{Tablero}!limpiar\_basico@{limpiar\_basico}}
+\index{limpiar\_basico@{limpiar\_basico}!Tablero@{Tablero}}
+\doxysubsubsection{\texorpdfstring{limpiar\_basico()}{limpiar\_basico()}}
+{\footnotesize\ttfamily void Tablero\+::limpiar\+\_\+basico (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCasilla}{Casilla}} \&}]{cas }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dada la última casilla escrita en el tablero, limpia todas las combinaciones y posiciones de cada estructura que contenga a {\itshape cas}. 
+
+LLama a Tablero\+::limp\+\_\+\{estructura\}(\mbox{\hyperlink{classCasilla}{Casilla}} cas)
+
+
+\begin{DoxyParams}{Parámetros}
+{\em cas} & Última casilla escrita \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTablero_ab0be25d645cab06e45d889a08c27509d}\label{classTablero_ab0be25d645cab06e45d889a08c27509d}} 
+\index{Tablero@{Tablero}!limpiar\_col@{limpiar\_col}}
+\index{limpiar\_col@{limpiar\_col}!Tablero@{Tablero}}
+\doxysubsubsection{\texorpdfstring{limpiar\_col()}{limpiar\_col()}}
+{\footnotesize\ttfamily void Tablero\+::limpiar\+\_\+col (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCasilla}{Casilla}} \&}]{cas }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dada la última casilla escrita (o simulada) en el tablero, itera sobre todos los grupos con casillas dentro de la col a la que {\itshape cas} pertenece. 
+
+
+\begin{DoxyItemize}
+\item LLama a \mbox{\hyperlink{classGrupo_a1019974c417082c5b141518231415651}{Grupo\+::limp\+\_\+comb\+\_\+en\+\_\+col(const Casilla\& cas)}}
+\item LLama a \mbox{\hyperlink{classGrupo_a50a2f8e0c2e608ed82811e7eb2773930}{Grupo\+::limp\+\_\+comb\+\_\+no\+\_\+en\+\_\+col(const Casilla\& cas)}}
+\end{DoxyItemize}
+
+Esto se da porque la manera de limpiar un grupo de imposibilidades es notablemente distinta en los casos en los que los grupos afectados estén o no enteramente contenidos dentro de la estructura afectada
+
+
+\begin{DoxyParams}{Parámetros}
+{\em cas} & última casilla escrita (o simulada) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTablero_ae58d9ad07cec9734e831e7848e5db593}\label{classTablero_ae58d9ad07cec9734e831e7848e5db593}} 
+\index{Tablero@{Tablero}!limpiar\_cubo@{limpiar\_cubo}}
+\index{limpiar\_cubo@{limpiar\_cubo}!Tablero@{Tablero}}
+\doxysubsubsection{\texorpdfstring{limpiar\_cubo()}{limpiar\_cubo()}}
+{\footnotesize\ttfamily void Tablero\+::limpiar\+\_\+cubo (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCasilla}{Casilla}} \&}]{cas }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dada la última casilla escrita (o simulada) en el tablero, itera sobre todos los grupos con casillas dentro del cubo al que {\itshape cas} pertenece. 
+
+
+\begin{DoxyItemize}
+\item LLama a \mbox{\hyperlink{classGrupo_aa3399847a0bcae2b80ea32b025ae5145}{Grupo\+::limp\+\_\+comb\+\_\+en\+\_\+cubo(const Casilla\& cas)}}
+\item LLama a \mbox{\hyperlink{classGrupo_af64b55b58361da07c494f789c925a028}{Grupo\+::limp\+\_\+comb\+\_\+no\+\_\+en\+\_\+cubo(const Casilla\& cas)}}
+\end{DoxyItemize}
+
+Esto se da porque la manera de limpiar un grupo de imposibilidades es notablemente distinta en los casos en los que los grupos afectados estén o no enteramente contenidos dentro de la estructura afectada
+
+
+\begin{DoxyParams}{Parámetros}
+{\em cas} & última casilla escrita (o simulada) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTablero_aa1f9d773bf046d0728937e2878586783}\label{classTablero_aa1f9d773bf046d0728937e2878586783}} 
+\index{Tablero@{Tablero}!limpiar\_fila@{limpiar\_fila}}
+\index{limpiar\_fila@{limpiar\_fila}!Tablero@{Tablero}}
+\doxysubsubsection{\texorpdfstring{limpiar\_fila()}{limpiar\_fila()}}
+{\footnotesize\ttfamily void Tablero\+::limpiar\+\_\+fila (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCasilla}{Casilla}} \&}]{cas }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dada la última casilla escrita en el tablero (o simulada), itera sobre todos los grupos con casillas dentro de la fila a la que {\itshape cas} pertenece. 
+
+
+\begin{DoxyItemize}
+\item LLama a \mbox{\hyperlink{classGrupo_a397f7f2ad138b17a03db7fc619d5e263}{Grupo\+::limp\+\_\+comb\+\_\+en\+\_\+fila(const Casilla\& cas)}}
+\item LLama a \mbox{\hyperlink{classGrupo_ad350d5d2e7e05ef9c7a9c05f11ca39fb}{Grupo\+::limp\+\_\+comb\+\_\+no\+\_\+en\+\_\+fila(const Casilla\& cas)}}
+\end{DoxyItemize}
+
+Esto se da porque la manera de limpiar un grupo de imposibilidades es notablemente distinta en los casos en los que los grupos afectados estén o no enteramente contenidos dentro de la estructura afectada
+
+
+\begin{DoxyParams}{Parámetros}
+{\em cas} & última casilla escrita (o simulada) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTablero_a8bdea9f81c86f3e52c9ed969aade0357}\label{classTablero_a8bdea9f81c86f3e52c9ed969aade0357}} 
+\index{Tablero@{Tablero}!limpiar\_unic\_comb@{limpiar\_unic\_comb}}
+\index{limpiar\_unic\_comb@{limpiar\_unic\_comb}!Tablero@{Tablero}}
+\doxysubsubsection{\texorpdfstring{limpiar\_unic\_comb()}{limpiar\_unic\_comb()}}
+{\footnotesize\ttfamily void Tablero\+::limpiar\+\_\+unic\+\_\+comb (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCasilla}{Casilla}} \&}]{cas }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sobre cada uno de los grupos tocados por las estructuras a las que {\itshape cas} pertenece se comprobará\+: 
+
+
+\begin{DoxyItemize}
+\item Si ese grupo está contenido entero dentro de una estructura
+\item Si ese grupo tan solo conserva una de sus combinaciones Si ambas condiciones se cumplen, ejecutará este método de la siguiente manera\+:
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < tam\_unica\_comb; i++) \{}
+\DoxyCodeLine{    \mbox{\hyperlink{classCasilla}{Casilla}} cas(grupo[0].getCoord(),grupo.getComb[0][i]); \textcolor{comment}{// Solo hay una comb. ([0]) (con i sumandos)}}
+\DoxyCodeLine{    limpiar\_\{esctructura\}(cas); \textcolor{comment}{// Donde \{estructura\} será la fila, col. o cubo}}
+\DoxyCodeLine{                                \textcolor{comment}{// en el que grupo esté enteramente contenido (guión 1)}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+La motivación de este uso del método reside en que si en cierta estructura encontramos un grupo con una única combinación, aunque no sepamos el orden en el que esta aparecerá (su posición) y por tanto no podamos escribirla, sabemos que todos esos dígitos aparecerán en las casillas asociadas al grupo, y por tanto no aparecerán en ninguna otra casilla de la estructura que lo contenga Por tanto, llamamos a limpiar\+\_\+\{estructura\} con una casilla simulada
+
+
+\begin{DoxyParams}{Parámetros}
+{\em cas} & Úlima casilla escrita \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTablero_a51c3cf8337af705fcd6739974eaad963}\label{classTablero_a51c3cf8337af705fcd6739974eaad963}} 
+\index{Tablero@{Tablero}!metodo\_45@{metodo\_45}}
+\index{metodo\_45@{metodo\_45}!Tablero@{Tablero}}
+\doxysubsubsection{\texorpdfstring{metodo\_45()}{metodo\_45()}}
+{\footnotesize\ttfamily void Tablero\+::metodo\+\_\+45 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Escribe las casillas determinadas por el método del 45 (o derivados inmediatos). 
+
+MÉ\+TODO DE LOS 45
+
+Iterando sobre cada una de las estructuras del tablero (todas las filas, columnas y cubos de 3x3) examinamos si todos los grupos con casillas en esa estructura están totalmente contenidos menos uno de ellos. En ese caso, si el grupo no-\/enteramente-\/contenido tiene fuera de la estructura 1 sola casilla, o size\+\_\+grupo-\/1 casillas, podremos determinar de manera inmediata una casilla del grupo. (Tablero\+::unico\+\_\+casillas\+\_\+fuera\+\_\+\{estructura\})
+\begin{DoxyItemize}
+\item En el caso de una sola casilla fuera\+:
+\begin{DoxyItemize}
+\item casilla = suma\+\_\+todos\+\_\+grupos\+\_\+de\+\_\+la\+\_\+estructura -\/ 45
+\end{DoxyItemize}
+\item En el caso de size-\/1 casillas fuera\+:
+\begin{DoxyItemize}
+\item casilla = 45 -\/ suma\+\_\+grupos\+\_\+enteros\+\_\+dentro
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+Nótese que el método es fácilmente aplicable al caso en el que tengamos una estructura compuesta de dos o más de las estructuras anteriormente consideradas (sea n) usando 45$\ast$n en las fórmulas.
+
+Obtiene un vector con las casillas a escribir y las escribe con \mbox{\hyperlink{classTablero_aa09223075a7a2206544917484f01ce43}{Tablero\+::escribir\+\_\+vector}}. \mbox{\Hypertarget{classTablero_a6749cbed675bc3fb99257ea6818b4f62}\label{classTablero_a6749cbed675bc3fb99257ea6818b4f62}} 
+\index{Tablero@{Tablero}!rellenar\_unitarias@{rellenar\_unitarias}}
+\index{rellenar\_unitarias@{rellenar\_unitarias}!Tablero@{Tablero}}
+\doxysubsubsection{\texorpdfstring{rellenar\_unitarias()}{rellenar\_unitarias()}}
+{\footnotesize\ttfamily void Tablero\+::rellenar\+\_\+unitarias (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Rellena los grupos que tienen una sola casilla. 
+
+Las guarda en un vector y las escribe con \mbox{\hyperlink{classTablero_aa09223075a7a2206544917484f01ce43}{Tablero\+::escribir\+\_\+vector()}} \mbox{\Hypertarget{classTablero_a42bc19abfc635802ed9d3cb7dcc5d7d3}\label{classTablero_a42bc19abfc635802ed9d3cb7dcc5d7d3}} 
+\index{Tablero@{Tablero}!set\_casilla@{set\_casilla}}
+\index{set\_casilla@{set\_casilla}!Tablero@{Tablero}}
+\doxysubsubsection{\texorpdfstring{set\_casilla()}{set\_casilla()}}
+{\footnotesize\ttfamily void Tablero\+::set\+\_\+casilla (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCasilla}{Casilla}} \&}]{casilla\+\_\+escrita,  }\item[{bool}]{limpiar = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Modifica el grupo de la casilla que escribe eliminándola de este, con el metodo quitar\+\_\+casilla (\mbox{\hyperlink{classCasilla}{Casilla}} cas) de la clase \mbox{\hyperlink{classGrupo}{Grupo}} y modifica el sudoku colocando el valor a la casilla correspondiente. 
+
+Además, llamará a limpiar (por defecto) para quitar las combinaciones posibles de otros grupos. 
+\begin{DoxyParams}{Parámetros}
+{\em casilla\+\_\+escrita} & \mbox{\hyperlink{classCasilla}{Casilla}} cuyo valor se escribe \\
+\hline
+{\em limpiar} & Por defecto limpia. En el caso que no queramos, pasar un booleano igual a false. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTablero_ac42f7b6babaa045b85eb02630b8259aa}\label{classTablero_ac42f7b6babaa045b85eb02630b8259aa}} 
+\index{Tablero@{Tablero}!unico\_casillas\_fuera\_col@{unico\_casillas\_fuera\_col}}
+\index{unico\_casillas\_fuera\_col@{unico\_casillas\_fuera\_col}!Tablero@{Tablero}}
+\doxysubsubsection{\texorpdfstring{unico\_casillas\_fuera\_col()}{unico\_casillas\_fuera\_col()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classCasilla}{Casilla}}\& Tablero\+::unico\+\_\+casillas\+\_\+fuera\+\_\+col (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCasilla}{Casilla}} \&}]{col,  }\item[{int}]{desp = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Devuelve la casilla que se puede calcular (única fuera o única dentro). Devuelve casilla nula si no existe una única fuera o dentro de la estructura. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em col} & \mbox{\hyperlink{classCasilla}{Casilla}} de la cual solo tomaremos la segunda coordenada \\
+\hline
+{\em desp} & Número de columnas que hemos utilizado en el método 45. (\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{Ver también}
+\mbox{\hyperlink{classTablero_a51c3cf8337af705fcd6739974eaad963}{metodo\+\_\+45()}}) 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Devuelve}
+\mbox{\hyperlink{classCasilla}{Casilla}} que se puede calcular 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTablero_ada1028370bdedf72867f66e97fa8fb97}\label{classTablero_ada1028370bdedf72867f66e97fa8fb97}} 
+\index{Tablero@{Tablero}!unico\_casillas\_fuera\_cubo@{unico\_casillas\_fuera\_cubo}}
+\index{unico\_casillas\_fuera\_cubo@{unico\_casillas\_fuera\_cubo}!Tablero@{Tablero}}
+\doxysubsubsection{\texorpdfstring{unico\_casillas\_fuera\_cubo()}{unico\_casillas\_fuera\_cubo()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classCasilla}{Casilla}}\& Tablero\+::unico\+\_\+casillas\+\_\+fuera\+\_\+cubo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCasilla}{Casilla}}}]{cubo,  }\item[{bool}]{desp\+\_\+dcha = {\ttfamily false},  }\item[{bool}]{desp\+\_\+abj = {\ttfamily false} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Devuelve la casilla que se puede calcular (única fuera o única dentro). Devuelve casilla nula si no existe una única fuera o dentro de la estructura. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em cubo} & \mbox{\hyperlink{classCasilla}{Casilla}} que utilizaremos para identificar el cubo \\
+\hline
+{\em desp\+\_\+dcha} & Predeterminado false, ya que solo en el caso de querer tomar dos grupos hacia la derecha la llamaremos con booleano igual a true. (\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{Ver también}
+\mbox{\hyperlink{classTablero_a51c3cf8337af705fcd6739974eaad963}{metodo\+\_\+45()}}) 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parámetros}
+{\em desp\+\_\+abj} & Predeterminado false, ya que solo en el caso de querer tomar dos grupos hacia abajo la llamaremos con booleano igual a true. (\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{Ver también}
+\mbox{\hyperlink{classTablero_a51c3cf8337af705fcd6739974eaad963}{metodo\+\_\+45()}}) 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Devuelve}
+\mbox{\hyperlink{classCasilla}{Casilla}} que se puede calcular 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTablero_a0e3f25f726b674e1412a43f16c270f31}\label{classTablero_a0e3f25f726b674e1412a43f16c270f31}} 
+\index{Tablero@{Tablero}!unico\_casillas\_fuera\_fil@{unico\_casillas\_fuera\_fil}}
+\index{unico\_casillas\_fuera\_fil@{unico\_casillas\_fuera\_fil}!Tablero@{Tablero}}
+\doxysubsubsection{\texorpdfstring{unico\_casillas\_fuera\_fil()}{unico\_casillas\_fuera\_fil()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classCasilla}{Casilla}}\& Tablero\+::unico\+\_\+casillas\+\_\+fuera\+\_\+fil (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCasilla}{Casilla}} \&}]{fila,  }\item[{int}]{desp = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Devuelve la casilla que se puede calcular (única fuera o única dentro). Devuelve casilla nula si no existe una única fuera o dentro de la estructura. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em fila} & \mbox{\hyperlink{classCasilla}{Casilla}} de la cual solo tomaremos la primera coordenada \\
+\hline
+{\em desp} & Número de filas que hemos utilizado en el método 45 (\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{Ver también}
+\mbox{\hyperlink{classTablero_a51c3cf8337af705fcd6739974eaad963}{metodo\+\_\+45()}}) 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Devuelve}
+\mbox{\hyperlink{classCasilla}{Casilla}} que se puede calcular 
+\end{DoxyReturn}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classTablero_a5ab5516422e4b9a36514bdb25130f337}\label{classTablero_a5ab5516422e4b9a36514bdb25130f337}} 
+\index{Tablero@{Tablero}!grupos@{grupos}}
+\index{grupos@{grupos}!Tablero@{Tablero}}
+\doxysubsubsection{\texorpdfstring{grupos}{grupos}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{classGrupo}{Grupo}}$>$ Tablero\+::grupos\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Vector de los grupos que quedan en el sudoku. 
+
+Inicialmente, abarca el tablero completo. 
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Tablero_8h}{Tablero.\+h}}\end{DoxyCompactItemize}

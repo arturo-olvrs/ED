@@ -11,3 +11,7 @@
 
 # Ignorar archivo .DS_Store generado por el Finder
 **/.DS_Store
+
+
+# Ignorar cmake-build-debug
+Reto\ 02.\ Sudoku/cmake-build-debug/

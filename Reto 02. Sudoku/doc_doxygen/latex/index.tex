@@ -1,0 +1,35 @@
+\hypertarget{index_autotoc_md0}{}\doxysection{Introducción}\label{index_autotoc_md0}
+Este proyecto está compuesto de tres archivos de cabecera a forma de propuesta de representación algorítmica para la resolución del problema conocido como Sudoku Killer (las \href{https://en.wikipedia.org/wiki/Killer_sudoku}{\texttt{ reglas del sudoku killer}}).\hypertarget{index_autotoc_md1}{}\doxysection{Propuesta de resolución usando nuestra representación}\label{index_autotoc_md1}
+A continuación, detallamos cómo creemos podría resolverse cualquier Sudoku Killer (soluble) sistemáticamente haciendo uso de nuestros métodos (aunque no se precise explícitamente, en la siguiente propuesta no se escribirá nada que no pueda hacerse con nuestras clases).
+
+Lo primero que hacemos después de inicializar el tablero es obtener todas las combinaciones posibles asociadas a cada grupo y para cada una de esas todas sus posiciones posibles.
+
+Seguidamente, se procedería con la obtención de las casillas llamadas \char`\"{}inmediatas\char`\"{} por no requerir más que la posición inicial para determinarse. Estas son\+:
+\begin{DoxyItemize}
+\item Las pertenecientes a grupos unitarios
+\item Las obtenidas con el \char`\"{}método del 45 (o múltiplos)\char`\"{} detallado en los ficheros de cabecera (\mbox{\hyperlink{classTablero_a51c3cf8337af705fcd6739974eaad963}{Tablero\+::metodo\+\_\+45()}}).
+\end{DoxyItemize}
+
+Como se ha especificado en los comentarios en los ficheros de cabecera, por cada escritura se llamará al método \mbox{\hyperlink{classTablero_a602a384d1860c0b75ad6c143d4a81e04}{Tablero\+::limpiar()}} de la clase tablero, que se ocupará de\+:
+\begin{DoxyItemize}
+\item Tachar las correspondientes posiciones o combinaciones (esto iterando sobre cada fila, columna, y cubo 3x3 que contengan a la casilla escrita) para evitar que un mismo dígito se encuentre más de una vez en la misma estructura. Este es el método \mbox{\hyperlink{classTablero_a245e0df374bff65226957c40ab720a4d}{Tablero\+::limpiar\+\_\+basico()}}
+\item Otro limpiado más sutil\+: por cada grupo tocado por las estructuras anteriormente mencionadas, nos preguntamos si\+:
+\begin{DoxyItemize}
+\item Está enteramente contenido en alguna estructura (fila, columna o cubo)
+\item Le queda una única combinación posible (sumandos sin posición especificada)
+\end{DoxyItemize}
+
+En ese caso, obviamente, los dígitos de esa combinación no van a aparecer en la estructura contenedora (reglas del Sudoku) y por tanto las \char`\"{}tachamos\char`\"{} (de esto se ocupa el \mbox{\hyperlink{classTablero_a8bdea9f81c86f3e52c9ed969aade0357}{Tablero\+::limpiar\+\_\+unic\+\_\+comb()}}, que limpia a su vez sobre la estructura contenedora).
+\end{DoxyItemize}
+
+Tras hacer estos procesos de limpieza sobre cada casilla \char`\"{}inmediata\char`\"{}, se termina lo que llamaremos UNA ITERACIÓN DE LIMPIEZA en el Sudoku. Es decir, obtención de las casillas determinadas en un \char`\"{}snapshot\char`\"{} de la situación del Sudoku, y la escritura y limpieza de cada una de esas casillas. Al término de cada una de estas iteraciones de limpieza, comienza una nueva examinando la situación del sudoku y obteniendo las nuevas determinadas.
+
+Terminaremos este proceso en el momento en el que no \char`\"{}queden grupos\char`\"{} en el tablero, ya que para cada casilla que escribamos (y se encuentre en el borde del grupo al que pertenece) la eliminamos de éste, quitando el grupo del sudoku cuando no le queden casillas.
+
+\begin{DoxyAuthor}{Autor}
+Joaquín Avilés de la Fuente 
+
+Daniel Hidalgo Chica 
+
+Arturo Olivares Martos 
+\end{DoxyAuthor}
