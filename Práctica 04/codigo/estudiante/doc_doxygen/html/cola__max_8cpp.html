@@ -83,26 +83,25 @@ $(function() {
 <a href="#details">Más...</a></p>
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
 <code>#include &quot;<a class="el" href="maxqueue_8h_source.html">maxqueue.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="maxqueue_8cpp.html">maxqueue.cpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Dependencia gráfica adjunta para cola_max.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="cola__max_8cpp__incl.png" border="0" usemap="#aestudiante_2src_2cola__max_8cpp" alt=""/></div>
 <map name="aestudiante_2src_2cola__max_8cpp" id="aestudiante_2src_2cola__max_8cpp">
-<area shape="rect" title="Fichero de ejemplo para el uso de la clase MaxQueue." alt="" coords="50,5,195,47"/>
-<area shape="rect" title=" " alt="" coords="5,95,85,121"/>
-<area shape="rect" href="maxqueue_8h.html" title="Archivo de especificación del TDA MaxQueue." alt="" coords="119,169,222,196"/>
-<area shape="rect" href="maxqueue_8cpp.html" title="Archivo de implementación del TDA MaxQueue." alt="" coords="161,95,279,121"/>
-<area shape="rect" title=" " alt="" coords="101,244,158,271"/>
-<area shape="rect" title=" " alt="" coords="182,244,242,271"/>
+<area shape="rect" title="Fichero de ejemplo para el uso de la clase MaxQueue." alt="" coords="43,5,188,47"/>
+<area shape="rect" title=" " alt="" coords="18,95,98,121"/>
+<area shape="rect" href="maxqueue_8h.html" title="Archivo de especificación del TDA MaxQueue." alt="" coords="123,95,225,121"/>
+<area shape="rect" title=" " alt="" coords="5,169,63,196"/>
+<area shape="rect" title=" " alt="" coords="87,169,147,196"/>
+<area shape="rect" href="maxqueue_8cpp.html" title="Archivo de implementación del TDA MaxQueue." alt="" coords="171,169,289,196"/>
 </map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Funciones</h2></td></tr>
-<tr class="memitem:a6f0682110a2f2a71eba8b24dfbcd94e8"><td class="memTemplParams" colspan="2"><a id="a6f0682110a2f2a71eba8b24dfbcd94e8"></a>
-template&lt;typename T1 , typename T2 &gt; </td></tr>
-<tr class="memitem:a6f0682110a2f2a71eba8b24dfbcd94e8"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;os, const std::pair&lt; T1, T2 &gt; &amp;p)</td></tr>
+<tr class="memitem:a6f0682110a2f2a71eba8b24dfbcd94e8"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; </td></tr>
+<tr class="memitem:a6f0682110a2f2a71eba8b24dfbcd94e8"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="cola__max_8cpp.html#a6f0682110a2f2a71eba8b24dfbcd94e8">operator&lt;&lt;</a> (std::ostream &amp;os, const std::pair&lt; T1, T2 &gt; &amp;p)</td></tr>
+<tr class="memdesc:a6f0682110a2f2a71eba8b24dfbcd94e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga del operador de salida para pares.  <a href="cola__max_8cpp.html#a6f0682110a2f2a71eba8b24dfbcd94e8">Más...</a><br /></td></tr>
 <tr class="separator:a6f0682110a2f2a71eba8b24dfbcd94e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top"><a id="a0ddf1224851353fc92bfbff6f499fa97"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> (int argc, char *argv[])</td></tr>
@@ -116,7 +115,56 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> (int argc, ch
 <div class="line">(2, 4)</div>
 <div class="line">(3, 4)</div>
 <div class="line">(4, 4)</div>
-</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- fragment --><dl class="section author"><dt>Autor</dt><dd>Arturo Olivares Martos </dd></dl>
+</div><h2 class="groupheader">Documentación de las funciones</h2>
+<a id="a6f0682110a2f2a71eba8b24dfbcd94e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f0682110a2f2a71eba8b24dfbcd94e8">&#9670;&nbsp;</a></span>operator&lt;&lt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T1 , typename T2 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::pair&lt; T1, T2 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>p</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sobrecarga del operador de salida para pares. </p>
+<dl class="tparams"><dt>Parámetros del template</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T1</td><td>Tipo del primer elemento del par. </td></tr>
+    <tr><td class="paramname">T2</td><td>Tipo del segundo elemento del par. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">os</td><td>Flujo de salida. </td></tr>
+    <tr><td class="paramname">p</td><td>Par a mostrar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Referencia al flujo de salida. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(practica2)
+project(practica3)
 
 set(CMAKE_CXX_STANDARD 14)
 set(BASE_FOLDER estudiante)

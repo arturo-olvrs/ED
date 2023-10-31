@@ -14,4 +14,8 @@ Para consultar qué hace cada ejecutable, consultar su correspondiente archivo `
 - Contraste: contraste.cpp
 - Barajar: barajar.cpp
 - Comparar: comparar.cpp
+
+
+ * @author Arturo Olivares Martos
+ * @author Daniel Hidalgo Chica
 */

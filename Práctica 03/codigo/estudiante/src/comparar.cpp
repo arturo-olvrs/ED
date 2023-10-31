@@ -15,6 +15,10 @@
  * @endcode
  *
  * Este ejemplo muestra cómo utilizar el ejecutable **Comparar** para comparar dos imágenes.
+ *
+ *
+ * @author Arturo Olivares Martos
+ * @author Daniel Hidalgo Chica
  */
 
 #include <iostream>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['top_28',['top',['../classMaxStack.html#a98299b8f057e3b4917505b1bf5feff93',1,'MaxStack']]]
+  ['size_29',['size',['../classMaxQueue.html#abeffee6a42dc19be43e5c7f0df438120',1,'MaxQueue::size()'],['../classMaxStack.html#aa4a33c6e50d53b1d94692bc3a7b5cc9d',1,'MaxStack::size()']]]
 ];

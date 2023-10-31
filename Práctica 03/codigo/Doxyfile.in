@@ -1,8 +1,8 @@
-PROJECT_NAME           = "Práctica 2. TDA Imagen"
-OUTPUT_DIRECTORY       = @CMAKE_SOURCE_DIR@/../doxygen_doc
-INPUT                  = @CMAKE_SOURCE_DIR@/@BASE_FOLDER@/include @CMAKE_SOURCE_DIR@/@BASE_FOLDER@/src @CMAKE_SOURCE_DIR@/@BASE_FOLDER@/doc
+PROJECT_NAME           = "Práctica 3. TDA Imagen"
+OUTPUT_DIRECTORY       = "@CMAKE_SOURCE_DIR@/../doxygen_doc"
+INPUT                  = "@CMAKE_SOURCE_DIR@/@BASE_FOLDER@/include" "@CMAKE_SOURCE_DIR@/@BASE_FOLDER@/src" "@CMAKE_SOURCE_DIR@/@BASE_FOLDER@/doc"
 GENERATE_LATEX         = NO
-IMAGE_PATH             = @CMAKE_SOURCE_DIR@/@BASE_FOLDER@/doc
+IMAGE_PATH             = "@CMAKE_SOURCE_DIR@/@BASE_FOLDER@/doc"
 EXTRACT_PRIVATE        = NO
 OUTPUT_LANGUAGE        = Spanish
 USE_MATHJAX            = YES

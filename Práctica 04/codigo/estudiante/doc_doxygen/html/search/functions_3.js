@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['size_27',['size',['../classMaxQueue.html#abeffee6a42dc19be43e5c7f0df438120',1,'MaxQueue::size()'],['../classMaxStack.html#aa4a33c6e50d53b1d94692bc3a7b5cc9d',1,'MaxStack::size()']]]
+  ['pop_27',['pop',['../classMaxQueue.html#adcbb93e9d483141b4a376d5aec3f4e25',1,'MaxQueue::pop()'],['../classMaxStack.html#aaa2a78d832e7520071296783a12bc80c',1,'MaxStack::pop()']]],
+  ['push_28',['push',['../classMaxQueue.html#aa246a7748cc1e5a332f342797b6f9c8c',1,'MaxQueue::push()'],['../classMaxStack.html#a042b3eff509da775399e4e0d6acf2da1',1,'MaxStack::push()']]]
 ];

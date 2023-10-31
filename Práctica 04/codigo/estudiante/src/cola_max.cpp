@@ -18,10 +18,21 @@
  * (3, 4)
  * (4, 4)
  * @endcode
+ *
+ *
+ * @author Arturo Olivares Martos
  */
 #include <iostream>
 #include "maxqueue.h"
 
+/**
+ * @brief Sobrecarga del operador de salida para pares.
+ * @tparam T1  Tipo del primer elemento del par.
+ * @tparam T2  Tipo del segundo elemento del par.
+ * @param os  Flujo de salida.
+ * @param p  Par a mostrar.
+ * @return  Referencia al flujo de salida.
+ */
 template <typename T1, typename T2>
 std::ostream& operator<<(std::ostream& os, const std::pair<T1, T2>& p) {
 	os << "(" << p.first << ", " << p.second << ")";

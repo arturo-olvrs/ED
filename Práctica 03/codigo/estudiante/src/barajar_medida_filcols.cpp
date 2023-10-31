@@ -7,6 +7,9 @@
  * @param NumeroDeColumnas Número de columnas de la imagen con la que se trabaja.
  *
  * @pre 0 <= @a NumeroDeFilas, @a NumeroDeColumnas
+ *
+ * @author Arturo Olivares Martos
+ * @author Daniel Hidalgo Chica
  */
 #include <iostream>
 #include <cstdlib>

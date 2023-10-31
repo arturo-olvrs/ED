@@ -2,6 +2,9 @@
  * @file image.cpp
  * @brief Fichero con definiciones para los métodos primitivos de la clase Image
  *
+ *
+ * @author Arturo Olivares Martos
+ * @author Daniel Hidalgo Chica
  */
 
 #include <cstring>

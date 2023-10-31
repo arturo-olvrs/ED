@@ -24,6 +24,10 @@
  *     <small>Imagen Barajada</small>
  *   </div>
  * </div>
+ *
+ *
+ * @author Arturo Olivares Martos
+ * @author Daniel Hidalgo Chica
  */
 
 

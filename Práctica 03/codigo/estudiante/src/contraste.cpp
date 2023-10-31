@@ -33,6 +33,10 @@
  *     <small>Imagen con el contraste modificado</small>
  *   </div>
  * </div>
+ *
+ *
+ * @author Arturo Olivares Martos
+ * @author Daniel Hidalgo Chica
  */
 
 #include <iostream>

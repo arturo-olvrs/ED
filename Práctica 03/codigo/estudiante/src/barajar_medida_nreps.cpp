@@ -9,6 +9,10 @@
  * 				entre Image::Load() y Image::Save()
  *
  * @pre NumeroDeRepeticiones > 0
+ *
+ *
+ * @author Arturo Olivares Martos
+ * @author Daniel Hidalgo Chica
  */
 #include <iostream>
 #include <cstdlib>

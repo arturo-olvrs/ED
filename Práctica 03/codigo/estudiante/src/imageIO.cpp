@@ -4,6 +4,8 @@
   *
   * Permite la E/S de archivos de tipo PGM,PPM
   *
+ * @author Arturo Olivares Martos
+ * @author Daniel Hidalgo Chica
   */
 
 #include <string>

@@ -1,6 +1,8 @@
-/*!
+/**
  * @file image.h
  * @brief Cabecera para la clase Image
+ * @author Arturo Olivares Martos
+ * @author Daniel Hidalgo Chica
  */
 
 #ifndef _IMAGEN_H_
