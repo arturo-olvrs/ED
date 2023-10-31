@@ -1,4 +1,4 @@
-# Install script for directory: /home/arturoolvrs/Desktop/ED/Práctica 03/codigo
+# Install script for directory: /home/arturoolvrs/Desktop/practicas_ED/TDA_imagen/codigo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/arturoolvrs/Desktop/ED/Práctica 03/codigo/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/arturoolvrs/Desktop/practicas_ED/TDA_imagen/codigo/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

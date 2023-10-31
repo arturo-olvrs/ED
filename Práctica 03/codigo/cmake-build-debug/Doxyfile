@@ -1,6 +1,8 @@
-PROJECT_NAME           = "Práctica 1. Imágenes"
-OUTPUT_DIRECTORY       = /home/arturoolvrs/Desktop/ED/Práctica 03/codigo/cmake-build-debug/doc_doxygen/
-INPUT                  = /home/arturoolvrs/Desktop/ED/Práctica 03/codigo/estudiante/include /home/arturoolvrs/Desktop/ED/Práctica 03/codigo/estudiante/src /home/arturoolvrs/Desktop/ED/Práctica 03/codigo/estudiante/doc
+PROJECT_NAME           = "Práctica 2. TDA Imagen"
+OUTPUT_DIRECTORY       = /home/arturoolvrs/Desktop/practicas_ED/TDA_imagen/codigo/cmake-build-debug/doc_doxygen/
+INPUT                  = /home/arturoolvrs/Desktop/practicas_ED/TDA_imagen/codigo/estudiante/include /home/arturoolvrs/Desktop/practicas_ED/TDA_imagen/codigo/estudiante/src /home/arturoolvrs/Desktop/practicas_ED/TDA_imagen/codigo/estudiante/doc
 GENERATE_LATEX         = NO
-IMAGE_PATH             = /home/arturoolvrs/Desktop/ED/Práctica 03/codigo/estudiante/doc
+IMAGE_PATH             = /home/arturoolvrs/Desktop/practicas_ED/TDA_imagen/codigo/estudiante/doc
 EXTRACT_PRIVATE        = NO
+OUTPUT_LANGUAGE        = Spanish
+USE_MATHJAX            = YES

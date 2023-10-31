@@ -1,0 +1,150 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "practica2",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "barajar::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-barajar-Debug-09334a7a90682e67c5e8.json",
+					"name" : "barajar",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "barajar_medida_filcols::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-barajar_medida_filcols-Debug-e1395b07715e6d717bfc.json",
+					"name" : "barajar_medida_filcols",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "barajar_medida_nreps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-barajar_medida_nreps-Debug-26ddd3415eaa92683626.json",
+					"name" : "barajar_medida_nreps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "comparar::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-comparar-Debug-96209d3eccf6f0893cf0.json",
+					"name" : "comparar",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "contraste::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-contraste-Debug-d430061503992e38c595.json",
+					"name" : "contraste",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "crop::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-crop-Debug-f4491b2e92ef4371bea4.json",
+					"name" : "crop",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "doc_doxygen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-doc_doxygen-Debug-11d5d0f2fbd6788fd343.json",
+					"name" : "doc_doxygen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "icono::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-icono-Debug-a634e811a8d180ca9e75.json",
+					"name" : "icono",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "image::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-image-Debug-d54f5643a44b91ec58a4.json",
+					"name" : "image",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "negativo::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-negativo-Debug-29196dd69e03096bb6fb.json",
+					"name" : "negativo",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "zoom::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-zoom-Debug-7c631ecea79346bb1167.json",
+					"name" : "zoom",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/arturoolvrs/Desktop/practicas_ED/TDA_imagen/codigo/cmake-build-debug",
+		"source" : "/home/arturoolvrs/Desktop/practicas_ED/TDA_imagen/codigo"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 5
+	}
+}

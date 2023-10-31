@@ -1,6 +1,8 @@
-PROJECT_NAME           = "Práctica 1. Imágenes"
-OUTPUT_DIRECTORY       = @CMAKE_CURRENT_BINARY_DIR@/doc_doxygen/
+PROJECT_NAME           = "Práctica 2. TDA Imagen"
+OUTPUT_DIRECTORY       = @CMAKE_SOURCE_DIR@/../doxygen_doc
 INPUT                  = @CMAKE_SOURCE_DIR@/@BASE_FOLDER@/include @CMAKE_SOURCE_DIR@/@BASE_FOLDER@/src @CMAKE_SOURCE_DIR@/@BASE_FOLDER@/doc
 GENERATE_LATEX         = NO
 IMAGE_PATH             = @CMAKE_SOURCE_DIR@/@BASE_FOLDER@/doc
 EXTRACT_PRIVATE        = NO
+OUTPUT_LANGUAGE        = Spanish
+USE_MATHJAX            = YES

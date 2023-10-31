@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/comparar.dir/estudiante/src/comparar.cpp.o -o comparar  libimage.a 

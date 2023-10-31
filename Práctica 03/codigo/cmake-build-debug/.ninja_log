@@ -1,7 +1,0 @@
-# ninja log v5
-0	688	1696324269555536221	CMakeFiles/image.dir/estudiante/src/imageop.cpp.o	2aa5fdea12b79275
-0	800	1696324269675542073	CMakeFiles/image.dir/estudiante/src/image.cpp.o	b075e06fe25621a4
-4	860	1696324269735544999	CMakeFiles/image.dir/estudiante/src/imageIO.cpp.o	e347252f3c1cb497
-861	877	1696324269755545974	libimage.a	f8c489f5ea79ac71
-689	1186	1696324270063560994	CMakeFiles/negativo.dir/estudiante/src/negativo.cpp.o	f32fa8af6081a389
-1186	1281	1696324270155565481	negativo	52ba28992fc1c783

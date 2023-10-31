@@ -7,6 +7,7 @@
 #include <cstring>
 #include <cassert>
 #include <iostream>
+#include <cmath>
 
 #include <image.h>
 #include <imageIO.h>
@@ -23,10 +24,12 @@ void Image::Allocate(int nrows, int ncols, byte * buffer){
     img = new byte * [rows];
 
     if (buffer != 0)
-        img[0] = buffer;
+	    orgn_ptr = buffer;
     else
-        img[0] = new byte [rows * cols];
+	    orgn_ptr = new byte [rows * cols];
 
+
+	img[0] = orgn_ptr;
     for (int i=1; i < rows; i++)
         img[i] = img[i-1] + cols;
 }
@@ -35,7 +38,8 @@ void Image::Allocate(int nrows, int ncols, byte * buffer){
 void Image::Initialize (int nrows, int ncols, byte * buffer){
     if ((nrows == 0) || (ncols == 0)){
         rows = cols = 0;
-        img = 0;
+        img = nullptr;
+		orgn_ptr = nullptr;
     }
     else Allocate(nrows, ncols, buffer);
 }
@@ -55,7 +59,7 @@ bool Image::Empty() const{
 
 void Image::Destroy(){
     if (!Empty()){
-        delete [] img[0];
+        delete [] orgn_ptr;
         delete [] img;
     }
 }
@@ -140,22 +144,24 @@ byte Image::get_pixel (int i, int j) const {
 
 // This doesn't work if representation changes
 void Image::set_pixel (int k, byte value) {
-    // TODO this makes assumptions about the internal representation
-    // TODO Can you reuse set_pixel(i,j,value)?
-    img[0][k] = value;
+    // Obtenemos en primer lugar la fila y columna
+	int fil = (int)(k / get_cols());
+	int col = k % get_cols();
+
+	set_pixel(fil, col, value);
 }
 
 // This doesn't work if representation changes
 byte Image::get_pixel (int k) const {
-    // TODO this makes assumptions about the internal representation
-    // TODO Can you reuse get_pixel(i,j)?
-    return img[0][k];
+	// Obtenemos en primer lugar la fila y columna
+	int fil = (int)(k / get_cols());
+	int col = k % get_cols();
+
+	return get_pixel(fil, col);
 }
 
 // Métodos para almacenar y cargar imagenes en disco
 bool Image::Save (const char * file_path) const {
-    // TODO this makes assumptions about the internal representation
-    byte * p = img[0];
+	byte *p = orgn_ptr;
     return WritePGMImage(file_path, p, rows, cols);
 }
-

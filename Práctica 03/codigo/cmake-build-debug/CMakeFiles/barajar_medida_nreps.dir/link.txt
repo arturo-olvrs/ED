@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/barajar_medida_nreps.dir/estudiante/src/barajar_medida_nreps.cpp.o -o barajar_medida_nreps  libimage.a 

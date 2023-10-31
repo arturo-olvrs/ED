@@ -25,7 +25,7 @@ enum ImageKind {IMG_UNKNOWN, IMG_PGM, IMG_PPM};
   * @param path indica el archivo de disco que consultar
   * @return Devuelve el tipo de la imagen en el archivo
   *
-  * @see TipoImagen
+  * @see ImageKind
   */
 ImageKind ReadImageKind (const char *path);
 

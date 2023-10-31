@@ -1,0 +1,14 @@
+<map id="estudiante/include/image.h" name="estudiante/include/image.h">
+<area shape="rect" id="node1" title="Cabecera para la clase Image." alt="" coords="1073,5,1216,47"/>
+<area shape="rect" id="node2" href="$barajar_8cpp.html" title="Baraja una imagen según el método Image::ShuffleRows_eff()" alt="" coords="5,102,196,129"/>
+<area shape="rect" id="node3" href="$barajar__medida__filcols_8cpp.html" title="Fichero usado para medir la eficiencia empírica al llamar a Image::ShuffleRows_eff con una imagen de ..." alt="" coords="220,95,384,136"/>
+<area shape="rect" id="node4" href="$barajar__medida__nreps_8cpp.html" title="Fichero usado para medir la eficiencia empírica al llamar $n$ veces a Image::ShuffleRows_eff() entre ..." alt="" coords="408,95,572,136"/>
+<area shape="rect" id="node5" href="$comparar_8cpp.html" title="Dadas dos imágenes, informa si son iguales o no pixel a pixel." alt="" coords="596,102,803,129"/>
+<area shape="rect" id="node6" href="$contraste_8cpp.html" title="Modifica el contraste de una imagen." alt="" coords="827,102,1033,129"/>
+<area shape="rect" id="node7" href="$crop_8cpp.html" title="Recorta una imagen dada." alt="" coords="1058,102,1231,129"/>
+<area shape="rect" id="node8" href="$icono_8cpp.html" title="Obtiene un icono (reducción) a partir de una imagen." alt="" coords="1256,102,1436,129"/>
+<area shape="rect" id="node9" href="$image_8cpp.html" title="Fichero con definiciones para los métodos primitivos de la clase Image." alt="" coords="1461,102,1647,129"/>
+<area shape="rect" id="node10" href="$imageop_8cpp.html" title="Fichero con definiciones para el resto de métodos de la clase Image." alt="" coords="1671,102,1874,129"/>
+<area shape="rect" id="node11" href="$negativo_8cpp.html" title="Calcula el negativo de una imagen PGM." alt="" coords="1898,102,2101,129"/>
+<area shape="rect" id="node12" href="$zoom_8cpp.html" title="Aplica un zoom 2x de una imagen PGM." alt="" coords="2125,102,2306,129"/>
+</map>

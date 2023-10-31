@@ -6,12 +6,20 @@ set(BASE_FOLDER estudiante)
 
 include_directories(${BASE_FOLDER}/include)
 #add_library(imageio ${BASE_FOLDER}/src/imageio.cpp)
-add_library(image ${BASE_FOLDER}/src/image.cpp ${BASE_FOLDER}/src/imageop.cpp ${BASE_FOLDER}/src/imageIO.cpp)
+add_library(image ${BASE_FOLDER}/src/image.cpp ${BASE_FOLDER}/src/imageop.cpp ${BASE_FOLDER}/src/imageIO.cpp
+        estudiante/src/crop.cpp
+        estudiante/src/barajar.cpp)
 
 if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/negativo.cpp)
 add_executable(negativo ${BASE_FOLDER}/src/negativo.cpp)
 target_link_libraries(negativo LINK_PUBLIC image)
 endif()
+
+if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/crop.cpp)
+    add_executable(crop ${BASE_FOLDER}/src/crop.cpp)
+    target_link_libraries(crop LINK_PUBLIC image)
+endif()
+
 
 if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/subimagen.cpp)
 add_executable(subimagen ${BASE_FOLDER}/src/subimagen.cpp)
@@ -36,6 +44,21 @@ endif()
 if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/barajar.cpp)
 add_executable(barajar ${BASE_FOLDER}/src/barajar.cpp)
 target_link_libraries(barajar LINK_PUBLIC image)
+endif()
+
+if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/comparar.cpp)
+add_executable(comparar ${BASE_FOLDER}/src/comparar.cpp)
+target_link_libraries(comparar LINK_PUBLIC image)
+endif()
+
+if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/barajar_medida_filcols.cpp)
+    add_executable(barajar_medida_filcols ${BASE_FOLDER}/src/barajar_medida_filcols.cpp)
+    target_link_libraries(barajar_medida_filcols LINK_PUBLIC image)
+endif()
+
+if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/barajar_medida_nreps.cpp)
+    add_executable(barajar_medida_nreps ${BASE_FOLDER}/src/barajar_medida_nreps.cpp)
+    target_link_libraries(barajar_medida_nreps LINK_PUBLIC image)
 endif()
 
 # check if Doxygen is installed

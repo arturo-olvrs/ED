@@ -7,9 +7,7 @@
   */
 
 #include <string>
-
 #include <imageIO.h>
-
 #include <fstream>
 using namespace std;
 

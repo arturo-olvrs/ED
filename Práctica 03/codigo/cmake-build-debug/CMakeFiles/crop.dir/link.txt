@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/crop.dir/estudiante/src/crop.cpp.o -o crop  libimage.a 

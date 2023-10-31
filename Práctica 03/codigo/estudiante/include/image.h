@@ -11,9 +11,26 @@
 #include "imageIO.h"
 
 
-
+/**
+ * @typedef byte
+ * @brief Tipo de dato que representa un byte sin signo.
+ *
+ * Contiene el valor de un pixel de una imagen de la clase Image.
+ */
 typedef unsigned char byte;
 
+
+/**
+ * @enum LoadResult
+ * @brief Enumeración que representa el resultado de cargar una imagen PGM.
+ *
+ * Esta enumeración se utiliza para indicar el resultado de la operación de carga
+ * de una imagen PGM. Puede tener uno de los siguientes valores:
+ *
+ * - LoadResult::SUCCESS: La operación de carga se realizó con éxito.
+ * - LoadResult::NOT_PGM: El archivo no es un archivo PGM válido.
+ * - LoadResult::READING_ERROR: Se produjo un error al leer el archivo.
+ */
 enum LoadResult: unsigned char {
     SUCCESS,
     NOT_PGM,
@@ -32,10 +49,6 @@ enum LoadResult: unsigned char {
 
   \#include <Imagen.h>
 
-  @author Javier Abad
-  @author Guillermo Gómez
-  @date Septiembre 2021
-
 **/
 
 class Image{
@@ -43,16 +56,37 @@ class Image{
     /**
          @page page_repImagen Representación del TDA Imagen
 
-         @section sec_Image_A Título A
+         @section sec_Image_A Representación secuencial.
 
+         Para representar una imagen hemos escogido una matriz dinámica de Bytes (unsigned char).
 
-         Contenido de la sección A.
+         En particular, de las diferentes implementaciones posibles hemos escogido
+         tener dos vectores dinámicos: el vector byte *img[rows] y otro vector de bytes de tamaño
+         rows*cols que comience en img[0] (que será, esencialmente, resultado de colocar secuencialmente en memoria
+         las filas de la matriz abstracta). Así, en un primer momento, impusimos que el elemento i-ésimo del vector img, apunte
+         a la casilla (i*cols)-ésima del otro vector, y tenemos que, para referirnos al elemento (i,j) de nuestra
+         matriz abstracta no hacemos más que img[i][j].
 
-         @section sec_Image_B Título  B
+         Nos referimos a ésta como la implementación "secuencial" del tipo porque las filas en el vector "desenrollado"
+         aparecen en el orden natural: la fila (i)-ésima de la imagen, aparece justo antes de la fila (i+1)-ésima, y justo
+         después de la fila (i-1)-ésima.
 
-         Contenido de la sección B.
+         Veamos que esto no tiene por qué ser así.
 
-         Referencia a la \ref sec_Image_A
+         @section sec_Image_B Representación no necesariamente secuencial.
+         Motivados por problemas de eficiencia a la hora de intercambiar unas filas de la matriz por otras,
+         decidimos reinterpretar la representación del tipo "desordenando las filas". No reservamos nueva memoria
+         (optando por realmente separar la matriz en memoria usando una implementación de matriz dinámica como
+         vector de vectores dinámicos) sino que dejamos de imponer que la casilla i-ésima del vector img apuntase
+         a la casilla (i*cols)-ésima de la matriz, permitiendo que apunte a cualquier otra de las originales filas.
+
+         Sin embargo, esta idea nos inclina al uso de un nuevo campo de la clase: "origin_ptr", porque de lo contrario
+         no tendríamos controlada la primera casilla del vector "desenrrollado", y la necesitamos, al menos, para
+         la destrucción del objeto Imagen (también tendríamos la opción de, en el momento en el que necesitásemos
+         esa posición, buscarla comparando las direcciones de memoria a las que apuntan las distintas casillas
+         del vector img y tomando la primera de ellas, pero esto nos parece un sinsentido por la innecesaria
+         ineficiencia que implica).
+
        **/
 private :
 
@@ -75,6 +109,10 @@ private :
     **/
     int cols;
 
+    /**
+      @brief Puntero inicializado en img[0] que almacena el inicio de la representación en memoria.
+    **/
+    byte * orgn_ptr;
 
     /**
       @brief Initialize una imagen.
@@ -90,6 +128,8 @@ private :
       @brief Lee una imagen PGM desde un archivo.
       @param file_path Ruta del archivo a leer
       @return LoadResult
+
+      @see LoadResult
     **/
     LoadResult LoadFromPGM(const char * file_path);
 
@@ -123,7 +163,7 @@ public :
 
     /**
       * @brief Constructor por defecto .
-      * @post Genera una instancia de la clase Imagen con O filas y O colunmas.
+      * @post Genera una instancia de la clase Imagen con O filas y O columnas.
       * @return Imagen, el objeto imagen creado.
       */
     Image();
@@ -133,8 +173,8 @@ public :
       * @param nrows Número de filas de la imagen.
       * @param ncols Número de columnas de la imagen.
       * @param value defecto Valor con el que inicializar los píxeles de la imagen . Por defecto O.
-      * @pre n fils > O Y n_cols > O
-      * @post La imagen creada es de n_fils y n_cols columnas. Estará inicializada al valor por defecto.
+      * @pre @p nrows > O y @p ncols > O
+      * @post La imagen creada es de @p nrows y @p ncols columnas. Estará inicializada al valor por defecto.
       * @return Imagen, el objeto imagen creado.
       */
     Image(int nrows, int ncols, byte value=0);
@@ -232,12 +272,25 @@ void set_pixel (int i, int j, byte value);
 
     /**
       * @brief Almacena imágenes en disco.
+      * 	La diferencia con Image::MySave() es que usa la representación secuencial en memoria,
+	  * 			por lo que no funciona con la representación modificada.
       * @param file_path Ruta donde se almacenará la imagen.
       * @pre file path debe ser una ruta válida donde almacenar el fichero de salida.
       * @return Devuelve true si la imagen se almacenó con éxito y false en caso contrario.
       * @post La imagen no se modifica.
       */
     bool Save (const char * file_path) const;
+
+	/**
+	 * @brief Almacena imágenes en disco.
+	 * 		La diferencia con Image::Save() es que no usa la representación secuencial en memoria,
+	 * 			por lo que funciona con la representación modificada.
+     * @param file_path Ruta donde se almacenará la imagen.
+     * @pre file path debe ser una ruta válida donde almacenar el fichero de salida.
+     * @return Devuelve true si la imagen se almacenó con éxito y false en caso contrario.
+     * @post La imagen no se modifica.
+	 */
+	bool MySave (const char *file_path) const;
 
     /**
       * @brief Carga en memoria una imagen de disco .
@@ -248,28 +301,119 @@ void set_pixel (int i, int j, byte value);
       */
     bool Load (const char * file_path);
 
-    // Invierte
+      /**
+      * @brief Calcula el negativo de la imagen llamadora
+      * @post Cada byte de la imagen queda correspondido a su opuesto en la escala de grises
+      */
     void Invert();
 
-    // Modifica el contraste de una Imagen .
+    /**
+     * @brief Modifica el contraste de una Imagen mediante un ajuste lineal.
+     *
+     * Los nuevos valores de los píxeles estarán en el rango:
+     * - [0,out1] si sus valores iniciales están en [0,in1],
+     * - [out1, out2] si sus valores iniciales están en [in1,in2], y
+     * - [out2,255] si sus valores iniciales están en [in2,255].
+     *
+     * @image html Doc_Contraste.png "Explicación del método Image::AdjustContrast"
+     * @image latex Doc_Contraste.png "Explicación del método Image::AdjustContrast"
+     *
+     * @param in1 Extremo superior del primer rango de la imagen de entrada (@f$e_1@f$ en la imagen).
+     * @param in2 Extremo superior del segundo rango de la imagen de entrada (@f$e_2@f$ en la imagen).
+     * @param out1 Extremo superior del primer rango de la imagen de salida (@f$s_1@f$ en la imagen).
+     * @param out2 Extremo superior del segundo rango de la imagen de salida (@f$s_2@f$ en la imagen).
+     *
+     * @pre 0 <= in1, in2, out1, out2 <= 255
+     * @pre in1 < in2
+     * @pre out1 < out2
+     *
+     * @post El objeto que llama a la función es modificado.
+     */
     void AdjustContrast (byte in1, byte in2, byte out1, byte out2);
 
-    // Calcula la media de los píxeles de una imagen entera o de un fragmento de ésta.
+
+    /**
+     * @brief Calcula la media de los píxeles de una imagen entera o de un fragmento de ésta.
+     * @param i Fila de la esquina superior izquierda desde donde empieza el recorte
+     * @param j Columna de la esquina superior izquierda desde donde empieza el recorte
+     * @param height Número de filas que ocupa el recorte.
+     * @param width Número de columnas que ocupa el recorte.
+     * @return La media de los píxeles del fragmento buscado.
+     * @pre 0 < @p height, @p width, @p i, @p j
+     * @pre 0<= @p i+height <= get_rows()
+     * @pre 0<= @p j+width  <= get_cols()
+     */
     double Mean (int i, int j, int height, int width) const;
 
-    // Genera un icono como reducción de una imagen.
+    /**
+     * @brief Genera un icono como reducción de una imagen.
+     * @param factor Factor de reducción de la imagen original respecto al icono
+     * @return La imagen iconizada
+     * @pre factor > 0
+     * @post la imagen no se modifica
+     * @post La imagen resultante tendrá tamaño int(filas/factor) X int(columnas/factor),
+     *              descartando los decimales de la división.
+     */
     Image Subsample(int factor) const;
 
-    // Genera una subimagen.
+    /**
+     * @brief Hace un recorte de una imagen
+     * @param nrow Fila inicial para recortar
+     * @param ncol Columna inicial para recortar
+     * @param height Número de filas del recorte
+     * @param width Número de columnas del recorte
+     * @return La imagen recortada
+     * @pre 0 <= nrow, ncol, height, width
+     * @pre 0 <= nrow + height <= rows
+     * @pre 0 <= ncols + width <= cols
+     * @post la imagen llamadora no se modifica
+     * @post La imagen devuelta tendrá el tamaño especificado en los parámetros
+     */
     Image Crop(int nrow, int ncol, int height, int width) const;
 
-    // Genera una imagen aumentada 2x.
+    /**
+     * @brief Genera una imagen aumentada 2x.
+     * @return La imagen generada aumentada 2x.
+     */
     Image Zoom2X() const;
 
 
 
-    // Baraja pseudoaleatoriamente las filas de una imagen.
-    void ShuffleRows();
+    /**
+	 * @brief Método que baraja pseudoaleatoriamente las filas de una imagen.
+     * 			Código de eficiencia de orden rows*cols.
+	 * @pre get_rows() < 9973
+	 * @post El objeto implícito contiene la misma imagen pero con las filas cambiadas
+	 * 			según el siguiente algoritmo:
+	 * 			r' = r*p mod( get_rows() )
+	 *
+	 * 			donde r' es el nuevo índice de la fila r y p es un coprimo de rows.
+	 * 			En este algoritmo usamos p=9973, pero se podría modificar.
+	 */
+    void ShuffleRows_noeff();
+
+	/**
+	 * @brief Método que baraja pseudoaleatoriamente las filas de una imagen.
+	 * 			Código de eficiencia de orden rows.
+	 * 			Más eficiente, pero a costa de variar la representación de nuestro tipo.
+	 * @pre get_rows() < 9973
+	 * @post El objeto implícito contiene la misma imagen pero con las filas cambiadas
+	 * 			según el siguiente algoritmo:
+	 * 			r' = r*p mod(get_rows())
+	 *
+	 * 			donde r' es el nuevo índice de la fila r y p es un coprimo de rows.
+	 * 			En este algoritmo usamos p=9973, pero se podría modificar.
+	 */
+	 void ShuffleRows_eff();
+
+
+    /**
+     * @brief Operador ==, para comparar dos imágenes
+     * @param other Imagen con la que comparar
+     * @retval  true si ambas imágenes son iguales pixel a pixel
+     * @retval false si, al menos, hay un pixel distinto o tienen dimensiones distintas.
+     */
+    bool operator==(const Image & other) const;
 } ;
 
 

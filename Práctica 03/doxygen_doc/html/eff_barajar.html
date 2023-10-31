@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Práctica 2. TDA Imagen: Eficiencia del método para barajar en la clase Image.</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Práctica 2. TDA Imagen
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">Eficiencia del método para barajar en la clase <a class="el" href="classImage.html" title="T.D.A. Imagen.">Image</a>. </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>El objetivo de esta página es analizar el método que baraja las filas de la imagen. Veremos la diferencia entre los métodos Image::Shuffle_Rowsnoeff y <a class="el" href="classImage.html#a697bec07fe363b64ad1b152a6df47a16" title="Método que baraja pseudoaleatoriamente las filas de una imagen. Código de eficiencia de orden rows....">Image::ShuffleRows_eff</a>, analizaremos por qué decimos que uno es más eficiente que otro, y haremos hincapié en por qué se implementó en primer lugar el método no eficiente y, posteriormente, se hizo el eficiente.</p>
+<p>Como se explica en <a class="el" href="page_repImagen.html">Representación del TDA Imagen</a>, en un primer lugar para el TDA imagen, mediante la clase <a class="el" href="classImage.html" title="T.D.A. Imagen.">Image</a> se usaba una representación secuencial en memoria. No obstante, como veremos a continuación esto provocaba que el método <a class="el" href="classImage.html#a1a3afd6887e6629eb841c6b66d14d9d2" title="Método que baraja pseudoaleatoriamente las filas de una imagen. Código de eficiencia de orden rows*co...">Image::ShuffleRows_noeff</a> fuese muy poco eficiente, por lo que se optó por modificar la representación en memoria y terminar usando el método <a class="el" href="classImage.html#a697bec07fe363b64ad1b152a6df47a16" title="Método que baraja pseudoaleatoriamente las filas de una imagen. Código de eficiencia de orden rows....">Image::ShuffleRows_eff</a>. Como veremos, este cambio supuso variar la representación interna, pero aumentó en gran medida la eficiencia.</p>
+<p>A continuación, vamos a analizar la eficiencia para ambas representaciones en el caso de variar:</p><ul>
+<li>El número de filas</li>
+<li>El número de columnas</li>
+<li>El número de llamadas al método para una misma imagen</li>
+</ul>
+<h1><a class="anchor" id="rep_secuencial"></a>
+Uso de la representación secuencial.</h1>
+<p>En este caso, usamos el método <a class="el" href="classImage.html#a1a3afd6887e6629eb841c6b66d14d9d2" title="Método que baraja pseudoaleatoriamente las filas de una imagen. Código de eficiencia de orden rows*co...">Image::ShuffleRows_noeff</a>. Como podemos ver en el código, este tiene una eficiencia teórica de orden \(O(nfils*ncols)\): </p><p class="formulaDsp">
+\[ \sum_{r=0}^{nfils-1} \sum_{c=0}^{ncols-1} 1 = nfils \cdot ncols \Longrightarrow O(nfils \cdot ncols) \]
+</p>
+<p> donde:</p><ul>
+<li>\(nfils\): Número de filas.</li>
+<li>\(ncols\): Número de columnas.</li>
+</ul>
+<h2><a class="anchor" id="filas_sec"></a>
+Distinto número de filas</h2>
+<p>En este caso, mantenemos constante el número de columnas ( \(ncols=300\)) y el número de veces que se llama al método <a class="el" href="classImage.html#a1a3afd6887e6629eb841c6b66d14d9d2" title="Método que baraja pseudoaleatoriamente las filas de una imagen. Código de eficiencia de orden rows*co...">Image::ShuffleRows_noeff</a> ( \(nreps=1\)). No obstante, variamos el número de filas desde \(100\) a \(100000\) con incrementos de \(500\). La gráfica que representa el número de filas frente número de segundos que tarda en ejecutarse es la siguiente:</p>
+<div class="image">
+<img src="Gr_Filas_Noeff.png" alt=""/>
+<div class="caption">
+Número de filas frente a tiempo de ejecución con el método Image::ShuffleRows_noeff</div></div>
+ <p>Como podemos ver, manteniendo todos los parámetros fijos, tenemos que depende linealmente del número de filas. Esto coincide con lo predicho por la eficiencia teórica, ya que tenemos que sería \(O(nfils*ncols)=O(300*nfils)=O(nfils)\).</p>
+<h2><a class="anchor" id="cols_sec"></a>
+Distinto número de columnas</h2>
+<p>En este caso, mantenemos constante el número de filas ( \(nfils=300\)) y el número de veces que se llama al método <a class="el" href="classImage.html#a1a3afd6887e6629eb841c6b66d14d9d2" title="Método que baraja pseudoaleatoriamente las filas de una imagen. Código de eficiencia de orden rows*co...">Image::ShuffleRows_noeff</a> ( \(nreps=1\)). No obstante, variamos el número de columnas desde \(100\) a \(100000\) con incrementos de \(500\). La gráfica que representa el número de columnas frente número de segundos que tarda en ejecutarse es la siguiente:</p>
+<div class="image">
+<img src="Gr_Columnas_Noeff.png" alt=""/>
+<div class="caption">
+Número de columnas frente a tiempo de ejecución con el método Image::ShuffleRows_noeff</div></div>
+ <p>Como podemos ver, manteniendo todos los parámetros fijos, tenemos que depende linealmente del número de columnas. Esto coincide con lo predicho por la eficiencia teórica, ya que tenemos que sería \(O(nfils*ncols)=O(300*ncols)=O(ncols)\).</p>
+<h2><a class="anchor" id="nreps_sec"></a>
+Distinto número de repeticiones</h2>
+<p>En este caso, mantenemos constante el número de filas ( \(nfils=300\)) y el número de columnas ( \(ncols=300\)). No obstante, variamos el número de veces que se llama al método <a class="el" href="classImage.html#a1a3afd6887e6629eb841c6b66d14d9d2" title="Método que baraja pseudoaleatoriamente las filas de una imagen. Código de eficiencia de orden rows*co...">Image::ShuffleRows_noeff</a> tras haber cargado la imagen con <a class="el" href="classImage.html#a997e2d58be54bca2cf8f4da5818bf771" title="Carga en memoria una imagen de disco .">Image::Load</a> y antes de guardarla con <a class="el" href="classImage.html#adde1007dc6359087dae65fa8cae26448" title="Almacena imágenes en disco. La diferencia con Image::MySave() es que usa la representación secuencial...">Image::Save</a> . Este número varía desde \(100\) a \(46100\) con incrementos de \(500\). La gráfica que representa el número de repeticiones frente número de segundos que tarda en ejecutarse es la siguiente:</p>
+<div class="image">
+<img src="Gr_Repeticiones_Noeff.png" alt=""/>
+<div class="caption">
+Número de columnas frente a tiempo de ejecución con el método Image::ShuffleRows_noeff</div></div>
+ <p>Como podemos ver, manteniendo todos los parámetros fijos, tenemos que depende linealmente del número de repeticiones. Esto es evidente, ya que una sola ejecución sería \(O(nfils*ncols)=O(300*300)=O(1)\). Por tanto, al repetirla \(nreps\) veces, tenemos que es \(O(nreps)\).</p>
+<p>Además, cabe destacar que este es el caso en el que más tarda, viendo que llega incluso a valores cercanos a los 200s. Esto se debe a que este método es muy poco eficiente, ya que internamente hace copias de imágenes, etc. Entonces, al llamarlo un gran número de veces tarda mucho más.</p>
+<p>El número de repeticiones no ha llegado hasta valores más altos por el alto coste de recursos del ordenador que requiere.</p>
+<h1><a class="anchor" id="rep_NO_secuencial"></a>
+Uso de la representación no secuencial.</h1>
+<p>En este caso, usamos el método <a class="el" href="classImage.html#a697bec07fe363b64ad1b152a6df47a16" title="Método que baraja pseudoaleatoriamente las filas de una imagen. Código de eficiencia de orden rows....">Image::ShuffleRows_eff</a>. Como podemos ver en el código, este tiene una eficiencia teórica de orden \(O(nfils)\): </p><p class="formulaDsp">
+\[ \sum_{i=0}^{nfils-1} k = k \cdot nfils \Longrightarrow O(nfils) \]
+</p>
+<p> donde:</p><ul>
+<li>\(nfils\): Número de filas.</li>
+<li>\(ncols\): Número de columnas.</li>
+</ul>
+<h2><a class="anchor" id="filas_NO_sec"></a>
+Distinto número de filas</h2>
+<p>En este caso, mantenemos constante el número de columnas ( \(ncols=300\)) y el número de veces que se llama al método <a class="el" href="classImage.html#a697bec07fe363b64ad1b152a6df47a16" title="Método que baraja pseudoaleatoriamente las filas de una imagen. Código de eficiencia de orden rows....">Image::ShuffleRows_eff</a> ( \(nreps=1\)). No obstante, variamos el número de filas desde \(100\) a \(100000\) con incrementos de \(500\). La gráfica que representa el número de filas frente número de segundos que tarda en ejecutarse es la siguiente:</p>
+<div class="image">
+<img src="Gr_Filas_eff.png" alt=""/>
+<div class="caption">
+Número de filas frente a tiempo de ejecución con el método Image::ShuffleRows_eff</div></div>
+ <p>Como podemos ver, manteniendo todos los parámetros fijos, tenemos que depende linealmente del número de filas. Esto coincide con lo predicho por la eficiencia teórica, ya que tenemos que sería \(O(nfils)\).</p>
+<h2><a class="anchor" id="cols_NO_sec"></a>
+Distinto número de columnas</h2>
+<p>En este caso, mantenemos constante el número de filas ( \(nfils=300\)) y el número de veces que se llama al método <a class="el" href="classImage.html#a697bec07fe363b64ad1b152a6df47a16" title="Método que baraja pseudoaleatoriamente las filas de una imagen. Código de eficiencia de orden rows....">Image::ShuffleRows_eff</a> ( \(nreps=1\)). No obstante, variamos el número de columnas desde \(100\) a \(100000\) con incrementos de \(500\). La gráfica que representa el número de columnas frente número de segundos que tarda en ejecutarse es la siguiente:</p>
+<div class="image">
+<img src="Gr_Columnas_eff.png" alt=""/>
+<div class="caption">
+Número de columnas frente a tiempo de ejecución con el método Image::ShuffleRows_eff</div></div>
+ <p>Como podemos ver, manteniendo todos los parámetros fijos, tenemos que <b>NO</b> depende del número de columnas. Esto coincide con lo predicho por la eficiencia teórica, ya que tenemos que sería \(O(nfils)=O(300)=O(1)\).</p>
+<p>Este hecho es de destacar, ya que con la representación secuencial hemos visto en el apartado <a class="el" href="eff_barajar.html#cols_sec">Distinto número de columnas</a> que el tiempo de ejecución dependía del número de columnas, mientras que en este caso no. Además, es importante notar que en este caso ha sido necesario hacer la media de 1000 ejecuciones de este método, ya que el programa tardaba menos que la precisión de la librería <b>ctime</b> proporciona, al verse los tiempos situados en franjas horizontales. Por tanto, optamos por hacer la media de 1000 ejecuciones para calcular el tiempo.</p>
+<h2><a class="anchor" id="nreps_NO_sec"></a>
+Distinto número de repeticiones</h2>
+<p>En este caso, mantenemos constante el número de filas ( \(nfils=300\)) y el número de columnas ( \(ncols=300\)). No obstante, variamos el número de veces que se llama al método <a class="el" href="classImage.html#a697bec07fe363b64ad1b152a6df47a16" title="Método que baraja pseudoaleatoriamente las filas de una imagen. Código de eficiencia de orden rows....">Image::ShuffleRows_eff</a> tras haber cargado la imagen con <a class="el" href="classImage.html#a997e2d58be54bca2cf8f4da5818bf771" title="Carga en memoria una imagen de disco .">Image::Load</a> y antes de guardarla con <a class="el" href="classImage.html#abc118c5aead787742d56a3a750b5e790" title="Almacena imágenes en disco. La diferencia con Image::Save() es que no usa la representación secuencia...">Image::MySave</a>. Notemos que empleamos este método en lugar de <a class="el" href="classImage.html#adde1007dc6359087dae65fa8cae26448" title="Almacena imágenes en disco. La diferencia con Image::MySave() es que usa la representación secuencial...">Image::Save</a> ya que hemos empleado la representación no secuencial.</p>
+<p>Este número de repeticiones varía desde \(100\) a \(100000\) con incrementos de \(500\). La gráfica que representa el número de repeticiones frente número de segundos que tarda en ejecutarse es la siguiente:</p>
+<div class="image">
+<img src="Gr_Repeticiones_eff.png" alt=""/>
+<div class="caption">
+Número de columnas frente a tiempo de ejecución con el método Image::ShuffleRows_eff</div></div>
+ <p>Como podemos ver, manteniendo todos los parámetros fijos, tenemos que depende linealmente del número de repeticiones. Esto es evidente, ya que una sola ejecución sería \(O(nfils*ncols)=O(300*300)=O(1)\). Por tanto, al repetirla \(nreps\) veces, tenemos que es \(O(nreps)\).</p>
+<p>También es importante notar que, debido al cambio en la representación, este método es mucho más rápido. Basta con compararlo con la gráfica de <a class="el" href="eff_barajar.html#nreps_sec">Distinto número de repeticiones</a> para ver la diferencia de tiempo tan notoria. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

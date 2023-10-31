@@ -1,5 +1,13 @@
-/home/arturoolvrs/Desktop/ED/Práctica 03/codigo/cmake-build-debug/CMakeFiles/image.dir
-/home/arturoolvrs/Desktop/ED/Práctica 03/codigo/cmake-build-debug/CMakeFiles/negativo.dir
-/home/arturoolvrs/Desktop/ED/Práctica 03/codigo/cmake-build-debug/CMakeFiles/doc_doxygen.dir
-/home/arturoolvrs/Desktop/ED/Práctica 03/codigo/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/arturoolvrs/Desktop/ED/Práctica 03/codigo/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/arturoolvrs/Desktop/practicas_ED/TDA_imagen/codigo/cmake-build-debug/CMakeFiles/image.dir
+/home/arturoolvrs/Desktop/practicas_ED/TDA_imagen/codigo/cmake-build-debug/CMakeFiles/negativo.dir
+/home/arturoolvrs/Desktop/practicas_ED/TDA_imagen/codigo/cmake-build-debug/CMakeFiles/crop.dir
+/home/arturoolvrs/Desktop/practicas_ED/TDA_imagen/codigo/cmake-build-debug/CMakeFiles/zoom.dir
+/home/arturoolvrs/Desktop/practicas_ED/TDA_imagen/codigo/cmake-build-debug/CMakeFiles/icono.dir
+/home/arturoolvrs/Desktop/practicas_ED/TDA_imagen/codigo/cmake-build-debug/CMakeFiles/contraste.dir
+/home/arturoolvrs/Desktop/practicas_ED/TDA_imagen/codigo/cmake-build-debug/CMakeFiles/barajar.dir
+/home/arturoolvrs/Desktop/practicas_ED/TDA_imagen/codigo/cmake-build-debug/CMakeFiles/comparar.dir
+/home/arturoolvrs/Desktop/practicas_ED/TDA_imagen/codigo/cmake-build-debug/CMakeFiles/barajar_medida_filcols.dir
+/home/arturoolvrs/Desktop/practicas_ED/TDA_imagen/codigo/cmake-build-debug/CMakeFiles/barajar_medida_nreps.dir
+/home/arturoolvrs/Desktop/practicas_ED/TDA_imagen/codigo/cmake-build-debug/CMakeFiles/doc_doxygen.dir
+/home/arturoolvrs/Desktop/practicas_ED/TDA_imagen/codigo/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/arturoolvrs/Desktop/practicas_ED/TDA_imagen/codigo/cmake-build-debug/CMakeFiles/rebuild_cache.dir
