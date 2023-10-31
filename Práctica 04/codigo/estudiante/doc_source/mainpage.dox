@@ -1,0 +1,15 @@
+/*! \mainpage Documentación de la Práctica 4.
+
+# Introducción
+En este documento se encuentra la documentación de la práctica 4 de la asignatura de Estructura de Datos.
+
+En esta práctica se ha implementado una cola y una pila con un elemento adicional que es el máximo de los elementos
+que contiene la estructura.
+
+# Ejecutables
+
+Los distintos ejecutables son:
+- Cola_max: cola_max.cpp
+- Pila_max: pila_max.cpp
+
+*/
