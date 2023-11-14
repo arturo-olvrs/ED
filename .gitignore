@@ -14,4 +14,4 @@
 
 
 # Ignorar cmake-build-debug
-Reto\ 02.\ Sudoku/cmake-build-debug/
+**/cmake-build-debug/
