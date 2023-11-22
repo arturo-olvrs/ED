@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Práctica 5. Set y Map.: Fichero Fuente estudiante/src/dictionary.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Práctica 5. Set y Map.
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_9a0f087c5462c2cd29ef809929a48712.html">estudiante</a></li><li class="navelem"><a class="el" href="dir_823aef3b9625aa06c2f52a5cab57b07a.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">dictionary.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="dictionary_8cpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="dictionary_8h.html">dictionary.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classDictionary.html#a6cb3a5e60e9cce4306140f53a3f31773">   16</a></span>&#160;ostream&amp; <a class="code" href="dictionary_8cpp.html#a6cb3a5e60e9cce4306140f53a3f31773">operator&lt;&lt;</a>(ostream&amp; os, <span class="keyword">const</span> <a class="code" href="classDictionary.html">Dictionary</a>&amp; dic){</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="classDictionary_1_1iterator.html">Dictionary::iterator</a> it = dic.<a class="code" href="classDictionary.html#a6d73b2cf398563dadf4370ac626026c0">begin</a>(); it != dic.<a class="code" href="classDictionary.html#adaef4e0b3619428d196df1d51af40baf">end</a>(); ++it){</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        os &lt;&lt; *it &lt;&lt; endl;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">return</span> os;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classDictionary.html#a2b3ba013c76884bcdbf40e8b661da83c">   23</a></span>&#160;istream&amp; <a class="code" href="dictionary_8cpp.html#a2b3ba013c76884bcdbf40e8b661da83c">operator&gt;&gt;</a>(istream&amp; is, <a class="code" href="classDictionary.html">Dictionary</a>&amp; dic) {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    dic.<a class="code" href="classDictionary.html#a2d54b74d14335da04ad9d64e49536d9a">clear</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">string</span> wrd;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">while</span> (is &gt;&gt; wrd)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        dic.<a class="code" href="classDictionary.html#a1a0506c2f7fcc4008450c447eb5644bf">insert</a>(wrd);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">return</span> is;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classDictionary.html#aee8d612bc9d323c38faba045ba384b8b">   32</a></span>&#160;<a class="code" href="classDictionary.html#aee8d612bc9d323c38faba045ba384b8b">Dictionary::Dictionary</a>() {}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classDictionary.html#a8939a354ac8ed884b6e49db26dfeee0c">   34</a></span>&#160;<a class="code" href="classDictionary.html#aee8d612bc9d323c38faba045ba384b8b">Dictionary::Dictionary</a>(<span class="keyword">const</span> <a class="code" href="classDictionary.html">Dictionary</a> &amp;othr) {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    this-&gt;words = othr.words;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classDictionary.html#a37870c3d72f836d9d9528b9bbe5882c4">   38</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classDictionary.html#a37870c3d72f836d9d9528b9bbe5882c4">Dictionary::exists</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;s)<span class="keyword"> const </span>{<span class="keywordflow">return</span> (<span class="keywordtype">bool</span>)words.count(s);}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classDictionary.html#a1a0506c2f7fcc4008450c447eb5644bf">   40</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classDictionary.html#a1a0506c2f7fcc4008450c447eb5644bf">Dictionary::insert</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;s) {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    pair&lt;set&lt;string&gt;::iterator, <span class="keywordtype">bool</span>&gt; ret = words.insert(s);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">return</span> ret.second;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classDictionary.html#aeb001fc08ed14ac0fbdb3ae82a4a9742">   45</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classDictionary.html#aeb001fc08ed14ac0fbdb3ae82a4a9742">Dictionary::erase</a>(<span class="keyword">const</span> std::string &amp;s) {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">return</span> (<span class="keywordtype">bool</span>) this-&gt;words.erase(s);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classDictionary.html#a2d54b74d14335da04ad9d64e49536d9a">   49</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classDictionary.html#a2d54b74d14335da04ad9d64e49536d9a">Dictionary::clear</a>() {this-&gt;words.clear();}</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classDictionary.html#ab45dc9793957e562ccc104150fc7af8f">   51</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classDictionary.html#ab45dc9793957e562ccc104150fc7af8f">Dictionary::empty</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> this-&gt;words.empty();}</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classDictionary.html#ac2456f6eb0cb7f997acc69eac47e2244">   53</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classDictionary.html#ac2456f6eb0cb7f997acc69eac47e2244">Dictionary::size</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> this-&gt;words.size();}</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classDictionary.html#acf34952fa69cce8eefcb76e02feb5b9b">   55</a></span>&#160;vector&lt;string&gt; <a class="code" href="classDictionary.html#acf34952fa69cce8eefcb76e02feb5b9b">Dictionary::wordsOfLength</a>(<span class="keywordtype">int</span> length)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    vector&lt;string&gt; v_ret;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="classDictionary_1_1iterator.html">Dictionary::iterator</a> it = this-&gt;begin(); it != this-&gt;end(); ++it)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">if</span> ((*it).length() == length) v_ret.push_back(*it);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">return</span> v_ret;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="dictionary_8h.html#a1fcf8bbd0d517243e73cd60036e901eb">   63</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="dictionary_8cpp.html#a277261b2762b918523ad5e118a6caac3">count_ocurrences</a>(<span class="keywordtype">char</span> c, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; word, <span class="keywordtype">size_t</span> pos) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">int</span> cont = 0;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">size_t</span> s = word.find(c,pos);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">if</span> (s != string::npos) {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        cont++;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        cont += <a class="code" href="dictionary_8cpp.html#a277261b2762b918523ad5e118a6caac3">count_ocurrences</a>(c,word,s+1);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">return</span> cont;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classDictionary.html#ade04cb2b980514b6fce1caef78a611fc">   73</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classDictionary.html#ade04cb2b980514b6fce1caef78a611fc">Dictionary::getOcurrences</a>(<span class="keywordtype">char</span> c)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">int</span> cont = 0;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="classDictionary_1_1iterator.html">Dictionary::iterator</a> it = this-&gt;begin(); it != this-&gt;end(); ++it)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        cont += <a class="code" href="dictionary_8cpp.html#a277261b2762b918523ad5e118a6caac3">count_ocurrences</a>(c,*it);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">return</span> cont;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classDictionary.html#ab1435a78461843bd206b5234468e7044">   81</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classDictionary.html#ab1435a78461843bd206b5234468e7044">Dictionary::anade</a>(<span class="keyword">const</span> <a class="code" href="classDictionary.html">Dictionary</a> &amp;dic) {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="classDictionary_1_1iterator.html">Dictionary::iterator</a> it = dic.<a class="code" href="classDictionary.html#a6d73b2cf398563dadf4370ac626026c0">begin</a>(); it != dic.<a class="code" href="classDictionary.html#adaef4e0b3619428d196df1d51af40baf">end</a>(); ++it)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        this-&gt;insert(*it);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="classDictionary.html#a6e897cec3e265f58830c3a8eb7666332">   88</a></span>&#160;<a class="code" href="classDictionary.html#aee8d612bc9d323c38faba045ba384b8b">Dictionary::Dictionary</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp; file_name){</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    LoadDictionary(file_name);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keywordtype">void</span> Dictionary::LoadDictionary(<span class="keyword">const</span> std::string &amp;file_name) {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    ifstream is;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    is.open(file_name);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">if</span> (!is.is_open()) {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        cerr &lt;&lt; <span class="stringliteral">&quot;Error opening the file &quot;</span> &lt;&lt; file_name;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        exit(1);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    is &gt;&gt; *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
+<div class="ttc" id="aclassDictionary_1_1iterator_html"><div class="ttname"><a href="classDictionary_1_1iterator.html">Dictionary::iterator</a></div><div class="ttdoc">Clase para iterar sobre el diccionario.</div><div class="ttdef"><b>Definition:</b> <a href="dictionary_8h_source.html#l00141">dictionary.h:141</a></div></div>
+<div class="ttc" id="aclassDictionary_html"><div class="ttname"><a href="classDictionary.html">Dictionary</a></div><div class="ttdoc">TDA Dictionary.</div><div class="ttdef"><b>Definition:</b> <a href="dictionary_8h_source.html#l00025">dictionary.h:25</a></div></div>
+<div class="ttc" id="aclassDictionary_html_a1a0506c2f7fcc4008450c447eb5644bf"><div class="ttname"><a href="classDictionary.html#a1a0506c2f7fcc4008450c447eb5644bf">Dictionary::insert</a></div><div class="ttdeci">bool insert(const string &amp;s)</div><div class="ttdoc">Inserta una palabra en el diccionario.</div><div class="ttdef"><b>Definition:</b> <a href="dictionary_8cpp_source.html#l00040">dictionary.cpp:40</a></div></div>
+<div class="ttc" id="aclassDictionary_html_a2d54b74d14335da04ad9d64e49536d9a"><div class="ttname"><a href="classDictionary.html#a2d54b74d14335da04ad9d64e49536d9a">Dictionary::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">Borra todos los elementos del diccionario.</div><div class="ttdef"><b>Definition:</b> <a href="dictionary_8cpp_source.html#l00049">dictionary.cpp:49</a></div></div>
+<div class="ttc" id="aclassDictionary_html_a37870c3d72f836d9d9528b9bbe5882c4"><div class="ttname"><a href="classDictionary.html#a37870c3d72f836d9d9528b9bbe5882c4">Dictionary::exists</a></div><div class="ttdeci">bool exists(const string &amp;s) const</div><div class="ttdoc">Comprueba si una palabra existe en el diccionario.</div><div class="ttdef"><b>Definition:</b> <a href="dictionary_8cpp_source.html#l00038">dictionary.cpp:38</a></div></div>
+<div class="ttc" id="aclassDictionary_html_a6d73b2cf398563dadf4370ac626026c0"><div class="ttname"><a href="classDictionary.html#a6d73b2cf398563dadf4370ac626026c0">Dictionary::begin</a></div><div class="ttdeci">iterator begin() const</div><div class="ttdoc">Devuelve un iterador al principio del diccionario.</div><div class="ttdef"><b>Definition:</b> <a href="dictionary_8h_source.html#l00157">dictionary.h:157</a></div></div>
+<div class="ttc" id="aclassDictionary_html_ab1435a78461843bd206b5234468e7044"><div class="ttname"><a href="classDictionary.html#ab1435a78461843bd206b5234468e7044">Dictionary::anade</a></div><div class="ttdeci">void anade(const Dictionary &amp;dic)</div><div class="ttdoc">Une dos diccionarios en uno.</div><div class="ttdef"><b>Definition:</b> <a href="dictionary_8cpp_source.html#l00081">dictionary.cpp:81</a></div></div>
+<div class="ttc" id="aclassDictionary_html_ab45dc9793957e562ccc104150fc7af8f"><div class="ttname"><a href="classDictionary.html#ab45dc9793957e562ccc104150fc7af8f">Dictionary::empty</a></div><div class="ttdeci">bool empty() const</div><div class="ttdoc">Comprueba si el diccionario está vacío.</div><div class="ttdef"><b>Definition:</b> <a href="dictionary_8cpp_source.html#l00051">dictionary.cpp:51</a></div></div>
+<div class="ttc" id="aclassDictionary_html_ac2456f6eb0cb7f997acc69eac47e2244"><div class="ttname"><a href="classDictionary.html#ac2456f6eb0cb7f997acc69eac47e2244">Dictionary::size</a></div><div class="ttdeci">unsigned int size() const</div><div class="ttdoc">Devuelve el número de palabras del diccionario.</div><div class="ttdef"><b>Definition:</b> <a href="dictionary_8cpp_source.html#l00053">dictionary.cpp:53</a></div></div>
+<div class="ttc" id="aclassDictionary_html_acf34952fa69cce8eefcb76e02feb5b9b"><div class="ttname"><a href="classDictionary.html#acf34952fa69cce8eefcb76e02feb5b9b">Dictionary::wordsOfLength</a></div><div class="ttdeci">vector&lt; string &gt; wordsOfLength(int length) const</div><div class="ttdoc">Devuelve un vector con las palabras de una longitud dada.</div><div class="ttdef"><b>Definition:</b> <a href="dictionary_8cpp_source.html#l00055">dictionary.cpp:55</a></div></div>
+<div class="ttc" id="aclassDictionary_html_adaef4e0b3619428d196df1d51af40baf"><div class="ttname"><a href="classDictionary.html#adaef4e0b3619428d196df1d51af40baf">Dictionary::end</a></div><div class="ttdeci">iterator end() const</div><div class="ttdoc">Devuelve un iterador al final del diccionario.</div><div class="ttdef"><b>Definition:</b> <a href="dictionary_8h_source.html#l00167">dictionary.h:167</a></div></div>
+<div class="ttc" id="aclassDictionary_html_ade04cb2b980514b6fce1caef78a611fc"><div class="ttname"><a href="classDictionary.html#ade04cb2b980514b6fce1caef78a611fc">Dictionary::getOcurrences</a></div><div class="ttdeci">int getOcurrences(char c) const</div><div class="ttdoc">Devuelve el número de ocurrencias de un carácter en el diccionario.</div><div class="ttdef"><b>Definition:</b> <a href="dictionary_8cpp_source.html#l00073">dictionary.cpp:73</a></div></div>
+<div class="ttc" id="aclassDictionary_html_aeb001fc08ed14ac0fbdb3ae82a4a9742"><div class="ttname"><a href="classDictionary.html#aeb001fc08ed14ac0fbdb3ae82a4a9742">Dictionary::erase</a></div><div class="ttdeci">bool erase(const string &amp;s)</div><div class="ttdoc">Borra un elemento del diccionario.</div><div class="ttdef"><b>Definition:</b> <a href="dictionary_8cpp_source.html#l00045">dictionary.cpp:45</a></div></div>
+<div class="ttc" id="aclassDictionary_html_aee8d612bc9d323c38faba045ba384b8b"><div class="ttname"><a href="classDictionary.html#aee8d612bc9d323c38faba045ba384b8b">Dictionary::Dictionary</a></div><div class="ttdeci">Dictionary()</div><div class="ttdoc">Constructor por defecto de la clase.</div><div class="ttdef"><b>Definition:</b> <a href="dictionary_8cpp_source.html#l00032">dictionary.cpp:32</a></div></div>
+<div class="ttc" id="adictionary_8cpp_html_a277261b2762b918523ad5e118a6caac3"><div class="ttname"><a href="dictionary_8cpp.html#a277261b2762b918523ad5e118a6caac3">count_ocurrences</a></div><div class="ttdeci">int count_ocurrences(char c, const string &amp;word, size_t pos)</div><div class="ttdoc">Función que cuenta el número de ocurrencias de un carácter en una palabra.</div><div class="ttdef"><b>Definition:</b> <a href="dictionary_8cpp_source.html#l00063">dictionary.cpp:63</a></div></div>
+<div class="ttc" id="adictionary_8cpp_html_a2b3ba013c76884bcdbf40e8b661da83c"><div class="ttname"><a href="dictionary_8cpp.html#a2b3ba013c76884bcdbf40e8b661da83c">operator&gt;&gt;</a></div><div class="ttdeci">istream &amp; operator&gt;&gt;(istream &amp;is, Dictionary &amp;dic)</div><div class="ttdef"><b>Definition:</b> <a href="dictionary_8cpp_source.html#l00023">dictionary.cpp:23</a></div></div>
+<div class="ttc" id="adictionary_8cpp_html_a6cb3a5e60e9cce4306140f53a3f31773"><div class="ttname"><a href="dictionary_8cpp.html#a6cb3a5e60e9cce4306140f53a3f31773">operator&lt;&lt;</a></div><div class="ttdeci">ostream &amp; operator&lt;&lt;(ostream &amp;os, const Dictionary &amp;dic)</div><div class="ttdef"><b>Definition:</b> <a href="dictionary_8cpp_source.html#l00016">dictionary.cpp:16</a></div></div>
+<div class="ttc" id="adictionary_8h_html"><div class="ttname"><a href="dictionary_8h.html">dictionary.h</a></div><div class="ttdoc">TDA Dictionary.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

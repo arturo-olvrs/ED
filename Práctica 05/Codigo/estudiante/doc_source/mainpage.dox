@@ -1,0 +1,23 @@
+/*! \mainpage Documentación de la Práctica 5.
+
+# Introducción
+
+En este documento se encuentra la documentación de la práctica 5 de la asignatura de Estructura de Datos.
+
+En esta práctica se han implementado un diccionario y una guía de teléfonos.
+
+# Ejecutables
+
+Los distintos ejecutables son, para el diccionario:
+- apariciones.cpp
+- palabras_longitud.cpp
+- union.cpp
+
+Y para la guía de teléfonos:
+- filtro.cpp
+- inter.cpp
+- modificar.cpp
+
+@author Arturo Olivares Martos
+@author Daniel Hidalgo Chica
+*/

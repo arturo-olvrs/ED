@@ -1,0 +1,7 @@
+<map id="estudiante/include/guiatlf.h" name="estudiante/include/guiatlf.h">
+<area shape="rect" id="node1" title="TDA guia de teléfonos." alt="" coords="329,5,472,47"/>
+<area shape="rect" id="node2" href="$filtro_8cpp.html" title="Programa que muestra los teléfonos de los nombres que comienzan por una cadena dada en una guía de te..." alt="" coords="5,95,180,121"/>
+<area shape="rect" id="node3" href="$guiatlf_8cpp.html" title="Implementación TDA guia de teléfonos." alt="" coords="205,95,391,121"/>
+<area shape="rect" id="node4" href="$inter_8cpp.html" title="Programa que calcula la intersección de dos guías de teléfono." alt="" coords="416,95,591,121"/>
+<area shape="rect" id="node5" href="$modificar_8cpp.html" title="Programa que modifica el teléfono de un nombre dado en una guía de teléfonos." alt="" coords="615,95,821,121"/>
+</map>

@@ -1,0 +1,10 @@
+PROJECT_NAME           = "Práctica 5. Set y Map."
+OUTPUT_DIRECTORY       = "@CMAKE_SOURCE_DIR@/@BASE_FOLDER@/doc_doxygen/"
+INPUT                  = "@CMAKE_SOURCE_DIR@/@BASE_FOLDER@/include" "@CMAKE_SOURCE_DIR@/@BASE_FOLDER@/src" "@CMAKE_SOURCE_DIR@/@BASE_FOLDER@/doc_source"
+GENERATE_LATEX         = NO
+IMAGE_PATH             = "@CMAKE_SOURCE_DIR@/@BASE_FOLDER@/doc_source"
+EXTRACT_PRIVATE        = NO
+OUTPUT_LANGUAGE        = Spanish
+USE_MATHJAX            = YES
+SOURCE_BROWSER         = YES
+STRIP_FROM_PATH        = "@CMAKE_SOURCE_DIR@/"
