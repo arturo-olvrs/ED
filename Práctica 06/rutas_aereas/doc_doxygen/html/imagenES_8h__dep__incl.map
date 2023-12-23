@@ -1,0 +1,5 @@
+<map id="rutas_aereas/include/imagenES.h" name="rutas_aereas/include/imagenES.h">
+<area shape="rect" id="node1" title="Fichero cabecera para la E/S de imágenes." alt="" coords="151,5,309,47"/>
+<area shape="rect" id="node2" href="$imagen_8cpp.html" title="Fichero de implementación del TDA Imagen." alt="" coords="5,95,215,121"/>
+<area shape="rect" id="node3" href="$imagenES_8cpp.html" title="Fichero con definiciones para la E/S de imágenes." alt="" coords="239,95,464,121"/>
+</map>

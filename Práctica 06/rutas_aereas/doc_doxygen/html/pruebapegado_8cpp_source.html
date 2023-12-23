@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Práctica Final. Rutas Aéreas.: Fichero Fuente rutas_aereas/src/pruebapegado.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Práctica Final. Rutas Aéreas.
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_99a846cfddeb688341ec01d5a782e057.html">rutas_aereas</a></li><li class="navelem"><a class="el" href="dir_08a3db362685a0d1c4866ae105db899b.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">pruebapegado.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="pruebapegado_8cpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="imagen_8h.html">imagen.h</a>&quot;</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> * argv[]){</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">if</span> (argc!=8){</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;Los parametros son :&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;1 - La imagen de fondo&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;2 - La imagen a pegar&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;3 - La máscara de la imagen a pegar&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;4 - El nombre de la imagen de salida&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;5 - La fila donde pegar&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;6 - La columna donde pegar&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;7 - 0: Pegado Opaco 1: Pegado Blending&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;Uso: &quot;</span> &lt;&lt; argv[0] &lt;&lt; <span class="stringliteral">&quot; &lt;img_fondo&gt; &lt;img_pegar&gt; &lt;mascara&gt; &lt;img_salida&gt; &lt;fil&gt; &lt;col&gt; &lt;TipoPegado&gt;&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="classImagen.html">Imagen</a> I,Ip;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    I.<a class="code" href="classImagen.html#a6a809546bc4c8c520c35e48105c0197e">LeerImagen</a>(argv[1]);  <span class="comment">// Imagen donde voy a pegar</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    Ip.<a class="code" href="classImagen.html#a6a809546bc4c8c520c35e48105c0197e">LeerImagen</a>(argv[2],argv[3]);     <span class="comment">// Imagen que voy a pegar</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">int</span> i,j;    <span class="comment">// Pasamos fila y columnas a enteros</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    i=atoi(argv[5]); j=atoi(argv[6]);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="imagen_8h.html#a573504250cd1401cf4e53b1e756d38f2">Tipo_Pegado</a> tp; <span class="comment">//variable de tipo Tipo_Pegado que es un enumerado con los valores OPACO y BLENDING</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">int</span> au= atoi(argv[7]);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">if</span> (au==0) tp=OPACO;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (au==1) tp=BLENDING;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;El valor de pegado debe ser 0 o 1&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="comment">// Pegamos la imagen</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    I.<a class="code" href="classImagen.html#a94d91812474e8276a6ee088887bcb017">PutImagen</a>(i,j,Ip,tp);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="comment">// Guardamos la imagen</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    I.<a class="code" href="classImagen.html#a06fe5a18f99fca11af8f683fcabe743c">EscribirImagen</a>(argv[4]);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}  </div>
+<div class="ttc" id="aclassImagen_html"><div class="ttname"><a href="classImagen.html">Imagen</a></div><div class="ttdoc">TDA Imagen.</div><div class="ttdef"><b>Definition:</b> <a href="imagen_8h_source.html#l00065">imagen.h:65</a></div></div>
+<div class="ttc" id="aclassImagen_html_a06fe5a18f99fca11af8f683fcabe743c"><div class="ttname"><a href="classImagen.html#a06fe5a18f99fca11af8f683fcabe743c">Imagen::EscribirImagen</a></div><div class="ttdeci">void EscribirImagen(const char img_path[]) const</div><div class="ttdoc">Método que escribe una imagen en disco en el archivo dado por nombre.</div><div class="ttdef"><b>Definition:</b> <a href="imagen_8cpp_source.html#l00127">imagen.cpp:127</a></div></div>
+<div class="ttc" id="aclassImagen_html_a6a809546bc4c8c520c35e48105c0197e"><div class="ttname"><a href="classImagen.html#a6a809546bc4c8c520c35e48105c0197e">Imagen::LeerImagen</a></div><div class="ttdeci">void LeerImagen(const char img_path[], const string &amp;nombre_mascara=&quot;&quot;)</div><div class="ttdoc">Método que lee una imagen del disco desde el archivo dado por nombre.</div><div class="ttdef"><b>Definition:</b> <a href="imagen_8cpp_source.html#l00085">imagen.cpp:85</a></div></div>
+<div class="ttc" id="aclassImagen_html_a94d91812474e8276a6ee088887bcb017"><div class="ttname"><a href="classImagen.html#a94d91812474e8276a6ee088887bcb017">Imagen::PutImagen</a></div><div class="ttdeci">void PutImagen(int i, int j, const Imagen &amp;img, Tipo_Pegado tp=OPACO)</div><div class="ttdoc">Método que pega una imagen sobre otra.</div><div class="ttdef"><b>Definition:</b> <a href="imagen_8cpp_source.html#l00172">imagen.cpp:172</a></div></div>
+<div class="ttc" id="aimagen_8h_html"><div class="ttname"><a href="imagen_8h.html">imagen.h</a></div><div class="ttdoc">Fichero cabecera para el TDA Imagen.</div></div>
+<div class="ttc" id="aimagen_8h_html_a573504250cd1401cf4e53b1e756d38f2"><div class="ttname"><a href="imagen_8h.html#a573504250cd1401cf4e53b1e756d38f2">Tipo_Pegado</a></div><div class="ttdeci">Tipo_Pegado</div><div class="ttdoc">Enumerado para representar el tipo de pegado de una imagen sobre otra.</div><div class="ttdef"><b>Definition:</b> <a href="imagen_8h_source.html#l00054">imagen.h:54</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

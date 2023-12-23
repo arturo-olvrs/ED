@@ -1,0 +1,32 @@
+/*! \mainpage Documentación de la Práctica 6.
+
+# Introducción
+
+En este documento se encuentra la documentación de la práctica 6 de la asignatura de Estructura de Datos.
+
+En esta práctica, se ha desarrollado un software que permite a una compañía aéreas visualizar las rutas
+que llevan a cabo en un mapa del mundo. Un ejemplo del resultado es la siguiente imagen:
+<div style="display: inline-block; text-align: center; margin: 0 3em;">
+    <img src="R4_Mapa.png" alt="Imagen Generada" style="border: none;" />
+    <br>
+    <small>Imagen generada para una determinada ruta.</small>
+</div>
+
+El resto de las imágenes se encuentran en la carpeta output.
+
+# Ejecutables
+
+Este proyecto cuenta con dos ejecutables auxiliares y uno principal.
+
+Los auxiliares son:
+- pruebapegado.cpp
+- pruebarotacion.cpp
+
+El programa principal es:
+- ruta_aerea.cpp
+
+La documentación de cada uno de ellos se encuentra en su correspondiente página.
+
+@author Arturo Olivares Martos
+@author Daniel Hidalgo Chica
+*/

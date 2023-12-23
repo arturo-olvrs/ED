@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Práctica Final. Rutas Aéreas.: Fichero Fuente rutas_aereas/include/pais.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Práctica Final. Rutas Aéreas.
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_99a846cfddeb688341ec01d5a782e057.html">rutas_aereas</a></li><li class="navelem"><a class="el" href="dir_a3eb7bf00e161954cd18095a53f16466.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">pais.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="pais_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef PRACTICAFINAL_PAIS_H</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define PRACTICAFINAL_PAIS_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="punto_8h.html">punto.h</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classPais.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPais.html">Pais</a> {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">string</span> nombre;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">string</span> bandera;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="classPunto.html">Punto</a> p;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classPais.html#a16af2b45eb9d07e7292a58556edc9371">   46</a></span>&#160;    <a class="code" href="classPais.html#a16af2b45eb9d07e7292a58556edc9371">Pais</a>(){}</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="classPais.html#a16af2b45eb9d07e7292a58556edc9371">Pais</a>(<span class="keywordtype">string</span> nombre, <span class="keywordtype">string</span> bandera, <span class="keyword">const</span> <a class="code" href="classPunto.html">Punto</a> &amp;p);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classPais.html#ad96734b99172b71684fd26664647f3a5">getNombre</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classPais.html#a31a1c6c4cb42ac61dcb49ea5eefb62e8">getBandera</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">const</span> <a class="code" href="classPunto.html">Punto</a> &amp; <a class="code" href="classPais.html#a3db8213a9bb93e0fe1fc6fe6667ce702">getPunto</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPais.html#a5181e631ce20fb8957dafdb4ce789644">setNombre</a>(<span class="keywordtype">string</span> nombre);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPais.html#afd9779d627f7989f9e13eb0320a55bfb">setBandera</a>(<span class="keywordtype">string</span> bandera);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPais.html#a6d18913fac2b4d878acd0b70b4da7bf7">setPunto</a>(<span class="keyword">const</span> <a class="code" href="classPunto.html">Punto</a> &amp;p);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classPais.html#a4de5594ccb03f04855658ef7a3c533e4">operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="classPais.html">Pais</a> &amp;p) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">friend</span> ostream &amp; <a class="code" href="classPais.html#aee8f53c9e1efeb28d2ee1b83e1c4eda6">operator&lt;&lt;</a>(ostream &amp; os, <span class="keyword">const</span> <a class="code" href="classPais.html">Pais</a> &amp; p);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">friend</span> istream &amp; <a class="code" href="classPais.html#af4846d0083ff183dd8bef0ed00f6b733">operator&gt;&gt;</a>(istream &amp; is, <a class="code" href="classPais.html">Pais</a> &amp; p);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;};</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;ostream &amp; <a class="code" href="pais_8h.html#aee8f53c9e1efeb28d2ee1b83e1c4eda6">operator&lt;&lt;</a>(ostream &amp; os, <span class="keyword">const</span> <a class="code" href="classPais.html">Pais</a> &amp; p);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;istream &amp; <a class="code" href="pais_8h.html#af4846d0083ff183dd8bef0ed00f6b733">operator&gt;&gt;</a>(istream &amp; is, <a class="code" href="classPais.html">Pais</a> &amp; p);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//PRACTICAFINAL_PAIS_H</span></div>
+<div class="ttc" id="aclassPais_html"><div class="ttname"><a href="classPais.html">Pais</a></div><div class="ttdoc">TDA Pais.</div><div class="ttdef"><b>Definition:</b> <a href="pais_8h_source.html#l00023">pais.h:23</a></div></div>
+<div class="ttc" id="aclassPais_html_a16af2b45eb9d07e7292a58556edc9371"><div class="ttname"><a href="classPais.html#a16af2b45eb9d07e7292a58556edc9371">Pais::Pais</a></div><div class="ttdeci">Pais()</div><div class="ttdoc">Constructor por defecto.</div><div class="ttdef"><b>Definition:</b> <a href="pais_8h_source.html#l00046">pais.h:46</a></div></div>
+<div class="ttc" id="aclassPais_html_a31a1c6c4cb42ac61dcb49ea5eefb62e8"><div class="ttname"><a href="classPais.html#a31a1c6c4cb42ac61dcb49ea5eefb62e8">Pais::getBandera</a></div><div class="ttdeci">string getBandera() const</div><div class="ttdoc">Devuelve la ubicación de la bandera del país en el sistema de archivos.</div><div class="ttdef"><b>Definition:</b> <a href="pais_8cpp_source.html#l00022">pais.cpp:22</a></div></div>
+<div class="ttc" id="aclassPais_html_a3db8213a9bb93e0fe1fc6fe6667ce702"><div class="ttname"><a href="classPais.html#a3db8213a9bb93e0fe1fc6fe6667ce702">Pais::getPunto</a></div><div class="ttdeci">const Punto &amp; getPunto() const</div><div class="ttdoc">Devuelve el punto que representa la posición del país en el mapa.</div><div class="ttdef"><b>Definition:</b> <a href="pais_8cpp_source.html#l00026">pais.cpp:26</a></div></div>
+<div class="ttc" id="aclassPais_html_a4de5594ccb03f04855658ef7a3c533e4"><div class="ttname"><a href="classPais.html#a4de5594ccb03f04855658ef7a3c533e4">Pais::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(const Pais &amp;p) const</div><div class="ttdoc">Sobrecarga del operador de &lt; para ordenar los paises por nombre.</div><div class="ttdef"><b>Definition:</b> <a href="pais_8cpp_source.html#l00042">pais.cpp:42</a></div></div>
+<div class="ttc" id="aclassPais_html_a5181e631ce20fb8957dafdb4ce789644"><div class="ttname"><a href="classPais.html#a5181e631ce20fb8957dafdb4ce789644">Pais::setNombre</a></div><div class="ttdeci">void setNombre(string nombre)</div><div class="ttdoc">Modifica el nombre del país.</div><div class="ttdef"><b>Definition:</b> <a href="pais_8cpp_source.html#l00030">pais.cpp:30</a></div></div>
+<div class="ttc" id="aclassPais_html_a6d18913fac2b4d878acd0b70b4da7bf7"><div class="ttname"><a href="classPais.html#a6d18913fac2b4d878acd0b70b4da7bf7">Pais::setPunto</a></div><div class="ttdeci">void setPunto(const Punto &amp;p)</div><div class="ttdoc">Modifica el punto que representa la posición del país en el mapa.</div><div class="ttdef"><b>Definition:</b> <a href="pais_8cpp_source.html#l00038">pais.cpp:38</a></div></div>
+<div class="ttc" id="aclassPais_html_ad96734b99172b71684fd26664647f3a5"><div class="ttname"><a href="classPais.html#ad96734b99172b71684fd26664647f3a5">Pais::getNombre</a></div><div class="ttdeci">string getNombre() const</div><div class="ttdoc">Devuelve el nombre del país.</div><div class="ttdef"><b>Definition:</b> <a href="pais_8cpp_source.html#l00018">pais.cpp:18</a></div></div>
+<div class="ttc" id="aclassPais_html_aee8f53c9e1efeb28d2ee1b83e1c4eda6"><div class="ttname"><a href="classPais.html#aee8f53c9e1efeb28d2ee1b83e1c4eda6">Pais::operator&lt;&lt;</a></div><div class="ttdeci">friend ostream &amp; operator&lt;&lt;(ostream &amp;os, const Pais &amp;p)</div><div class="ttdoc">Sobrecarga del operador de salida.</div><div class="ttdef"><b>Definition:</b> <a href="pais_8cpp_source.html#l00046">pais.cpp:46</a></div></div>
+<div class="ttc" id="aclassPais_html_af4846d0083ff183dd8bef0ed00f6b733"><div class="ttname"><a href="classPais.html#af4846d0083ff183dd8bef0ed00f6b733">Pais::operator&gt;&gt;</a></div><div class="ttdeci">friend istream &amp; operator&gt;&gt;(istream &amp;is, Pais &amp;p)</div><div class="ttdoc">Sobrecarga del operador de entrada.</div><div class="ttdef"><b>Definition:</b> <a href="pais_8cpp_source.html#l00055">pais.cpp:55</a></div></div>
+<div class="ttc" id="aclassPais_html_afd9779d627f7989f9e13eb0320a55bfb"><div class="ttname"><a href="classPais.html#afd9779d627f7989f9e13eb0320a55bfb">Pais::setBandera</a></div><div class="ttdeci">void setBandera(string bandera)</div><div class="ttdoc">Modifica la ubicación de la bandera del país en el sistema de archivos.</div><div class="ttdef"><b>Definition:</b> <a href="pais_8cpp_source.html#l00034">pais.cpp:34</a></div></div>
+<div class="ttc" id="aclassPunto_html"><div class="ttname"><a href="classPunto.html">Punto</a></div><div class="ttdoc">TDA Punto.</div><div class="ttdef"><b>Definition:</b> <a href="punto_8h_source.html#l00023">punto.h:23</a></div></div>
+<div class="ttc" id="apais_8h_html_aee8f53c9e1efeb28d2ee1b83e1c4eda6"><div class="ttname"><a href="pais_8h.html#aee8f53c9e1efeb28d2ee1b83e1c4eda6">operator&lt;&lt;</a></div><div class="ttdeci">ostream &amp; operator&lt;&lt;(ostream &amp;os, const Pais &amp;p)</div><div class="ttdoc">Sobrecarga del operador de salida.</div><div class="ttdef"><b>Definition:</b> <a href="pais_8cpp_source.html#l00046">pais.cpp:46</a></div></div>
+<div class="ttc" id="apais_8h_html_af4846d0083ff183dd8bef0ed00f6b733"><div class="ttname"><a href="pais_8h.html#af4846d0083ff183dd8bef0ed00f6b733">operator&gt;&gt;</a></div><div class="ttdeci">istream &amp; operator&gt;&gt;(istream &amp;is, Pais &amp;p)</div><div class="ttdoc">Sobrecarga del operador de entrada.</div><div class="ttdef"><b>Definition:</b> <a href="pais_8cpp_source.html#l00055">pais.cpp:55</a></div></div>
+<div class="ttc" id="apunto_8h_html"><div class="ttname"><a href="punto_8h.html">punto.h</a></div><div class="ttdoc">Fichero cabecera del TDA Punto.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

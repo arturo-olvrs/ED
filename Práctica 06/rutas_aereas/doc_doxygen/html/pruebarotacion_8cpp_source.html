@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Práctica Final. Rutas Aéreas.: Fichero Fuente rutas_aereas/src/pruebarotacion.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Práctica Final. Rutas Aéreas.
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_99a846cfddeb688341ec01d5a782e057.html">rutas_aereas</a></li><li class="navelem"><a class="el" href="dir_08a3db362685a0d1c4866ae105db899b.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">pruebarotacion.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="pruebarotacion_8cpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="imagen_8h.html">imagen.h</a>&quot;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> * argv[]){</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">if</span> (argc!=4){</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;Los parametros son :&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;1 - La imagen de entrada&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;2 - El angulo de rotación en grados&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;3 - El nombre de la imagen de salida&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;Uso: &quot;</span> &lt;&lt; argv[0] &lt;&lt; <span class="stringliteral">&quot; &lt;img_entrada&gt; &lt;angulo_grados&gt; &lt;img_salida&gt;&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="classImagen.html">Imagen</a> I;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    I.<a class="code" href="classImagen.html#a6a809546bc4c8c520c35e48105c0197e">LeerImagen</a>(argv[1]);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">double</span> angulo=atof(argv[2]);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    angulo = angulo*(M_PI)/180;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="classImagen.html">Imagen</a> Iout=I.<a class="code" href="classImagen.html#a90fbc457b26a7ad970d3371b643778f8">Rota</a>(angulo);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    Iout.<a class="code" href="classImagen.html#a06fe5a18f99fca11af8f683fcabe743c">EscribirImagen</a>(argv[3]);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<div class="ttc" id="aclassImagen_html"><div class="ttname"><a href="classImagen.html">Imagen</a></div><div class="ttdoc">TDA Imagen.</div><div class="ttdef"><b>Definition:</b> <a href="imagen_8h_source.html#l00065">imagen.h:65</a></div></div>
+<div class="ttc" id="aclassImagen_html_a06fe5a18f99fca11af8f683fcabe743c"><div class="ttname"><a href="classImagen.html#a06fe5a18f99fca11af8f683fcabe743c">Imagen::EscribirImagen</a></div><div class="ttdeci">void EscribirImagen(const char img_path[]) const</div><div class="ttdoc">Método que escribe una imagen en disco en el archivo dado por nombre.</div><div class="ttdef"><b>Definition:</b> <a href="imagen_8cpp_source.html#l00127">imagen.cpp:127</a></div></div>
+<div class="ttc" id="aclassImagen_html_a6a809546bc4c8c520c35e48105c0197e"><div class="ttname"><a href="classImagen.html#a6a809546bc4c8c520c35e48105c0197e">Imagen::LeerImagen</a></div><div class="ttdeci">void LeerImagen(const char img_path[], const string &amp;nombre_mascara=&quot;&quot;)</div><div class="ttdoc">Método que lee una imagen del disco desde el archivo dado por nombre.</div><div class="ttdef"><b>Definition:</b> <a href="imagen_8cpp_source.html#l00085">imagen.cpp:85</a></div></div>
+<div class="ttc" id="aclassImagen_html_a90fbc457b26a7ad970d3371b643778f8"><div class="ttname"><a href="classImagen.html#a90fbc457b26a7ad970d3371b643778f8">Imagen::Rota</a></div><div class="ttdeci">Imagen Rota(double rads) const</div><div class="ttdoc">Método que rota una imagen.</div><div class="ttdef"><b>Definition:</b> <a href="imagen_8cpp_source.html#l00199">imagen.cpp:199</a></div></div>
+<div class="ttc" id="aimagen_8h_html"><div class="ttname"><a href="imagen_8h.html">imagen.h</a></div><div class="ttdoc">Fichero cabecera para el TDA Imagen.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

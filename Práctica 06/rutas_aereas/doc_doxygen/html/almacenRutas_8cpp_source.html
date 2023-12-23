@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Práctica Final. Rutas Aéreas.: Fichero Fuente rutas_aereas/src/almacenRutas.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Práctica Final. Rutas Aéreas.
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_99a846cfddeb688341ec01d5a782e057.html">rutas_aereas</a></li><li class="navelem"><a class="el" href="dir_08a3db362685a0d1c4866ae105db899b.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">almacenRutas.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="almacenRutas_8cpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="almacenRutas_8h.html">almacenRutas.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define MAGIC_CAD &quot;#Rutas&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classAlmacenRutas.html#a39d90dd781164b3bbf62dfc5d228f5c3">   15</a></span>&#160;<a class="code" href="classAlmacenRutas.html#ad6bdc843aac50ac6bb141eb26ddc85b0">AlmacenRutas::AlmacenRutas</a>(<span class="keyword">const</span> map&lt;string, Ruta&gt; &amp;rutas) {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    this-&gt;rutas = rutas;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classAlmacenRutas.html#aefc36f09e4c6c7d0f2a3945315e5dec5">   19</a></span>&#160;<span class="keyword">const</span> <a class="code" href="classRuta.html">Ruta</a>&amp; <a class="code" href="classAlmacenRutas.html#aefc36f09e4c6c7d0f2a3945315e5dec5">AlmacenRutas::getRuta</a>(<span class="keywordtype">string</span> codigo) {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">return</span> rutas[codigo];</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classAlmacenRutas.html#a0ad0440156a7081fa40f6a96babe178a">   23</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classAlmacenRutas.html#a0ad0440156a7081fa40f6a96babe178a">AlmacenRutas::existeRuta</a>(<span class="keywordtype">string</span> codigo) {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">return</span> rutas.find(codigo) != rutas.end();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classAlmacenRutas.html#a0e5dc949b2453f0f9ba18a9c26280c78">   27</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classAlmacenRutas.html#a0e5dc949b2453f0f9ba18a9c26280c78">AlmacenRutas::insertarRuta</a>(<span class="keyword">const</span> <a class="code" href="classRuta.html">Ruta</a> &amp;ruta) {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    rutas.insert(pair&lt;string, Ruta&gt;(ruta.<a class="code" href="classRuta.html#a3bcb9bd7b55c678b15473c802129e45c">getCodigo</a>(), ruta));</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classAlmacenRutas.html#af1a448e32cab9f8d15a4da2b3be83f97">   31</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classAlmacenRutas.html#af1a448e32cab9f8d15a4da2b3be83f97">AlmacenRutas::eliminarRuta</a>(<span class="keywordtype">string</span> codigo) {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    rutas.erase(codigo);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classAlmacenRutas.html#ae37e730e77156fcf72a95f85190b6a11">   35</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classAlmacenRutas.html#ae37e730e77156fcf72a95f85190b6a11">AlmacenRutas::getNumRutas</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">return</span> rutas.size();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classAlmacenRutas.html#a6f603a9ee4542efdc4c61ba164ce8eb8">   39</a></span>&#160;ostream &amp; <a class="code" href="almacenRutas_8cpp.html#a6f603a9ee4542efdc4c61ba164ce8eb8">operator&lt;&lt;</a>(ostream &amp; os, <span class="keyword">const</span> <a class="code" href="classAlmacenRutas.html">AlmacenRutas</a> &amp; ar) {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">//os &lt;&lt; MAGIC_CAD &lt;&lt; endl;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="classAlmacenRutas_1_1const__iterator.html">AlmacenRutas::const_iterator</a> it;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">for</span> (it = ar.<a class="code" href="classAlmacenRutas.html#a8599dc1ff27d825fcc51ef94f1fc26c1">begin</a>(); it != ar.<a class="code" href="classAlmacenRutas.html#abfbc151a6c4fd5764c4858bb1a0e5d34">end</a>(); ++it) {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        os &lt;&lt; *it &lt;&lt; endl;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">return</span> os;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classAlmacenRutas.html#af9debb20a355c0d296dfb58ac6ee1cd6">   50</a></span>&#160;istream &amp; <a class="code" href="almacenRutas_8cpp.html#af9debb20a355c0d296dfb58ac6ee1cd6">operator&gt;&gt;</a>(istream &amp; is, <a class="code" href="classAlmacenRutas.html">AlmacenRutas</a> &amp; ar) {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="classRuta.html">Ruta</a> ruta;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">string</span> cadena;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    is &gt;&gt; cadena;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">if</span> (cadena != MAGIC_CAD) {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        exit (-1);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">while</span> (is &gt;&gt; ruta) {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        ar.<a class="code" href="classAlmacenRutas.html#a0e5dc949b2453f0f9ba18a9c26280c78">insertarRuta</a>(ruta);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">return</span> is;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
+<div class="ttc" id="aalmacenRutas_8cpp_html_a6f603a9ee4542efdc4c61ba164ce8eb8"><div class="ttname"><a href="almacenRutas_8cpp.html#a6f603a9ee4542efdc4c61ba164ce8eb8">operator&lt;&lt;</a></div><div class="ttdeci">ostream &amp; operator&lt;&lt;(ostream &amp;os, const AlmacenRutas &amp;ar)</div><div class="ttdoc">Sobrecarga del operador de salida para la clase AlmacenRutas.</div><div class="ttdef"><b>Definition:</b> <a href="almacenRutas_8cpp_source.html#l00039">almacenRutas.cpp:39</a></div></div>
+<div class="ttc" id="aalmacenRutas_8cpp_html_af9debb20a355c0d296dfb58ac6ee1cd6"><div class="ttname"><a href="almacenRutas_8cpp.html#af9debb20a355c0d296dfb58ac6ee1cd6">operator&gt;&gt;</a></div><div class="ttdeci">istream &amp; operator&gt;&gt;(istream &amp;is, AlmacenRutas &amp;ar)</div><div class="ttdoc">Sobrecarga del operador de entrada.</div><div class="ttdef"><b>Definition:</b> <a href="almacenRutas_8cpp_source.html#l00050">almacenRutas.cpp:50</a></div></div>
+<div class="ttc" id="aalmacenRutas_8h_html"><div class="ttname"><a href="almacenRutas_8h.html">almacenRutas.h</a></div><div class="ttdoc">Fichero cabecera del TDA AlmacenRutas.</div></div>
+<div class="ttc" id="aclassAlmacenRutas_1_1const__iterator_html"><div class="ttname"><a href="classAlmacenRutas_1_1const__iterator.html">AlmacenRutas::const_iterator</a></div><div class="ttdoc">Clase iterador constante de la clase AlmacenRutas.</div><div class="ttdef"><b>Definition:</b> <a href="almacenRutas_8h_source.html#l00175">almacenRutas.h:175</a></div></div>
+<div class="ttc" id="aclassAlmacenRutas_html"><div class="ttname"><a href="classAlmacenRutas.html">AlmacenRutas</a></div><div class="ttdoc">TDA AlmacenRutas.</div><div class="ttdef"><b>Definition:</b> <a href="almacenRutas_8h_source.html#l00028">almacenRutas.h:28</a></div></div>
+<div class="ttc" id="aclassAlmacenRutas_html_a0ad0440156a7081fa40f6a96babe178a"><div class="ttname"><a href="classAlmacenRutas.html#a0ad0440156a7081fa40f6a96babe178a">AlmacenRutas::existeRuta</a></div><div class="ttdeci">bool existeRuta(string codigo)</div><div class="ttdoc">Método que comprueba si existe una ruta en el almacén.</div><div class="ttdef"><b>Definition:</b> <a href="almacenRutas_8cpp_source.html#l00023">almacenRutas.cpp:23</a></div></div>
+<div class="ttc" id="aclassAlmacenRutas_html_a0e5dc949b2453f0f9ba18a9c26280c78"><div class="ttname"><a href="classAlmacenRutas.html#a0e5dc949b2453f0f9ba18a9c26280c78">AlmacenRutas::insertarRuta</a></div><div class="ttdeci">void insertarRuta(const Ruta &amp;ruta)</div><div class="ttdoc">Método que añade una ruta al almacén.</div><div class="ttdef"><b>Definition:</b> <a href="almacenRutas_8cpp_source.html#l00027">almacenRutas.cpp:27</a></div></div>
+<div class="ttc" id="aclassAlmacenRutas_html_a8599dc1ff27d825fcc51ef94f1fc26c1"><div class="ttname"><a href="classAlmacenRutas.html#a8599dc1ff27d825fcc51ef94f1fc26c1">AlmacenRutas::begin</a></div><div class="ttdeci">iterator begin()</div><div class="ttdoc">Devuelve un iterador al principio del mapa.</div><div class="ttdef"><b>Definition:</b> <a href="almacenRutas_8h_source.html#l00156">almacenRutas.h:156</a></div></div>
+<div class="ttc" id="aclassAlmacenRutas_html_abfbc151a6c4fd5764c4858bb1a0e5d34"><div class="ttname"><a href="classAlmacenRutas.html#abfbc151a6c4fd5764c4858bb1a0e5d34">AlmacenRutas::end</a></div><div class="ttdeci">iterator end()</div><div class="ttdoc">Devuelve un iterador al final del mapa.</div><div class="ttdef"><b>Definition:</b> <a href="almacenRutas_8h_source.html#l00166">almacenRutas.h:166</a></div></div>
+<div class="ttc" id="aclassAlmacenRutas_html_ad6bdc843aac50ac6bb141eb26ddc85b0"><div class="ttname"><a href="classAlmacenRutas.html#ad6bdc843aac50ac6bb141eb26ddc85b0">AlmacenRutas::AlmacenRutas</a></div><div class="ttdeci">AlmacenRutas()</div><div class="ttdoc">Constructor por defecto de la clase.</div><div class="ttdef"><b>Definition:</b> <a href="almacenRutas_8h_source.html#l00042">almacenRutas.h:42</a></div></div>
+<div class="ttc" id="aclassAlmacenRutas_html_ae37e730e77156fcf72a95f85190b6a11"><div class="ttname"><a href="classAlmacenRutas.html#ae37e730e77156fcf72a95f85190b6a11">AlmacenRutas::getNumRutas</a></div><div class="ttdeci">int getNumRutas() const</div><div class="ttdoc">Método que devuelve el número de rutas del almacén.</div><div class="ttdef"><b>Definition:</b> <a href="almacenRutas_8cpp_source.html#l00035">almacenRutas.cpp:35</a></div></div>
+<div class="ttc" id="aclassAlmacenRutas_html_aefc36f09e4c6c7d0f2a3945315e5dec5"><div class="ttname"><a href="classAlmacenRutas.html#aefc36f09e4c6c7d0f2a3945315e5dec5">AlmacenRutas::getRuta</a></div><div class="ttdeci">const Ruta &amp; getRuta(string codigo)</div><div class="ttdoc">Método que devuelve la ruta correspondiente a un código.</div><div class="ttdef"><b>Definition:</b> <a href="almacenRutas_8cpp_source.html#l00019">almacenRutas.cpp:19</a></div></div>
+<div class="ttc" id="aclassAlmacenRutas_html_af1a448e32cab9f8d15a4da2b3be83f97"><div class="ttname"><a href="classAlmacenRutas.html#af1a448e32cab9f8d15a4da2b3be83f97">AlmacenRutas::eliminarRuta</a></div><div class="ttdeci">void eliminarRuta(string codigo)</div><div class="ttdoc">Método que elimina una ruta del almacén.</div><div class="ttdef"><b>Definition:</b> <a href="almacenRutas_8cpp_source.html#l00031">almacenRutas.cpp:31</a></div></div>
+<div class="ttc" id="aclassRuta_html"><div class="ttname"><a href="classRuta.html">Ruta</a></div><div class="ttdoc">TDA Ruta.</div><div class="ttdef"><b>Definition:</b> <a href="ruta_8h_source.html#l00026">ruta.h:26</a></div></div>
+<div class="ttc" id="aclassRuta_html_a3bcb9bd7b55c678b15473c802129e45c"><div class="ttname"><a href="classRuta.html#a3bcb9bd7b55c678b15473c802129e45c">Ruta::getCodigo</a></div><div class="ttdeci">string getCodigo() const</div><div class="ttdoc">Método que devuelve el codigo de la ruta.</div><div class="ttdef"><b>Definition:</b> <a href="ruta_8cpp_source.html#l00026">ruta.cpp:26</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

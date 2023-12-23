@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Práctica Final. Rutas Aéreas.: Fichero Fuente rutas_aereas/src/ruta.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Práctica Final. Rutas Aéreas.
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_99a846cfddeb688341ec01d5a782e057.html">rutas_aereas</a></li><li class="navelem"><a class="el" href="dir_08a3db362685a0d1c4866ae105db899b.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ruta.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="ruta_8cpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ruta_8h.html">ruta.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classRuta.html#a61e517c8157d8764adae01b7253df6ff">   12</a></span>&#160;<a class="code" href="classRuta.html#a1020b0a24a1212f30f4f74284bec3597">Ruta::Ruta</a>(<span class="keywordtype">string</span> codigo, <span class="keyword">const</span> list&lt;Punto&gt; &amp;puntos) {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    this-&gt;codigo = codigo;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    this-&gt;puntos = puntos;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classRuta.html#ac282d61bb39a0657d7ab1d42273b6c2a">   17</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classRuta.html#ac282d61bb39a0657d7ab1d42273b6c2a">Ruta::setCodigo</a>(<span class="keywordtype">string</span> codigo) {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    this-&gt;codigo = codigo;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classRuta.html#a7a2b5746e7e92e864b05be33e23b0b07">   22</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classRuta.html#a7a2b5746e7e92e864b05be33e23b0b07">Ruta::setPuntos</a>(<span class="keyword">const</span> list&lt;Punto&gt; &amp;puntos) {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    this-&gt;puntos = puntos;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classRuta.html#a3bcb9bd7b55c678b15473c802129e45c">   26</a></span>&#160;<span class="keywordtype">string</span> <a class="code" href="classRuta.html#a3bcb9bd7b55c678b15473c802129e45c">Ruta::getCodigo</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> codigo;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classRuta.html#adb986012b262e0ec7894445d9ef316be">   30</a></span>&#160;<span class="keyword">const</span> list&lt;Punto&gt;&amp; <a class="code" href="classRuta.html#adb986012b262e0ec7894445d9ef316be">Ruta::getPuntos</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">return</span> puntos;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classRuta.html#a5108b2783f884cc5cf1317b44130f4de">   34</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classRuta.html#a5108b2783f884cc5cf1317b44130f4de">Ruta::getNumPuntos</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">return</span> puntos.size();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classRuta.html#a11acdd4bfc98d46e31f45b1bf74adc59">   38</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classRuta.html#a11acdd4bfc98d46e31f45b1bf74adc59">Ruta::insertarPunto</a>(<span class="keyword">const</span> <a class="code" href="classPunto.html">Punto</a> &amp;p) {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    puntos.push_back(p);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classRuta.html#a2b32d22e70ec45ffa3fc6b26e3ab1286">   42</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classRuta.html#a2b32d22e70ec45ffa3fc6b26e3ab1286">Ruta::eliminarPunto</a>(<span class="keyword">const</span> <a class="code" href="classPunto.html">Punto</a> &amp;p) {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    puntos.remove(p);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classRuta.html#a6e12ea1f717227690623fa33c6c7e272">   46</a></span>&#160;ostream &amp; <a class="code" href="ruta_8cpp.html#a6e12ea1f717227690623fa33c6c7e272">operator&lt;&lt;</a>(ostream &amp; os, <span class="keyword">const</span> <a class="code" href="classRuta.html">Ruta</a> &amp; r) {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    os &lt;&lt; r.codigo &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    os &lt;&lt; r.<a class="code" href="classRuta.html#a5108b2783f884cc5cf1317b44130f4de">getNumPuntos</a>() &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    list&lt;Punto&gt;::const_iterator it;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">for</span> (it = r.puntos.begin(); it != r.puntos.end(); ++it) {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        os &lt;&lt; *it &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> os;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classRuta.html#ade5b5176a2d6a925bf5f97233132bc23">   57</a></span>&#160;istream &amp; <a class="code" href="ruta_8cpp.html#ade5b5176a2d6a925bf5f97233132bc23">operator&gt;&gt;</a>(istream &amp; is, <a class="code" href="classRuta.html">Ruta</a> &amp; r) {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">string</span> codigo;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">int</span> numPuntos;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    list&lt;Punto&gt; puntos;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    is &gt;&gt; codigo;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    r.<a class="code" href="classRuta.html#ac282d61bb39a0657d7ab1d42273b6c2a">setCodigo</a>(codigo);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">if</span> (codigo.length()&gt;0) {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        is &gt;&gt; numPuntos;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="classPunto.html">Punto</a> p;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; numPuntos; ++i) {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            is &gt;&gt; p;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            puntos.push_back(p);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        r.<a class="code" href="classRuta.html#a7a2b5746e7e92e864b05be33e23b0b07">setPuntos</a>(puntos);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">return</span> is;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
+<div class="ttc" id="aclassPunto_html"><div class="ttname"><a href="classPunto.html">Punto</a></div><div class="ttdoc">TDA Punto.</div><div class="ttdef"><b>Definition:</b> <a href="punto_8h_source.html#l00023">punto.h:23</a></div></div>
+<div class="ttc" id="aclassRuta_html"><div class="ttname"><a href="classRuta.html">Ruta</a></div><div class="ttdoc">TDA Ruta.</div><div class="ttdef"><b>Definition:</b> <a href="ruta_8h_source.html#l00026">ruta.h:26</a></div></div>
+<div class="ttc" id="aclassRuta_html_a1020b0a24a1212f30f4f74284bec3597"><div class="ttname"><a href="classRuta.html#a1020b0a24a1212f30f4f74284bec3597">Ruta::Ruta</a></div><div class="ttdeci">Ruta()</div><div class="ttdoc">Constructor por defecto de la clase.</div><div class="ttdef"><b>Definition:</b> <a href="ruta_8h_source.html#l00036">ruta.h:36</a></div></div>
+<div class="ttc" id="aclassRuta_html_a11acdd4bfc98d46e31f45b1bf74adc59"><div class="ttname"><a href="classRuta.html#a11acdd4bfc98d46e31f45b1bf74adc59">Ruta::insertarPunto</a></div><div class="ttdeci">void insertarPunto(const Punto &amp;p)</div><div class="ttdoc">Método que inserta un punto en la ruta.</div><div class="ttdef"><b>Definition:</b> <a href="ruta_8cpp_source.html#l00038">ruta.cpp:38</a></div></div>
+<div class="ttc" id="aclassRuta_html_a2b32d22e70ec45ffa3fc6b26e3ab1286"><div class="ttname"><a href="classRuta.html#a2b32d22e70ec45ffa3fc6b26e3ab1286">Ruta::eliminarPunto</a></div><div class="ttdeci">void eliminarPunto(const Punto &amp;p)</div><div class="ttdoc">Método que elimina un punto de la ruta.</div><div class="ttdef"><b>Definition:</b> <a href="ruta_8cpp_source.html#l00042">ruta.cpp:42</a></div></div>
+<div class="ttc" id="aclassRuta_html_a3bcb9bd7b55c678b15473c802129e45c"><div class="ttname"><a href="classRuta.html#a3bcb9bd7b55c678b15473c802129e45c">Ruta::getCodigo</a></div><div class="ttdeci">string getCodigo() const</div><div class="ttdoc">Método que devuelve el codigo de la ruta.</div><div class="ttdef"><b>Definition:</b> <a href="ruta_8cpp_source.html#l00026">ruta.cpp:26</a></div></div>
+<div class="ttc" id="aclassRuta_html_a5108b2783f884cc5cf1317b44130f4de"><div class="ttname"><a href="classRuta.html#a5108b2783f884cc5cf1317b44130f4de">Ruta::getNumPuntos</a></div><div class="ttdeci">int getNumPuntos() const</div><div class="ttdoc">Método que devuelve el numero de puntos de la ruta.</div><div class="ttdef"><b>Definition:</b> <a href="ruta_8cpp_source.html#l00034">ruta.cpp:34</a></div></div>
+<div class="ttc" id="aclassRuta_html_a7a2b5746e7e92e864b05be33e23b0b07"><div class="ttname"><a href="classRuta.html#a7a2b5746e7e92e864b05be33e23b0b07">Ruta::setPuntos</a></div><div class="ttdeci">void setPuntos(const list&lt; Punto &gt; &amp;puntos)</div><div class="ttdoc">Método que modifica la lista de puntos de la ruta.</div><div class="ttdef"><b>Definition:</b> <a href="ruta_8cpp_source.html#l00022">ruta.cpp:22</a></div></div>
+<div class="ttc" id="aclassRuta_html_ac282d61bb39a0657d7ab1d42273b6c2a"><div class="ttname"><a href="classRuta.html#ac282d61bb39a0657d7ab1d42273b6c2a">Ruta::setCodigo</a></div><div class="ttdeci">void setCodigo(string codigo)</div><div class="ttdoc">Método que modifica el codigo de la ruta.</div><div class="ttdef"><b>Definition:</b> <a href="ruta_8cpp_source.html#l00017">ruta.cpp:17</a></div></div>
+<div class="ttc" id="aclassRuta_html_adb986012b262e0ec7894445d9ef316be"><div class="ttname"><a href="classRuta.html#adb986012b262e0ec7894445d9ef316be">Ruta::getPuntos</a></div><div class="ttdeci">const list&lt; Punto &gt; &amp; getPuntos() const</div><div class="ttdoc">Método que devuelve la lista de puntos de la ruta.</div><div class="ttdef"><b>Definition:</b> <a href="ruta_8cpp_source.html#l00030">ruta.cpp:30</a></div></div>
+<div class="ttc" id="aruta_8cpp_html_a6e12ea1f717227690623fa33c6c7e272"><div class="ttname"><a href="ruta_8cpp.html#a6e12ea1f717227690623fa33c6c7e272">operator&lt;&lt;</a></div><div class="ttdeci">ostream &amp; operator&lt;&lt;(ostream &amp;os, const Ruta &amp;r)</div><div class="ttdoc">Sobrecarga del operador de salida.</div><div class="ttdef"><b>Definition:</b> <a href="ruta_8cpp_source.html#l00046">ruta.cpp:46</a></div></div>
+<div class="ttc" id="aruta_8cpp_html_ade5b5176a2d6a925bf5f97233132bc23"><div class="ttname"><a href="ruta_8cpp.html#ade5b5176a2d6a925bf5f97233132bc23">operator&gt;&gt;</a></div><div class="ttdeci">istream &amp; operator&gt;&gt;(istream &amp;is, Ruta &amp;r)</div><div class="ttdoc">Sobrecarga del operador de entrada.</div><div class="ttdef"><b>Definition:</b> <a href="ruta_8cpp_source.html#l00057">ruta.cpp:57</a></div></div>
+<div class="ttc" id="aruta_8h_html"><div class="ttname"><a href="ruta_8h.html">ruta.h</a></div><div class="ttdoc">Fichero cabecera del TDA Ruta.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

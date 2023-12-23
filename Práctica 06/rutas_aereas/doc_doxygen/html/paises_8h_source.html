@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Práctica Final. Rutas Aéreas.: Fichero Fuente rutas_aereas/include/paises.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Práctica Final. Rutas Aéreas.
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_99a846cfddeb688341ec01d5a782e057.html">rutas_aereas</a></li><li class="navelem"><a class="el" href="dir_a3eb7bf00e161954cd18095a53f16466.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">paises.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="paises_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef PRACTICAFINAL_PAISES_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define PRACTICAFINAL_PAISES_H</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;set&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pais_8h.html">pais.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classPaises.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPaises.html">Paises</a> {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    set&lt;Pais&gt; datos;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classPaises.html#a3e50b7718e3e147dc36e2151b93af999">   34</a></span>&#160;    <a class="code" href="classPaises.html#a3e50b7718e3e147dc36e2151b93af999">Paises</a>(){}</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="classPaises.html">Paises</a>(<span class="keyword">const</span> set&lt;Pais&gt; &amp;paises);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">int</span> size() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">const</span> set&lt;Pais&gt;&amp; getDatos() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> insertar(<span class="keyword">const</span> <a class="code" href="classPais.html">Pais</a> &amp;pais);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> eliminar(<span class="keyword">const</span> <a class="code" href="classPais.html">Pais</a> &amp;pais);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> clear();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classPaises_1_1iterator.html">   76</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classPaises_1_1iterator.html">iterator</a>{</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        set&lt;Pais&gt;::iterator it;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classPaises_1_1iterator.html#a57a185897b05cb53944a1e40952c77ff">   86</a></span>&#160;        <a class="code" href="classPaises_1_1iterator.html#a57a185897b05cb53944a1e40952c77ff">iterator</a>(){}</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="classPaises_1_1iterator.html#a540d62a3c6efe5c523529625eac353ad">   92</a></span>&#160;        <a class="code" href="classPaises_1_1iterator.html#a540d62a3c6efe5c523529625eac353ad">iterator</a>(set&lt;Pais&gt;::iterator i){it = i;}</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classPaises_1_1iterator.html#ad20aa848497b09929cd00ec1a08c2b28">   98</a></span>&#160;        <span class="keyword">const</span> <a class="code" href="classPais.html">Pais</a>&amp; <a class="code" href="classPaises_1_1iterator.html#ad20aa848497b09929cd00ec1a08c2b28">operator*</a>() {<span class="keywordflow">return</span> (*it);}</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="classPaises_1_1iterator.html#a84e3ed656716fb2c478bedf7da5dbe96">  104</a></span>&#160;        <a class="code" href="classPaises_1_1iterator.html">iterator</a>&amp; <a class="code" href="classPaises_1_1iterator.html#a84e3ed656716fb2c478bedf7da5dbe96">operator++</a>(){</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            ++it;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="classPaises_1_1iterator.html#a17d75347e69da4e6139efb732d5ee814">  113</a></span>&#160;        <a class="code" href="classPaises_1_1iterator.html">iterator</a>&amp; <a class="code" href="classPaises_1_1iterator.html#a17d75347e69da4e6139efb732d5ee814">operator--</a>(){</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            --it;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="classPaises_1_1iterator.html#ab7f8df0c6d0eb0dbf91f9e0608086a86">  123</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classPaises_1_1iterator.html#ab7f8df0c6d0eb0dbf91f9e0608086a86">operator==</a>(<span class="keyword">const</span> <a class="code" href="classPaises_1_1iterator.html">iterator</a> &amp;i)<span class="keyword"> const </span>{<span class="keywordflow">return</span> it == i.it;}</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="classPaises_1_1iterator.html#a016d4b027e1c3bb7a807317dcd81a21e">  130</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classPaises_1_1iterator.html#a016d4b027e1c3bb7a807317dcd81a21e">operator!=</a>(<span class="keyword">const</span> <a class="code" href="classPaises_1_1iterator.html">iterator</a> &amp;i)<span class="keyword"> const </span>{<span class="keywordflow">return</span> it != i.it;}</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classPaises.html">Paises</a>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    };</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="classPaises.html#a1ac6ccd2efe76a21653a80ed44f53ca2">  139</a></span>&#160;    <a class="code" href="classPaises_1_1iterator.html">iterator</a> <a class="code" href="classPaises.html#a1ac6ccd2efe76a21653a80ed44f53ca2">begin</a>()<span class="keyword"> const</span>{<span class="keywordflow">return</span> <a class="code" href="classPaises_1_1iterator.html">iterator</a>(datos.begin());}</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="classPaises.html#a643edb0bb3a8ee18873e38ce508cf5a4">  145</a></span>&#160;    <a class="code" href="classPaises_1_1iterator.html">iterator</a> <a class="code" href="classPaises.html#a643edb0bb3a8ee18873e38ce508cf5a4">end</a>()<span class="keyword"> const</span>{<span class="keywordflow">return</span> <a class="code" href="classPaises_1_1iterator.html">iterator</a>(datos.end());}</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    iterator <a class="code" href="classPaises.html#a31a401485ca8d0014d3d738ef0314e47">find</a>(<span class="keyword">const</span> <a class="code" href="classPais.html">Pais</a> &amp;pais) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    iterator <a class="code" href="classPaises.html#a31a401485ca8d0014d3d738ef0314e47">find</a>(<span class="keyword">const</span> <a class="code" href="classPunto.html">Punto</a> &amp;punto) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keyword">friend</span> ostream&amp; <a class="code" href="paises_8h.html#a907282f7660caa01bc0902a8ca47d217">operator&lt;&lt;</a>(ostream &amp;os, <span class="keyword">const</span> <a class="code" href="classPaises.html">Paises</a> &amp;paises);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keyword">friend</span> istream&amp; <a class="code" href="paises_8h.html#a8a460559f1855eaeb64b173f20b56adf">operator&gt;&gt;</a>(istream &amp;is, <a class="code" href="classPaises.html">Paises</a> &amp;paises);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;};</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;ostream&amp; <a class="code" href="paises_8h.html#a907282f7660caa01bc0902a8ca47d217">operator&lt;&lt;</a>(ostream &amp;os, <span class="keyword">const</span> <a class="code" href="classPaises.html">Paises</a> &amp;paises);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;istream&amp; <a class="code" href="paises_8h.html#a8a460559f1855eaeb64b173f20b56adf">operator&gt;&gt;</a>(istream &amp;is, <a class="code" href="classPaises.html">Paises</a> &amp;paises);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//PRACTICAFINAL_PAISES_H</span></div>
+<div class="ttc" id="aclassPais_html"><div class="ttname"><a href="classPais.html">Pais</a></div><div class="ttdoc">TDA Pais.</div><div class="ttdef"><b>Definition:</b> <a href="pais_8h_source.html#l00023">pais.h:23</a></div></div>
+<div class="ttc" id="aclassPaises_1_1iterator_html"><div class="ttname"><a href="classPaises_1_1iterator.html">Paises::iterator</a></div><div class="ttdoc">Clase iterator.</div><div class="ttdef"><b>Definition:</b> <a href="paises_8h_source.html#l00076">paises.h:76</a></div></div>
+<div class="ttc" id="aclassPaises_1_1iterator_html_a016d4b027e1c3bb7a807317dcd81a21e"><div class="ttname"><a href="classPaises_1_1iterator.html#a016d4b027e1c3bb7a807317dcd81a21e">Paises::iterator::operator!=</a></div><div class="ttdeci">bool operator!=(const iterator &amp;i) const</div><div class="ttdoc">Sobrecarga del operador !=.</div><div class="ttdef"><b>Definition:</b> <a href="paises_8h_source.html#l00130">paises.h:130</a></div></div>
+<div class="ttc" id="aclassPaises_1_1iterator_html_a17d75347e69da4e6139efb732d5ee814"><div class="ttname"><a href="classPaises_1_1iterator.html#a17d75347e69da4e6139efb732d5ee814">Paises::iterator::operator--</a></div><div class="ttdeci">iterator &amp; operator--()</div><div class="ttdoc">Sobrecarga del operador –.</div><div class="ttdef"><b>Definition:</b> <a href="paises_8h_source.html#l00113">paises.h:113</a></div></div>
+<div class="ttc" id="aclassPaises_1_1iterator_html_a540d62a3c6efe5c523529625eac353ad"><div class="ttname"><a href="classPaises_1_1iterator.html#a540d62a3c6efe5c523529625eac353ad">Paises::iterator::iterator</a></div><div class="ttdeci">iterator(set&lt; Pais &gt;::iterator i)</div><div class="ttdoc">Constructor de la clase.</div><div class="ttdef"><b>Definition:</b> <a href="paises_8h_source.html#l00092">paises.h:92</a></div></div>
+<div class="ttc" id="aclassPaises_1_1iterator_html_a57a185897b05cb53944a1e40952c77ff"><div class="ttname"><a href="classPaises_1_1iterator.html#a57a185897b05cb53944a1e40952c77ff">Paises::iterator::iterator</a></div><div class="ttdeci">iterator()</div><div class="ttdoc">Constructor por defecto de la clase.</div><div class="ttdef"><b>Definition:</b> <a href="paises_8h_source.html#l00086">paises.h:86</a></div></div>
+<div class="ttc" id="aclassPaises_1_1iterator_html_a84e3ed656716fb2c478bedf7da5dbe96"><div class="ttname"><a href="classPaises_1_1iterator.html#a84e3ed656716fb2c478bedf7da5dbe96">Paises::iterator::operator++</a></div><div class="ttdeci">iterator &amp; operator++()</div><div class="ttdoc">Sobrecarga del operador ++.</div><div class="ttdef"><b>Definition:</b> <a href="paises_8h_source.html#l00104">paises.h:104</a></div></div>
+<div class="ttc" id="aclassPaises_1_1iterator_html_ab7f8df0c6d0eb0dbf91f9e0608086a86"><div class="ttname"><a href="classPaises_1_1iterator.html#ab7f8df0c6d0eb0dbf91f9e0608086a86">Paises::iterator::operator==</a></div><div class="ttdeci">bool operator==(const iterator &amp;i) const</div><div class="ttdoc">Sobrecarga del operador ==.</div><div class="ttdef"><b>Definition:</b> <a href="paises_8h_source.html#l00123">paises.h:123</a></div></div>
+<div class="ttc" id="aclassPaises_1_1iterator_html_ad20aa848497b09929cd00ec1a08c2b28"><div class="ttname"><a href="classPaises_1_1iterator.html#ad20aa848497b09929cd00ec1a08c2b28">Paises::iterator::operator*</a></div><div class="ttdeci">const Pais &amp; operator*()</div><div class="ttdoc">Sobrecarga del operador *.</div><div class="ttdef"><b>Definition:</b> <a href="paises_8h_source.html#l00098">paises.h:98</a></div></div>
+<div class="ttc" id="aclassPaises_html"><div class="ttname"><a href="classPaises.html">Paises</a></div><div class="ttdoc">TDA Paises.</div><div class="ttdef"><b>Definition:</b> <a href="paises_8h_source.html#l00023">paises.h:23</a></div></div>
+<div class="ttc" id="aclassPaises_html_a1ac6ccd2efe76a21653a80ed44f53ca2"><div class="ttname"><a href="classPaises.html#a1ac6ccd2efe76a21653a80ed44f53ca2">Paises::begin</a></div><div class="ttdeci">iterator begin() const</div><div class="ttdoc">Devuelve un iterador al principio del conjunto.</div><div class="ttdef"><b>Definition:</b> <a href="paises_8h_source.html#l00139">paises.h:139</a></div></div>
+<div class="ttc" id="aclassPaises_html_a31a401485ca8d0014d3d738ef0314e47"><div class="ttname"><a href="classPaises.html#a31a401485ca8d0014d3d738ef0314e47">Paises::find</a></div><div class="ttdeci">iterator find(const Pais &amp;pais) const</div><div class="ttdoc">Busca un pais en el conjunto.</div><div class="ttdef"><b>Definition:</b> <a href="paises_8cpp_source.html#l00039">paises.cpp:39</a></div></div>
+<div class="ttc" id="aclassPaises_html_a3e50b7718e3e147dc36e2151b93af999"><div class="ttname"><a href="classPaises.html#a3e50b7718e3e147dc36e2151b93af999">Paises::Paises</a></div><div class="ttdeci">Paises()</div><div class="ttdoc">Constructor por defecto de la clase.</div><div class="ttdef"><b>Definition:</b> <a href="paises_8h_source.html#l00034">paises.h:34</a></div></div>
+<div class="ttc" id="aclassPaises_html_a643edb0bb3a8ee18873e38ce508cf5a4"><div class="ttname"><a href="classPaises.html#a643edb0bb3a8ee18873e38ce508cf5a4">Paises::end</a></div><div class="ttdeci">iterator end() const</div><div class="ttdoc">Devuelve un iterador al final del conjunto.</div><div class="ttdef"><b>Definition:</b> <a href="paises_8h_source.html#l00145">paises.h:145</a></div></div>
+<div class="ttc" id="aclassPunto_html"><div class="ttname"><a href="classPunto.html">Punto</a></div><div class="ttdoc">TDA Punto.</div><div class="ttdef"><b>Definition:</b> <a href="punto_8h_source.html#l00023">punto.h:23</a></div></div>
+<div class="ttc" id="apais_8h_html"><div class="ttname"><a href="pais_8h.html">pais.h</a></div><div class="ttdoc">Fichero cabecera del TDA Pais.</div></div>
+<div class="ttc" id="apaises_8h_html_a8a460559f1855eaeb64b173f20b56adf"><div class="ttname"><a href="paises_8h.html#a8a460559f1855eaeb64b173f20b56adf">operator&gt;&gt;</a></div><div class="ttdeci">istream &amp; operator&gt;&gt;(istream &amp;is, Paises &amp;paises)</div><div class="ttdoc">Sobrecarga del operador &lt;&lt; para la clase Paises.</div><div class="ttdef"><b>Definition:</b> <a href="paises_8cpp_source.html#l00068">paises.cpp:68</a></div></div>
+<div class="ttc" id="apaises_8h_html_a907282f7660caa01bc0902a8ca47d217"><div class="ttname"><a href="paises_8h.html#a907282f7660caa01bc0902a8ca47d217">operator&lt;&lt;</a></div><div class="ttdeci">ostream &amp; operator&lt;&lt;(ostream &amp;os, const Paises &amp;paises)</div><div class="ttdoc">Sobrecarga del operador &gt;&gt; para la clase Paises.</div><div class="ttdef"><b>Definition:</b> <a href="paises_8cpp_source.html#l00054">paises.cpp:54</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

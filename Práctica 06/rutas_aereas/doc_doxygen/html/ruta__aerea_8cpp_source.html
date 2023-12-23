@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Práctica Final. Rutas Aéreas.: Fichero Fuente rutas_aereas/src/ruta_aerea.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Práctica Final. Rutas Aéreas.
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_99a846cfddeb688341ec01d5a782e057.html">rutas_aereas</a></li><li class="navelem"><a class="el" href="dir_08a3db362685a0d1c4866ae105db899b.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ruta_aerea.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="ruta__aerea_8cpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="almacenRutas_8h.html">almacenRutas.h</a>&quot;</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="paises_8h.html">paises.h</a>&quot;</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="imagen_8h.html">imagen.h</a>&quot;</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#define RESULT_PATH &quot;./output/&quot;</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">int</span> main (<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]) {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">if</span> (argc!=7){</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;Los parametros son:&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;1 - Fichero con la informacion de los paises&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;2 - Nombre de la imagen con el mapa del mundo&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;3 - Directorio con las banderas&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;4 - Fichero con el almacen de rutas&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;5 - Nombre de la imagen con el avion&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;6 - Nombre de la imagen de la mascara del avion&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;Uso: &quot;</span> &lt;&lt; argv[0] &lt;&lt; <span class="stringliteral">&quot; &lt;fichero_paises&gt; &lt;mapa_mundo&gt; &lt;dir_banderas&gt; &lt;almacen_rutas&gt; &lt;avion&gt; &lt;mascara_avion&gt;&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    ifstream file;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    file.open(argv[1]);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="classPaises.html">Paises</a> paises; <span class="comment">// Leemos los paises</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">if</span> (file)</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        file &gt;&gt; paises;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;Error de apertura del fichero&quot;</span> &lt;&lt; argv[1] &lt;&lt; endl;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    file.close();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="classImagen.html">Imagen</a> mapa;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    mapa.<a class="code" href="classImagen.html#a6a809546bc4c8c520c35e48105c0197e">LeerImagen</a>(argv[2]);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="classImagen.html">Imagen</a> avion;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    avion.<a class="code" href="classImagen.html#a6a809546bc4c8c520c35e48105c0197e">LeerImagen</a>(argv[5], argv[6]); <span class="comment">// Leemos con la m�scara</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="classAlmacenRutas.html">AlmacenRutas</a> Ar; <span class="comment">// Leemos el almacen de rutas</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    file.open (argv[4]);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">if</span> (file){</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        file &gt;&gt; Ar;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;Error de apertura del fichero &quot;</span> &lt;&lt; argv[4] &lt;&lt; endl;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    file.close();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="comment">// Muestra todas las rutas disponibles</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    cout&lt;&lt;<span class="stringliteral">&quot;Las rutas: &quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    cout &lt;&lt; Ar &lt;&lt; endl;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    cout&lt;&lt;<span class="stringliteral">&quot;Introduzca el codigo de una ruta&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">string</span> id_ruta; <span class="comment">// Ruta</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    cin&gt;&gt;id_ruta;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="comment">// Comprobaci�n de que &quot;id_ruta&quot; es una ruta valida</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">if</span> (!Ar.<a class="code" href="classAlmacenRutas.html#a0ad0440156a7081fa40f6a96babe178a">existeRuta</a>(id_ruta)) {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;La ruta no existe&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <a class="code" href="classRuta.html">Ruta</a> route=Ar.<a class="code" href="classAlmacenRutas.html#aefc36f09e4c6c7d0f2a3945315e5dec5">getRuta</a>(id_ruta);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="comment">// Ya tenemos la ruta, ahora vamos a mostrarla</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">string</span> dir_banderas = argv[3];</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <a class="code" href="classRuta_1_1iterator.html">Ruta::iterator</a> it_r=route.<a class="code" href="classRuta.html#a224317129a5a632660c9efa82e3917bb">begin</a>();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <a class="code" href="classPunto.html">Punto</a> point1, point2;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    pair&lt;int,int&gt; coord_point1, coord_point2, coord_point_midpoint;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordtype">double</span> orientation_angle;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <a class="code" href="classImagen.html">Imagen</a> avion_rotado;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <a class="code" href="classPais.html">Pais</a> pais;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <a class="code" href="classImagen.html">Imagen</a> bandera;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">while</span> (it_r != route.<a class="code" href="classRuta.html#a4516c245ec9504b4cd9a5aff4b9ae306">end</a>()) {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        point1=*it_r;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        coord_point1 = point1.<a class="code" href="classPunto.html#aaac29231b2b5370d4e08eb7b41f7a77d">coordenadasMapa</a>(mapa.<a class="code" href="classImagen.html#a8fcbfc520e5e5f65be694fd42ef80ed2">getColumnas</a>(), mapa.<a class="code" href="classImagen.html#aa55878206896d953af61b9e808525ba6">getFilas</a>());</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="comment">// Extraigo pa�s</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <a class="code" href="classPaises_1_1iterator.html">Paises::iterator</a> pos_pais_point1 = paises.find(point1);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keywordflow">if</span> (pos_pais_point1 == paises.end()) {</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;No pudo encontrarse el pais que tiene como punto &quot;</span> &lt;&lt; point1 &lt;&lt; endl;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            exit(-1);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        }</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        pais = *(paises.find(point1));</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="comment">// Pongo bandera en el mapa</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keywordtype">string</span> nombre_bandera = dir_banderas + <span class="stringliteral">&quot;/&quot;</span> + pais.<a class="code" href="classPais.html#a31a1c6c4cb42ac61dcb49ea5eefb62e8">getBandera</a>();</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        bandera.<a class="code" href="classImagen.html#a6a809546bc4c8c520c35e48105c0197e">LeerImagen</a>(nombre_bandera.c_str());</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <a class="code" href="imagen_8h.html#a573504250cd1401cf4e53b1e756d38f2">Tipo_Pegado</a> tp_bl = BLENDING;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        mapa.<a class="code" href="classImagen.html#a94d91812474e8276a6ee088887bcb017">PutImagen</a>(coord_point1.first, coord_point1.second, bandera, tp_bl);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="comment">// Imprimo por pantalla el nombre del pa�s</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        cout &lt;&lt; pais.<a class="code" href="classPais.html#ad96734b99172b71684fd26664647f3a5">getNombre</a>() &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="comment">// Leo siguiente punto</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        ++it_r;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keywordflow">if</span> (it_r != route.<a class="code" href="classRuta.html#a4516c245ec9504b4cd9a5aff4b9ae306">end</a>()) {</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            point2=*it_r;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            coord_point2 = point2.<a class="code" href="classPunto.html#aaac29231b2b5370d4e08eb7b41f7a77d">coordenadasMapa</a>(mapa.<a class="code" href="classImagen.html#a8fcbfc520e5e5f65be694fd42ef80ed2">getColumnas</a>(), mapa.<a class="code" href="classImagen.html#aa55878206896d953af61b9e808525ba6">getFilas</a>());</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            coord_point_midpoint = point1.<a class="code" href="classPunto.html#a130ebfb9a2f7d5037132a3b660497d24">punto_medio_en_mapa</a>(point2, mapa.<a class="code" href="classImagen.html#a8fcbfc520e5e5f65be694fd42ef80ed2">getColumnas</a>(), mapa.<a class="code" href="classImagen.html#aa55878206896d953af61b9e808525ba6">getFilas</a>());</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            orientation_angle = point1.<a class="code" href="classPunto.html#a4c190b90a4bbe2464982d6dda1c90cfb">angulo_en_mapa</a>(point2, mapa.<a class="code" href="classImagen.html#a8fcbfc520e5e5f65be694fd42ef80ed2">getColumnas</a>(), mapa.<a class="code" href="classImagen.html#aa55878206896d953af61b9e808525ba6">getFilas</a>());</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <span class="comment">// Pego los 3 aviones correspondientes</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            <a class="code" href="imagen_8h.html#a573504250cd1401cf4e53b1e756d38f2">Tipo_Pegado</a> tp_op = OPACO;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            avion_rotado = avion.<a class="code" href="classImagen.html#a90fbc457b26a7ad970d3371b643778f8">Rota</a>(orientation_angle);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            mapa.<a class="code" href="classImagen.html#a94d91812474e8276a6ee088887bcb017">PutImagen</a>(coord_point_midpoint.first, coord_point_midpoint.second, avion_rotado, tp_op);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            mapa.<a class="code" href="classImagen.html#a94d91812474e8276a6ee088887bcb017">PutImagen</a>(coord_point1.first, coord_point1.second, avion_rotado, tp_op);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            mapa.<a class="code" href="classImagen.html#a94d91812474e8276a6ee088887bcb017">PutImagen</a>(coord_point2.first, coord_point2.second, avion_rotado, tp_op);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        } <span class="comment">// if (it_r != route.end())</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    } <span class="comment">// while (it_r != route.end())</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordtype">string</span> result_path = RESULT_PATH + route.<a class="code" href="classRuta.html#a3bcb9bd7b55c678b15473c802129e45c">getCodigo</a>() + string(<span class="stringliteral">&quot;_Mapa.ppm&quot;</span>);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    mapa.<a class="code" href="classImagen.html#a06fe5a18f99fca11af8f683fcabe743c">EscribirImagen</a>(result_path.c_str());</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    cout &lt;&lt; endl &lt;&lt; endl;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;}</div>
+<div class="ttc" id="aalmacenRutas_8h_html"><div class="ttname"><a href="almacenRutas_8h.html">almacenRutas.h</a></div><div class="ttdoc">Fichero cabecera del TDA AlmacenRutas.</div></div>
+<div class="ttc" id="aclassAlmacenRutas_html"><div class="ttname"><a href="classAlmacenRutas.html">AlmacenRutas</a></div><div class="ttdoc">TDA AlmacenRutas.</div><div class="ttdef"><b>Definition:</b> <a href="almacenRutas_8h_source.html#l00028">almacenRutas.h:28</a></div></div>
+<div class="ttc" id="aclassAlmacenRutas_html_a0ad0440156a7081fa40f6a96babe178a"><div class="ttname"><a href="classAlmacenRutas.html#a0ad0440156a7081fa40f6a96babe178a">AlmacenRutas::existeRuta</a></div><div class="ttdeci">bool existeRuta(string codigo)</div><div class="ttdoc">Método que comprueba si existe una ruta en el almacén.</div><div class="ttdef"><b>Definition:</b> <a href="almacenRutas_8cpp_source.html#l00023">almacenRutas.cpp:23</a></div></div>
+<div class="ttc" id="aclassAlmacenRutas_html_aefc36f09e4c6c7d0f2a3945315e5dec5"><div class="ttname"><a href="classAlmacenRutas.html#aefc36f09e4c6c7d0f2a3945315e5dec5">AlmacenRutas::getRuta</a></div><div class="ttdeci">const Ruta &amp; getRuta(string codigo)</div><div class="ttdoc">Método que devuelve la ruta correspondiente a un código.</div><div class="ttdef"><b>Definition:</b> <a href="almacenRutas_8cpp_source.html#l00019">almacenRutas.cpp:19</a></div></div>
+<div class="ttc" id="aclassImagen_html"><div class="ttname"><a href="classImagen.html">Imagen</a></div><div class="ttdoc">TDA Imagen.</div><div class="ttdef"><b>Definition:</b> <a href="imagen_8h_source.html#l00065">imagen.h:65</a></div></div>
+<div class="ttc" id="aclassImagen_html_a06fe5a18f99fca11af8f683fcabe743c"><div class="ttname"><a href="classImagen.html#a06fe5a18f99fca11af8f683fcabe743c">Imagen::EscribirImagen</a></div><div class="ttdeci">void EscribirImagen(const char img_path[]) const</div><div class="ttdoc">Método que escribe una imagen en disco en el archivo dado por nombre.</div><div class="ttdef"><b>Definition:</b> <a href="imagen_8cpp_source.html#l00127">imagen.cpp:127</a></div></div>
+<div class="ttc" id="aclassImagen_html_a6a809546bc4c8c520c35e48105c0197e"><div class="ttname"><a href="classImagen.html#a6a809546bc4c8c520c35e48105c0197e">Imagen::LeerImagen</a></div><div class="ttdeci">void LeerImagen(const char img_path[], const string &amp;nombre_mascara=&quot;&quot;)</div><div class="ttdoc">Método que lee una imagen del disco desde el archivo dado por nombre.</div><div class="ttdef"><b>Definition:</b> <a href="imagen_8cpp_source.html#l00085">imagen.cpp:85</a></div></div>
+<div class="ttc" id="aclassImagen_html_a8fcbfc520e5e5f65be694fd42ef80ed2"><div class="ttname"><a href="classImagen.html#a8fcbfc520e5e5f65be694fd42ef80ed2">Imagen::getColumnas</a></div><div class="ttdeci">int getColumnas() const</div><div class="ttdoc">Método que informa del número de columnas de la imagen.</div><div class="ttdef"><b>Definition:</b> <a href="imagen_8h_source.html#l00150">imagen.h:150</a></div></div>
+<div class="ttc" id="aclassImagen_html_a90fbc457b26a7ad970d3371b643778f8"><div class="ttname"><a href="classImagen.html#a90fbc457b26a7ad970d3371b643778f8">Imagen::Rota</a></div><div class="ttdeci">Imagen Rota(double rads) const</div><div class="ttdoc">Método que rota una imagen.</div><div class="ttdef"><b>Definition:</b> <a href="imagen_8cpp_source.html#l00199">imagen.cpp:199</a></div></div>
+<div class="ttc" id="aclassImagen_html_a94d91812474e8276a6ee088887bcb017"><div class="ttname"><a href="classImagen.html#a94d91812474e8276a6ee088887bcb017">Imagen::PutImagen</a></div><div class="ttdeci">void PutImagen(int i, int j, const Imagen &amp;img, Tipo_Pegado tp=OPACO)</div><div class="ttdoc">Método que pega una imagen sobre otra.</div><div class="ttdef"><b>Definition:</b> <a href="imagen_8cpp_source.html#l00172">imagen.cpp:172</a></div></div>
+<div class="ttc" id="aclassImagen_html_aa55878206896d953af61b9e808525ba6"><div class="ttname"><a href="classImagen.html#aa55878206896d953af61b9e808525ba6">Imagen::getFilas</a></div><div class="ttdeci">int getFilas() const</div><div class="ttdoc">Método que informa del número de filas de la imagen.</div><div class="ttdef"><b>Definition:</b> <a href="imagen_8h_source.html#l00144">imagen.h:144</a></div></div>
+<div class="ttc" id="aclassPais_html"><div class="ttname"><a href="classPais.html">Pais</a></div><div class="ttdoc">TDA Pais.</div><div class="ttdef"><b>Definition:</b> <a href="pais_8h_source.html#l00023">pais.h:23</a></div></div>
+<div class="ttc" id="aclassPais_html_a31a1c6c4cb42ac61dcb49ea5eefb62e8"><div class="ttname"><a href="classPais.html#a31a1c6c4cb42ac61dcb49ea5eefb62e8">Pais::getBandera</a></div><div class="ttdeci">string getBandera() const</div><div class="ttdoc">Devuelve la ubicación de la bandera del país en el sistema de archivos.</div><div class="ttdef"><b>Definition:</b> <a href="pais_8cpp_source.html#l00022">pais.cpp:22</a></div></div>
+<div class="ttc" id="aclassPais_html_ad96734b99172b71684fd26664647f3a5"><div class="ttname"><a href="classPais.html#ad96734b99172b71684fd26664647f3a5">Pais::getNombre</a></div><div class="ttdeci">string getNombre() const</div><div class="ttdoc">Devuelve el nombre del país.</div><div class="ttdef"><b>Definition:</b> <a href="pais_8cpp_source.html#l00018">pais.cpp:18</a></div></div>
+<div class="ttc" id="aclassPaises_1_1iterator_html"><div class="ttname"><a href="classPaises_1_1iterator.html">Paises::iterator</a></div><div class="ttdoc">Clase iterator.</div><div class="ttdef"><b>Definition:</b> <a href="paises_8h_source.html#l00076">paises.h:76</a></div></div>
+<div class="ttc" id="aclassPaises_html"><div class="ttname"><a href="classPaises.html">Paises</a></div><div class="ttdoc">TDA Paises.</div><div class="ttdef"><b>Definition:</b> <a href="paises_8h_source.html#l00023">paises.h:23</a></div></div>
+<div class="ttc" id="aclassPunto_html"><div class="ttname"><a href="classPunto.html">Punto</a></div><div class="ttdoc">TDA Punto.</div><div class="ttdef"><b>Definition:</b> <a href="punto_8h_source.html#l00023">punto.h:23</a></div></div>
+<div class="ttc" id="aclassPunto_html_a130ebfb9a2f7d5037132a3b660497d24"><div class="ttname"><a href="classPunto.html#a130ebfb9a2f7d5037132a3b660497d24">Punto::punto_medio_en_mapa</a></div><div class="ttdeci">pair&lt; int, int &gt; punto_medio_en_mapa(const Punto &amp;p, int num_columnas, int num_filas) const</div><div class="ttdoc">Punto medio entre dos puntos.</div><div class="ttdef"><b>Definition:</b> <a href="punto_8cpp_source.html#l00058">punto.cpp:58</a></div></div>
+<div class="ttc" id="aclassPunto_html_a4c190b90a4bbe2464982d6dda1c90cfb"><div class="ttname"><a href="classPunto.html#a4c190b90a4bbe2464982d6dda1c90cfb">Punto::angulo_en_mapa</a></div><div class="ttdeci">double angulo_en_mapa(const Punto &amp;p, int num_columnas, int num_filas) const</div><div class="ttdoc">Ángulo de la recta que une dos puntos.</div><div class="ttdef"><b>Definition:</b> <a href="punto_8cpp_source.html#l00064">punto.cpp:64</a></div></div>
+<div class="ttc" id="aclassPunto_html_aaac29231b2b5370d4e08eb7b41f7a77d"><div class="ttname"><a href="classPunto.html#aaac29231b2b5370d4e08eb7b41f7a77d">Punto::coordenadasMapa</a></div><div class="ttdeci">pair&lt; int, int &gt; coordenadasMapa(int num_columnas, int num_filas) const</div><div class="ttdoc">Pasa de coordenadas geográficas a coordenadas en el mapa.</div><div class="ttdef"><b>Definition:</b> <a href="punto_8cpp_source.html#l00051">punto.cpp:51</a></div></div>
+<div class="ttc" id="aclassRuta_1_1iterator_html"><div class="ttname"><a href="classRuta_1_1iterator.html">Ruta::iterator</a></div><div class="ttdoc">Clase iterador de la clase ruta.</div><div class="ttdef"><b>Definition:</b> <a href="ruta_8h_source.html#l00093">ruta.h:93</a></div></div>
+<div class="ttc" id="aclassRuta_html"><div class="ttname"><a href="classRuta.html">Ruta</a></div><div class="ttdoc">TDA Ruta.</div><div class="ttdef"><b>Definition:</b> <a href="ruta_8h_source.html#l00026">ruta.h:26</a></div></div>
+<div class="ttc" id="aclassRuta_html_a224317129a5a632660c9efa82e3917bb"><div class="ttname"><a href="classRuta.html#a224317129a5a632660c9efa82e3917bb">Ruta::begin</a></div><div class="ttdeci">iterator begin()</div><div class="ttdoc">Devuelve un iterador al principio de la lista de puntos.</div><div class="ttdef"><b>Definition:</b> <a href="ruta_8h_source.html#l00165">ruta.h:165</a></div></div>
+<div class="ttc" id="aclassRuta_html_a3bcb9bd7b55c678b15473c802129e45c"><div class="ttname"><a href="classRuta.html#a3bcb9bd7b55c678b15473c802129e45c">Ruta::getCodigo</a></div><div class="ttdeci">string getCodigo() const</div><div class="ttdoc">Método que devuelve el codigo de la ruta.</div><div class="ttdef"><b>Definition:</b> <a href="ruta_8cpp_source.html#l00026">ruta.cpp:26</a></div></div>
+<div class="ttc" id="aclassRuta_html_a4516c245ec9504b4cd9a5aff4b9ae306"><div class="ttname"><a href="classRuta.html#a4516c245ec9504b4cd9a5aff4b9ae306">Ruta::end</a></div><div class="ttdeci">iterator end()</div><div class="ttdoc">Devuelve un iterador al final de la lista de puntos.</div><div class="ttdef"><b>Definition:</b> <a href="ruta_8h_source.html#l00175">ruta.h:175</a></div></div>
+<div class="ttc" id="aimagen_8h_html"><div class="ttname"><a href="imagen_8h.html">imagen.h</a></div><div class="ttdoc">Fichero cabecera para el TDA Imagen.</div></div>
+<div class="ttc" id="aimagen_8h_html_a573504250cd1401cf4e53b1e756d38f2"><div class="ttname"><a href="imagen_8h.html#a573504250cd1401cf4e53b1e756d38f2">Tipo_Pegado</a></div><div class="ttdeci">Tipo_Pegado</div><div class="ttdoc">Enumerado para representar el tipo de pegado de una imagen sobre otra.</div><div class="ttdef"><b>Definition:</b> <a href="imagen_8h_source.html#l00054">imagen.h:54</a></div></div>
+<div class="ttc" id="apaises_8h_html"><div class="ttname"><a href="paises_8h.html">paises.h</a></div><div class="ttdoc">Fichero cabecera del TDA Paises.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
